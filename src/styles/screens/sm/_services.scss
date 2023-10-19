@@ -16,14 +16,14 @@
       width: 100%;
       @include mix.flex-col-center($al: flex-start);
       h2 {
-        @include mix.font(vr.$blue, 1.438rem, 500, 0 0 1rem 0, 0);
+        @include mix.font(vr.$blue, 1.188rem, 500, 0 0 1rem 0, 0);
       }
       p {
-        @include mix.font(vr.$blue, 1rem, 300, 0, 0);
+        @include mix.font(vr.$blue, 0.813rem, 300, 0, 0);
       }
     }
     img {
-      width: 65%;
+      width: 60%;
       aspect-ratio: 1;
       margin: 2rem 0 3.5rem 0;
       border-radius: 0.75rem;

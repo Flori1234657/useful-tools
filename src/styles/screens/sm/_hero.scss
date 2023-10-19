@@ -2,7 +2,7 @@
 @use "../../base/mixin" as mix;
 
 header {
-  margin-top: 5.25rem;
+  margin-top: 5.2rem;
   width: 100%;
   background: vr.$Hero-background;
   @include mix.flex-col-center;

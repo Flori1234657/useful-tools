@@ -8,6 +8,7 @@
   background-color: vr.$green;
   @include mix.flex($js: center);
   z-index: 1;
+  box-shadow: vr.$nav-box-shadow;
   // Palestine Support Banner
 
   .nav-bar-container__Palestine-support {
@@ -64,10 +65,11 @@
         position: absolute;
         right: 0;
         top: 100%;
-        width: 50vw;
+        width: 60vw;
         background-color: vr.$green;
         @include mix.flex-col-center;
-        border-bottom-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.75rem;
+        box-shadow: vr.$nav-box-shadow;
         ul {
           width: 80%;
           @include mix.flex-col-center;

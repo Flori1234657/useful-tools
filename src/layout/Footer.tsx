@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import FooterLogo from "../assets/images/logo2.webp";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -25,9 +27,24 @@ const Footer = () => {
       <section>
         <h1>Contact</h1>
         <ul>
-          <li>floriandollani15@gmail.com</li>
-          <li>info.fl29@gmail.com</li>
-          <li>+355 68 839 3968</li>
+          <li>
+            <span>
+              <MdEmail />
+            </span>
+            floriandollani15@gmail.com{" "}
+          </li>
+          <li>
+            <span>
+              <MdEmail />
+            </span>
+            info.fl29@gmail.com{" "}
+          </li>
+          <li>
+            <span>
+              <BsFillTelephoneFill />
+            </span>
+            +355 68 839 3968{" "}
+          </li>
         </ul>
       </section>
       <section>

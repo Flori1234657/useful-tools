@@ -9,11 +9,11 @@
     @include mix.font(white, 2.063rem, 600, 3rem 0, 0);
   }
   h2 {
-    @include mix.font(vr.$green, 1.438rem, 500, 0, 0);
+    @include mix.font(vr.$green, 1.188rem, 500, 0, 0);
     text-align: center;
   }
   p {
-    @include mix.font(white, 1rem, 300, 1rem 0.938rem, 0);
+    @include mix.font(white, 0.813rem, 300, 1rem 0.938rem, 0);
     text-align: center;
   }
   button {

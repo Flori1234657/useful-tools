@@ -14,15 +14,18 @@ footer {
     width: 90.65%;
     @include mix.flex-col-center($al: flex-start);
     h1 {
-      @include mix.font(vr.$green, 1.188rem, 500, 0, 1rem 0 0 0);
+      @include mix.font(vr.$green, 1.188rem, 500, 0, 1.5rem 0 0 0);
     }
     ul {
       list-style-type: none;
       li {
-        @include mix.font(white, 1rem, 500, 0, 0.5rem 0 0 0);
+        @include mix.font(white, 0.813rem, 500, 0, 1rem 0 0 0);
         a:hover {
           transition: 0.4s;
           text-decoration: underline;
+        }
+        span {
+          padding-right: 0.5rem;
         }
       }
     }
