@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "links": ["Kryefaqja", "Mjete", "Detyrë", "Rreth nesh"],
+    "button": "Mësoni më shumë",
+    "lang": {
+      "chosen": "EN",
+      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
+    }
+  },
+  "layout": {
+    "hero": {
+      "headingTxt": "Lehtësoni punën tuaj!",
+      "subHeadingTxt": "Mjete të dobishme për të kryer veprimin që kërkoni, të gjitha në një vend.",
+      "button": "Mësoni më shumë"
+    },
+    "services": {
+      "headingTxt": "Çfarë ofron faqja jonë?",
+      "subHeadingTxt": "Mjete të dobishme!",
+      "paragraph": "Ne ofrojmë mjete të ndryshme (mini aplikacione) si: gjeneratori i fjalëkalimeve, konvertimi i njësive të ndryshme, zmadhuesi i imazheve dhe shumë të tjera! Të gjitha këto në një vend, pa nevojën për të kërkuar në internet.<br/><br/>Gjithashtu, të gjitha këto shërbime janë falas. Kështu mund të skurtuar kohën shumë në punën tuaj të përditshme, pa nevojën për të kërkuar një mjet specifik në internet. Thjesht ejani te faqja jonë dhe me shumë mundësi mjeti që kërkoni mund të gjendet në katalogun tonë!<br/><br/>Atëherë, çfarë po prisni?! Shkoni në menunë e navigimit dhe klikoni te Mjete për të vazhduar. Nëse dëshironi të planifikoni ditën tuaj, klikoni te Detyra."
+    },
+    "about": {
+      "headingTxt": "Kush jam unë?",
+      "subHeadingTxt": "Zhvillues web i pavarur front-end!",
+      "paragraph": "Jam një zhvillues web i aftësuar në fushën e front-end, i përkushtuar zanatit tim. Sinqeriteti dhe cilësia janë parimet e mia themelore. Punoj fort në çdo projekt me qëllimin për të prodhuar një faqe interneti / aplikacion web me performancë të mirë, duke përfshirë SEO dhe me një UI/UX të mirë.<br/><br/>I përmbahem praktikave më të mira të industrisë për të siguruar suksesin e projektit tuaj, InshaaAllah."
+    },
+    "footer": {
+      "section1": {
+        "title": "Navigimi",
+        "li1": "Kryefaqja",
+        "li2": "Mjete",
+        "li3": "Detyrë",
+        "li4": "Rreth nesh"
+      },
+      "section3": {
+        "title": "Lidhje të tjera",
+        "li1": "Faqja ime",
+        "li2": "Linkedin",
+        "li3": "Facebook",
+        "li4": "GitHub",
+        "li5": "Up Work"
+      }
+    }
+  },
+  "pages": {
+    "tools": {
+      "headingTxt": "Mjete të nevojshme, të gjitha në një vend!",
+      "searchBar": "Kërkoni",
+      "infoTxt": "Klikoni për të përdorur atë mjet specifik.",
+      "toolsNames": ["Llogaritësi"]
+    },
+    "tasks": {
+      "headingTxt": "Planifikoni ditën tuaj!",
+      "firstPanel": {
+        "headingTxt": "Përshëndetje! Jeni i ri këtu, ju lutem zgjidhni kalendarin fillimisht.",
+        "calendars": ["Gjregorian", "Hixhri"],
+        "button": "Vazhdoni"
+      },
+      "secondPanel": {
+        "topInfo": ["Data", "Detyra"],
+        "filter_Status": {
+          "topText": "Filtro",
+          "option1": "Pezull",
+          "option2": "E plotësuar",
+          "option3": "Dështoi"
+        },
+        "cardsCategoryText": {
+          "txt1": "Koha",
+          "txt2": "Detyra",
+          "txt3": "Gjendja"
+        },
+        "hijriTimes": ["Sabahu", "Dreka", "Ikindia", "Akshami", "Jacia"],
+        "bottomInfoText": "Klikoni detyrën për ta redaktuar, fshirë ose ndryshuar gjendjen e saj. Paralajmërim! Plotësoni detyrën para se të kaloi koha, përndryshe detyra do të dështojë, InshaaAllah."
+      }
+    },
+    "aboutUs": {
+      "headingTxt": "Rreth nesh",
+      "subHeadings": [
+        {
+          "topTxt": "Kush jemi ne?",
+          "topParagraph": "Jam një zhvillues web i aftësuar në fushën e front-end, i përkushtuar zanatit tim. Sinqeriteti dhe cilësia janë parimet e mia themelore. Punoj fort në çdo projekt me qëllimin për të prodhuar një faqe interneti / aplikacion web me performancë të mirë, duke përfshirë SEO dhe me një UI/UX të mirë.<br/><br/>I përmbahem praktikave më të mira të industrisë për të siguruar suksesin e projektit tuaj, InshaaAllah."
+        },
+        {
+          "topTxt": "Shërbimet",
+          "paragraph": "Zhvillimi i faqeve interneti front-end,<br/><br/>Zhvillimi i faqeve interneti full-stack duke përdorur Firebase,<br/><br/>Rregullimi i gabimeve të faqes ose rritja e performancës së saj"
+        },
+        {
+          "topTxt": "Çertifikatat",
+          "ulList": [
+            "Basic web Development (1-muaj)",
+            "Introduction to Front-End Development",
+            "Programming with JavaScript",
+            "Version Control",
+            "HTML and CSS in depth",
+            "React Basics",
+            "Advanced React",
+            "Principles of UI/UX Design",
+            "Front-End Developer Capstone",
+            "Coding Interview Preparation",
+            "Meta Front-End Developer (dëshmia përfundimtare)"
+          ]
+        },
+        {
+          "topTxt": "Më shumë informacion",
+          "ulList": ["Cv-ja", "Faqja e internetit"]
+        },
+        {
+          "topTxt": "Kontakto",
+          "ulList": ["Up Work", "Linkedin", "Facebook"]
+        }
+      ]
+    }
+  }
+}

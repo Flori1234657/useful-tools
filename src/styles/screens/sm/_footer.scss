@@ -1,0 +1,39 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+footer {
+  width: 100%;
+  background-color: vr.$blue;
+  @include mix.flex-col-center();
+  img {
+    width: 65%;
+    aspect-ratio: 1.62;
+    margin: 3rem 0;
+  }
+  section {
+    width: 90.65%;
+    @include mix.flex-col-center($al: flex-start);
+    h1 {
+      @include mix.font(vr.$green, 1.188rem, 500, 0, 1rem 0 0 0);
+    }
+    ul {
+      list-style-type: none;
+      li {
+        @include mix.font(white, 1rem, 500, 0, 0.5rem 0 0 0);
+        a:hover {
+          transition: 0.4s;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .copyright-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: vr.$footer-copyright;
+    h2 {
+      text-align: center;
+      @include mix.font(white, 1rem, 500, 0.5rem 0, 0);
+    }
+  }
+}

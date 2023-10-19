@@ -1,0 +1,30 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+.about {
+  width: 100%;
+  background: vr.$Task-Tools-background;
+  @include mix.flex-col-center;
+  h1 {
+    @include mix.font(white, 2.063rem, 600, 3rem 0, 0);
+  }
+  h2 {
+    @include mix.font(vr.$green, 1.438rem, 500, 0, 0);
+    text-align: center;
+  }
+  p {
+    @include mix.font(white, 1rem, 300, 1rem 0.938rem, 0);
+    text-align: center;
+  }
+  button {
+    @include mix.button(
+      vr.$blue,
+      0.8125rem,
+      700,
+      1em 2em,
+      0 0 10rem 0,
+      0.75rem,
+      white
+    );
+  }
+}

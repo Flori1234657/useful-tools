@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "links": ["Home", "Tools", "Task", "About us"],
+    "button": "Learn More",
+    "lang": {
+      "chosen": "EN",
+      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
+    }
+  },
+  "layout": {
+    "hero": {
+      "headingTxt": "Simplify your work!",
+      "subHeadingTxt": "Useful tools to perform the action you are looking for, all in one place.",
+      "button": "Learn More"
+    },
+    "services": {
+      "headingTxt": "What our website offers?",
+      "subHeadingTxt": "Useful tools!",
+      "paragraph": "We offer different tools (mini apps) like: password generator, different units conversion,image resizer and much more! All of this in one place, without the need to search the internet.<br/><br/>Also all of this services are free. In this way you can shorten to much time from your daily work, without the need to search for a specific tool on the internet. Simply come to our web and more likely that tool can be found on our catalog!<br/><br/>Then, what are you waiting for?! Go to the navigation menu and click Tools to continue. If you want to plan your day click Task."
+    },
+    "about": {
+      "headingTxt": "Who Am I?",
+      "subHeadingTxt": "Freelance front-end web developer!",
+      "paragraph": "I'm a passionate front-end web developer dedicated to my craft. Sincerity and quality are my basic principles.I approach each project with the goal of producing a high-performing, SEO-friendly, and accessible website / web App with an good UI/UX design.<br/><br/>I adhere to industry best practices to ensure your project's success InshaaAllah.",
+      "button": "Read More"
+    },
+    "footer": {
+      "section1": {
+        "title": "Navigation",
+        "li1": "Home",
+        "li2": "Tools",
+        "li3": "Task",
+        "li4": "About us"
+      },
+      "section3": {
+        "title": "Other links",
+        "li1": "Portfolio website",
+        "li2": "Linkedin",
+        "li3": "Facebook",
+        "li4": "GitHub",
+        "li5": "Up Work"
+      }
+    }
+  },
+  "pages": {
+    "tools": {
+      "headingTxt": "Necessary tools, all in one place!",
+      "searchBar": "Search",
+      "infoTxt": "Click to use that specific tool.",
+      "toolsNames": ["Calculator"]
+    },
+    "tasks": {
+      "headingTxt": "Plan your day!",
+      "firstPanel": {
+        "headingTxt": "Hello! You are new here, please chose the calendar first.",
+        "calendars": ["Gregorian", "Hijri"],
+        "button": "Continue"
+      },
+      "secondPanel": {
+        "topInfo": ["Date", "Tasks"],
+        "filter_Status": {
+          "topText": "Filter",
+          "option1": "Pending",
+          "option2": "Completed",
+          "option3": "Failed"
+        },
+        "cardsCategoryText": {
+          "txt1": "Time",
+          "txt2": "Task",
+          "txt3": "State"
+        },
+        "hijriTimes": ["Fajr", "Zuhur", "Asr", "Maghrib", "Isha"],
+        "bottomInfoText": "Click on task to edit, delete, or to change it state. Warning! Complete the task before time pass, otherwise task will fail InshaaAllah.",
+        "button": "Add a Task"
+      }
+    },
+    "aboutUs": {
+      "headingTxt": "About us",
+      "subHeadings": [
+        {
+          "topTxt": "Who we are?",
+          "topParagraph": "I'm a passionate front-end web developer dedicated to my craft. Sincerity and quality are my basic principles.I approach each project with the goal of producing a high-performing, SEO-friendly, and accessible website / web App with an good UI/UX design. I adhere to industry best practices to ensure your project's success InshaaAllah. <br/><br/> Here are some of the technologies I'm proficient in: <br/><br/>",
+          "ulList": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Sass",
+            "TypeScript",
+            "React",
+            "Material UI/Joy UI",
+            "Figma for UI design",
+            "Git & GitHub for version control",
+            "Firebase for backend"
+          ],
+          "endParagraph": "<br/><br/>I look forward to the opportunity to collaborate with you and bring to you something special InshaaAllah."
+        },
+        {
+          "topTxt": "Services",
+          "paragraph": "Font-End web development,<br/><br/>Full-Stack web development using Firebase,<br/><br/>Web error fix or optimization"
+        },
+        {
+          "topTxt": "Certificates",
+          "ulList": [
+            "Basic web Development (1-month)",
+            "Introduction to Front-End Development",
+            "Programming with JavaScript",
+            "Version Control",
+            "HTML and CSS in depth",
+            "React Basics",
+            "Advanced React",
+            "Principles of UI/UX Design",
+            "Front-End Developer Capstone",
+            "Coding Interview Preparation",
+            "Meta Front-End Developer (final certificate)"
+          ]
+        },
+        {
+          "topTxt": "More Information",
+          "ulList": ["Resume", "Portfolio Website"]
+        },
+        {
+          "topTxt": "Contact",
+          "ulList": ["Up Work", "Linkedin", "Facebook"]
+        }
+      ]
+    }
+  }
+}

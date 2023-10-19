@@ -1,0 +1,45 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+header {
+  margin-top: 5.25rem;
+  width: 100%;
+  background: vr.$Hero-background;
+  @include mix.flex-col-center;
+  position: relative;
+  .hero-txt-container {
+    width: 90.65%;
+    @include mix.flex-col-center($al: flex-start);
+    h1 {
+      @include mix.font(white, 2.5rem, 600, 4rem 0 0 0, 0);
+    }
+    p {
+      @include mix.font(white, 1rem, 400, 1.06rem 0, 0);
+      padding-right: 4rem;
+    }
+    button {
+      @include mix.button(
+        white,
+        0.8125rem,
+        700,
+        1em 2em,
+        0 0 3.63rem 0,
+        0.75rem,
+        vr.$green
+      );
+    }
+  }
+  .hero-phone-img {
+    width: 18.1875rem;
+    height: 17.4375rem;
+    margin-bottom: 3.36rem;
+    align-self: flex-end;
+  }
+  .hero-phone-adobe-copyright-img {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: 25%;
+    margin-bottom: 1rem;
+  }
+}

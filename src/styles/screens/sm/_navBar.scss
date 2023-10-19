@@ -1,0 +1,88 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+.nav-bar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: vr.$green;
+  @include mix.flex($js: center);
+  z-index: 1;
+  // Palestine Support Banner
+
+  .nav-bar-container__Palestine-support {
+    width: 100%;
+    @include mix.flex($dr: row, $js: center);
+    background-color: #127683;
+    h1 {
+      @include mix.font(white, 0.813rem, 500, 0.5em 0, 0 1em 0 0);
+    }
+    img {
+      width: 1rem;
+      aspect-ratio: 1;
+    }
+  }
+
+  // Palestine support banner end
+
+  nav {
+    width: 90.65%;
+    @include mix.flex-row-between;
+    img {
+      width: 4rem;
+      height: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    .nav-bar-container__btn-select-container,
+    .nav-bar-container__pc-links {
+      display: none;
+    }
+    .nav-bar-container__phone-nav {
+      width: 2.5rem;
+      aspect-ratio: 1;
+      margin: 0.5rem 0;
+      > button {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 0.75rem;
+        background-color: vr.$blue;
+        @include mix.flex($js: center);
+        svg {
+          width: 1.563rem !important;
+          height: 1.563rem !important;
+          color: white;
+        }
+      }
+      .nav-bar-container__phone-nav__links-and-select-container {
+        overflow-x: hidden;
+        &.--hidden {
+          display: none;
+        }
+        &.--visible {
+          display: flex;
+        }
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 50vw;
+        background-color: vr.$green;
+        @include mix.flex-col-center;
+        border-bottom-left-radius: 0.5rem;
+        ul {
+          width: 80%;
+          @include mix.flex-col-center;
+          list-style-type: none;
+          li {
+            @include mix.font(white, 1rem, 500, 1em 0 0 0, 0);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

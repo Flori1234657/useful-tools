@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "links": ["Ana Sayfa", "Araçlar", "Görev", "Hakkımızda"],
+    "button": "Daha Fazla Bilgi",
+    "lang": {
+      "chosen": "EN",
+      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
+    }
+  },
+  "layout": {
+    "hero": {
+      "headingTxt": "İşinizi Kolaylaştırın!",
+      "subHeadingTxt": "Aranan işlemi gerçekleştirmek için kullanışlı araçlar, hepsi bir arada.",
+      "button": "Daha Fazla Bilgi"
+    },
+    "services": {
+      "headingTxt": "Web sitemiz neler sunuyor?",
+      "subHeadingTxt": "Kullanışlı araçlar!",
+      "paragraph": "Şifre oluşturucu, birim dönüştürme, resim yeniden boyutlandırma gibi farklı araçlar sunuyoruz. Tüm bunlar tek bir yerde, interneti arama ihtiyacınız olmadan sunuluyor.<br/><br/>Ayrıca, tüm bu hizmetler ücretsizdir. Bu şekilde günlük işlerinizden zaman kazanabilir, internet üzerinde belirli bir araç arama ihtiyacınız olmaz. Sadece web sitemize gelin ve muhtemelen o aracı katalogumuzda bulabilirsiniz!<br/><br/>Peki, ne bekliyorsunuz?! Navigasyon menüsüne gidin ve Araçlar'a tıklayarak devam edin. Gününüzü planlamak isterseniz Görev'e tıklayın."
+    },
+    "about": {
+      "headingTxt": "Ben Kimim?",
+      "subHeadingTxt": "Serbest ön yüz web geliştirici!",
+      "paragraph": "Kendimi mesleğime adamış tutkulu bir ön uç web geliştiricisiyim. Samimiyet ve kalite temel ilkelerimdir. Her projeye, iyi bir UI/UX tasarımı ile yüksek performanslı, SEO dostu ve erişilebilir bir web sitesi / web Uygulaması üretme hedefiyle yaklaşıyorum.<br/><br/>Sektörün en iyi uygulamalarına bağlı kalıyorum projenizin başarısını garantilemek için inşaAllah.",
+      "button": "Daha Fazla Oku"
+    },
+    "footer": {
+      "section1": {
+        "title": "Navigasyon",
+        "li1": "Ana Sayfa",
+        "li2": "Araçlar",
+        "li3": "Görev",
+        "li4": "Hakkımızda"
+      },
+      "section3": {
+        "title": "Diğer Bağlantılar",
+        "li1": "Portföy web sitesi",
+        "li2": "Linkedin",
+        "li3": "Facebook",
+        "li4": "GitHub",
+        "li5": "Up Work"
+      }
+    }
+  },
+  "pages": {
+    "tools": {
+      "headingTxt": "Gerekli Araçlar, Hepsi Bir Arada!",
+      "searchBar": "Ara",
+      "infoTxt": "Belirli bir aracı kullanmak için tıklayın.",
+      "toolsNames": ["Hesap Makinesi"]
+    },
+    "tasks": {
+      "headingTxt": "Gününüzü Planlayın!",
+      "firstPanel": {
+        "headingTxt": "Merhaba! Burada yenisiniz, lütfen önce takvimi seçin.",
+        "calendars": ["Miladi", "Hicri"],
+        "button": "Devam"
+      },
+      "secondPanel": {
+        "topInfo": ["Tarih", "Görevler"],
+        "filter_Status": {
+          "topText": "Filtrele",
+          "option1": "Beklemede",
+          "option2": "Tamamlandı",
+          "option3": "Başarısız"
+        },
+        "cardsCategoryText": {
+          "txt1": "Saat",
+          "txt2": "Görev",
+          "txt3": "Durum"
+        },
+        "hijriTimes": ["Fecir", "Zuhr", "Aser", "Akşam", "İşa"],
+        "bottomInfoText": "Düzenlemek, silmek veya durumunu değiştirmek için bir göreve tıklayın. Uyarı! Görevi süre dolmadan tamamlayın, aksi takdirde görev başarısız olur, inşaAllah.",
+        "button": "Görev Ekle"
+      }
+    },
+    "aboutUs": {
+      "headingTxt": "Hakkımızda",
+      "subHeadings": [
+        {
+          "topTxt": "Biz Kimiz?",
+          "topParagraph": "Kendi işime adanmış bir ön yüz web geliştiriciyim. Samimiyet ve kalite temel prensiplerimdir. Yüksek performanslı, SEO dostu ve erişilebilir bir web sitesi veya web uygulaması üretme hedefiyle her projeye yaklaşıyorum. İşinizin başarısını sağlamak için endüstri en iyi uygulamalarına uyarım, İnşaAllah. <br/><br/> İşte uzman olduğum bazı teknolojiler: <br/><br/>",
+          "ulList": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Sass",
+            "TypeScript",
+            "React",
+            "Material UI / Joy UI",
+            "UI tasarımı için Figma",
+            "Sürüm kontrolü için Git & GitHub",
+            "Arka uç için Firebase"
+          ],
+          "endParagraph": "<br/><br/> Sizinle işbirliği yapma fırsatını dört gözle bekliyorum ve size özel bir şey getirmek için, İnşaAllah."
+        },
+        {
+          "topTxt": "Hizmetler",
+          "paragraph": "Ön yüz web geliştirme, Firebase kullanarak Tam Yığın web geliştirme, Web hatası düzeltme veya iyileştirme"
+        },
+        {
+          "topTxt": "Sertifikalar",
+          "ulList": [
+            "Basic web Development (1-ay)",
+            "Introduction to Front-End Development",
+            "Programming with JavaScript",
+            "Version Control",
+            "HTML and CSS in depth",
+            "React Basics",
+            "Advanced React",
+            "Principles of UI/UX Design",
+            "Front-End Developer Capstone",
+            "Coding Interview Preparation",
+            "Meta Front-End Developer (final sertifikası)"
+          ]
+        },
+        {
+          "topTxt": "Daha Fazla Bilgi",
+          "ulList": ["Özgeçmiş", "Portföy Web Sitesi"]
+        },
+        {
+          "topTxt": "İletişim",
+          "ulList": ["Up Work", "Linkedin", "Facebook"]
+        }
+      ]
+    }
+  }
+}

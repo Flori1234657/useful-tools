@@ -1,0 +1,39 @@
+// flex
+@mixin flex-row-between($al: center) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $al;
+}
+
+@mixin flex-col-center($al: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: $al;
+}
+
+@mixin flex($dr: column, $js: flex-start, $al: center) {
+  display: flex;
+  flex-direction: $dr;
+  justify-content: $js;
+  align-items: $al;
+}
+
+// fonts
+@mixin font($cl, $fs, $fw, $p, $m) {
+  color: $cl;
+  font-size: $fs;
+  font-weight: $fw;
+
+  padding: $p;
+  margin: $m;
+}
+
+@mixin button($cl, $fs, $fw, $p, $m, $br, $bg) {
+  @include font($cl, $fs, $fw, $p, $m);
+  border-radius: $br;
+  background-color: $bg;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}

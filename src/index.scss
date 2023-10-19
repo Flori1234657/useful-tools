@@ -1,0 +1,21 @@
+@forward "./styles/screens/sm/phone";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  -webkit-tap-highlight-color: none;
+}
