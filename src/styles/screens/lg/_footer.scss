@@ -1,0 +1,13 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  footer {
+    img {
+      margin-left: 6.8%;
+    }
+    section:nth-child(4) {
+      margin-right: 6.8%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "./navBar" as nav;
+@use "./hero" as hero;
+@use "./services" as services;
+@use "./about" as about;
+@use "./footer" as footer;
+
+@mixin styles {
+  @include nav.styles;
+  @include hero.styles;
+  @include services.styles;
+  @include about.styles;
+  @include footer.styles;
+}

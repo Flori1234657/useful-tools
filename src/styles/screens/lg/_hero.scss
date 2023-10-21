@@ -1,0 +1,17 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  header {
+    .hero-txt-container {
+      max-width: 1081.97px;
+      margin-left: 6.8%;
+      h1 {
+        padding: 0 15rem 0 0;
+      }
+    }
+    .hero-phone-adobe-copyright-img {
+      left: 6.8%;
+    }
+  }
+}

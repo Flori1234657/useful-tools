@@ -1,0 +1,41 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  footer {
+    position: relative;
+    @include mix.flex-row-between($al: flex-start);
+    img {
+      width: 15.3125rem;
+      margin: 2.25rem 0 6.28rem 5.538rem;
+    }
+    section {
+      width: auto;
+      margin-top: 3rem;
+      h1 {
+        font-size: 1.1875rem;
+        margin: 0 0 1rem 0;
+      }
+      ul {
+        li {
+          font-size: 1rem;
+          margin: 0 0 0.5rem 0;
+          span {
+            padding-right: 0.615rem;
+          }
+        }
+      }
+    }
+    section:nth-child(4) {
+      margin-right: 5.538rem;
+    }
+    .copyright-wrapper {
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      h2 {
+        font-size: 0.846rem;
+      }
+    }
+  }
+}

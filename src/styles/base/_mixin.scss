@@ -1,6 +1,7 @@
 // flex
 @mixin flex-row-between($al: center) {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: $al;
 }

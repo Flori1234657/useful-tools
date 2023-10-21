@@ -8,9 +8,9 @@ const SelectCont = () => {
       size="sm"
       indicator={<MdKeyboardArrowDown />}
       sx={{
-        width: "80%",
-        fontSize: "0.813rem",
-        my: "1rem",
+        width: { xs: "80%", md: "3.387rem" },
+        fontSize: { xs: "0.813rem", md: "0.8125rem" },
+        my: { xs: "1rem", md: 0 },
         borderRadius: "0.5rem",
         [`& .${selectClasses.indicator}`]: {
           transition: "0.2s",
@@ -19,7 +19,7 @@ const SelectCont = () => {
           },
         },
       }}
-      placeholder="Lang: EN"
+      placeholder="EN"
       variant="solid"
       slotProps={{
         listbox: {

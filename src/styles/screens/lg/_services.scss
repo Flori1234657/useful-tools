@@ -1,0 +1,8 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  .services {
+    max-width: 1595.16px;
+  }
+}

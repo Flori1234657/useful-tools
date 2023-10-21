@@ -1,0 +1,11 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  .nav-bar-container {
+    nav {
+      width: 84%;
+      max-width: 1595.16px;
+    }
+  }
+}

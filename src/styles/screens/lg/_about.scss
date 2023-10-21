@@ -1,0 +1,14 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  .about {
+    p {
+      max-width: 1899px;
+    }
+    button {
+      font-size: 1rem;
+      margin-bottom: 13.19rem;
+    }
+  }
+}

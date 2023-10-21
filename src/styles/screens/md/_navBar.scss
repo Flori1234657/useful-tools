@@ -1,0 +1,62 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  .nav-bar-container {
+    .nav-bar-container__Palestine-support {
+      h1 {
+        font-size: 0.8125rem;
+      }
+      img {
+        width: 1.231rem;
+      }
+    }
+    nav {
+      width: 84%;
+      img {
+        width: 4.5rem;
+        height: 2.8125rem;
+      }
+      .nav-bar-container__btn-select-container,
+      .nav-bar-container__pc-links {
+        display: block;
+      }
+      .nav-bar-container__pc-links {
+        @include mix.flex-row-between;
+        list-style-type: none;
+        gap: 3.21rem;
+        li {
+          @include mix.font(white, 1rem, 500, 0, 0);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .nav-bar-container__btn-select-container {
+        @include mix.flex-row-between;
+        gap: 1.846rem;
+        > button {
+          @include mix.button(
+            vr.$green,
+            0.8125rem,
+            700,
+            1em 2em,
+            0,
+            0.75rem,
+            white
+          );
+          text-wrap: nowrap;
+        }
+        > div {
+          background-color: transparent !important;
+          button {
+            text-decoration: underline;
+          }
+        }
+      }
+      .nav-bar-container__phone-nav {
+        display: none;
+      }
+    }
+  }
+}

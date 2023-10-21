@@ -1,0 +1,33 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  .services {
+    width: 84%;
+    h1 {
+      font-size: 3rem;
+      padding: 3.44rem 0;
+    }
+    .services__bottom-content {
+      @include mix.flex-row-between;
+      gap: 13rem;
+      margin-bottom: 10.44rem;
+      .services__bottom-content__text-content {
+        width: auto;
+        h2 {
+          font-size: 1.75rem;
+          padding: 0 0 1.12rem 0;
+        }
+        p {
+          font-size: 1.1875rem;
+        }
+      }
+      img {
+        width: 18rem;
+        aspect-ratio: 1;
+        margin: 0;
+        border-radius: 0.75rem;
+      }
+    }
+  }
+}
