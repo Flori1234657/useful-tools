@@ -1,0 +1,51 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as vr;
+
+@mixin styles {
+  .tools {
+    width: 100%;
+    min-height: 100vh;
+    h1 {
+      @include mix.font(white, 3rem, 500, 3.06rem 0, 0);
+    }
+    .tools__panel {
+      width: 54rem;
+      max-width: 84%;
+      border-radius: 1.13rem;
+      margin-bottom: 5.5rem;
+      .tools__panel__top-wrapper {
+        width: 84%;
+        margin: 2.5rem 0;
+        @include mix.flex-row-between;
+        .tools__panel__top-wrapper__search-bar {
+          width: 10.375rem;
+          input {
+            font-size: 1rem;
+          }
+          svg {
+            width: 0.875rem;
+            min-height: 0.875rem;
+          }
+        }
+        h2 {
+          font-size: 1rem;
+          padding: 0;
+        }
+      }
+      .tools__panel__cards-grid {
+        width: 84%;
+        grid-template-columns: repeat(6, 6.9rem);
+        margin-bottom: 2.5rem;
+        gap: 0.7rem;
+        .tools__panel__cards-grid__card {
+          align-items: center;
+          cursor: pointer;
+          h3 {
+            @include mix.font(black, 0.8125rem, 500, 0, 0 1rem 0.75rem 1rem);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

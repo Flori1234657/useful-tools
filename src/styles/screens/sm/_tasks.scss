@@ -1,0 +1,134 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as vr;
+@use "../../base/components" as comp;
+
+.tasks {
+  width: 100%;
+  min-height: 100vh;
+  background-image: vr.$Task-Tools-background;
+  margin-top: 5rem;
+  @include mix.flex-col-center;
+  h1 {
+    @include mix.font(white, 1.75rem, 600, 3rem 0.935rem, 0);
+    text-align: center;
+  }
+  .tasks__panel {
+    width: 90.65%;
+    border-radius: 1.5rem;
+    background-image: vr.$tools-panel-background;
+    box-shadow: vr.$tools-panel-box-shadow;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    @include mix.flex-col-center;
+    .tasks__panel__top-info-wrapper {
+      width: 90%;
+      @include mix.flex-col-center;
+      margin: 1rem 0 0.5em 0;
+      h2 {
+        @include mix.font(white, 0.813rem, 500, 0 0 0.5em 0, 0);
+      }
+    }
+    .tasks__panel__search-filter-wrapper {
+      @extend .tasks__panel__top-info-wrapper;
+      margin: 0;
+      .tasks__panel__search-filter-wrapper__search-wrapper {
+        width: 70%;
+        @include mix.flex($dr: row, $js: center);
+        border-radius: 0.75rem;
+        background-color: vr.$blue;
+        @include comp.searchInput(white, 0.813rem, 400, 0.5rem 0.25rem, 0);
+      }
+    }
+    .tasks__panel__task-container {
+      width: 90%;
+      @include mix.flex-row-between($al: flex-start);
+      margin: 1rem 0 0 0;
+      .tasks__panel__task-container__3-txt-headers {
+        @include mix.flex($al: flex-start);
+        width: 20%;
+        min-height: 9.813rem;
+        position: relative;
+        h3 {
+          @include mix.font(white, 1.188rem, 500, 0, 0);
+        }
+        h3:nth-child(1) {
+          margin-top: 0.5rem;
+        }
+        h3:nth-child(2) {
+          margin-top: 1rem;
+        }
+        h3:nth-child(3) {
+          position: absolute;
+          bottom: 1rem;
+        }
+      }
+      .tasks__panel__task-container__card-container {
+        width: 80%;
+        @include mix.flex-row-between;
+        overflow-x: scroll;
+        -webkit-mask-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 6%,
+          rgba(0, 0, 0, 1) 12%
+        );
+        mask-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 6%,
+          rgba(0, 0, 0, 1) 12%
+        );
+        .tasks__panel__task-container__card-container__card:nth-child(1) {
+          margin-left: 1.5rem;
+        }
+        .tasks__panel__task-container__card-container__card {
+          @include mix.flex($al: flex-start);
+          min-width: 11.25rem;
+          min-height: 9.813rem;
+          background-color: vr.$green;
+          border-radius: 0.88rem;
+          overflow: hidden;
+          position: relative;
+          margin-right: 0.8rem;
+          h4 {
+            @include mix.font(white, 1rem, 400, 0 1rem, 0);
+          }
+          .tasks__panel__task-container__card-container__card__time {
+            @include mix.flex-row-between;
+            margin-top: 0.5rem;
+            svg {
+              font-size: 1.188rem;
+              color: white;
+            }
+          }
+
+          h4:nth-child(2) {
+            margin-top: 1rem;
+            font-size: 0.813rem;
+          }
+          h4:nth-child(3) {
+            font-size: 0.813rem;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 1rem;
+            background-color: vr.$blue;
+            padding: 0.5em 1em;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  p {
+    @include mix.font(white, 0.813rem, 400, 0 1rem, 0);
+  }
+  button:last-child {
+    @include mix.button(
+      white,
+      0.813rem,
+      700,
+      1em 2em,
+      1rem 0,
+      0.75rem,
+      vr.$green
+    );
+  }
+}

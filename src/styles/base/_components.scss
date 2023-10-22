@@ -1,0 +1,19 @@
+@use "../base/mixin" as mix;
+
+@mixin searchInput($fc, $fs, $fw, $p, $m) {
+  input {
+    width: 60%;
+    background-color: transparent;
+    border: none;
+    @include mix.font($fc, $fs, $fw, $p, $m);
+    font-family: Inter;
+    &::-webkit-input-placeholder {
+      color: whitesmoke;
+    }
+  }
+  svg {
+    width: 1.188rem;
+    min-height: 1.188rem;
+    color: white;
+  }
+}

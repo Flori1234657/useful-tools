@@ -25,6 +25,18 @@ button {
   -webkit-tap-highlight-color: none;
 }
 
+input {
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-clear-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 :root {
   font-size: clamp(1rem, 0.1398rem + 4.3011vw, 1.75rem); // 16-28 max-599
 }

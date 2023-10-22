@@ -20,6 +20,8 @@ $About-us-background: linear-gradient(
   #375165 45.6%
 );
 
+$tools-panel-background: linear-gradient(180deg, #43abb8 0%, #394f64 78.12%);
+
 $green: #43abb8;
 $blue: #375165;
 $footer-copyright: #1c2832;
@@ -27,3 +29,5 @@ $footer-copyright: #1c2832;
 // Box Shadow
 $nav-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
   rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$tools-panel-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;

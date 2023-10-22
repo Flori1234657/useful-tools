@@ -3,6 +3,7 @@
 @use "./services" as services;
 @use "./about" as about;
 @use "./footer" as footer;
+@use "./tools" as tools;
 
 @mixin styles {
   @include nav.styles;
@@ -10,4 +11,5 @@
   @include services.styles;
   @include about.styles;
   @include footer.styles;
+  @include tools.styles;
 }

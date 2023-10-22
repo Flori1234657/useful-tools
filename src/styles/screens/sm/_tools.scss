@@ -1,0 +1,62 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as vr;
+@use "../../base/components" as comp;
+
+.tools {
+  width: 100%;
+  background-image: vr.$Task-Tools-background;
+  margin-top: 5rem;
+  @include mix.flex-col-center;
+  h1 {
+    @include mix.font(white, 1.75rem, 600, 3rem 0.935rem, 0);
+    text-align: center;
+  }
+  .tools__panel {
+    width: 90.65%;
+    border-radius: 1.5rem;
+    background-image: vr.$tools-panel-background;
+    box-shadow: vr.$tools-panel-box-shadow;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    @include mix.flex-col-center;
+    .tools__panel__top-wrapper {
+      width: 90%;
+      margin: 2rem 0;
+      @include mix.flex-col-center;
+      .tools__panel__top-wrapper__search-bar {
+        width: 70%;
+        @include mix.flex($dr: row, $js: center);
+        border-radius: 0.75rem;
+        background-color: vr.$blue;
+        @include comp.searchInput(white, 0.813rem, 400, 0.5rem 0.25rem, 0);
+      }
+      h2 {
+        @include mix.font(white, 0.813rem, 400, 0.5rem 0, 0);
+      }
+    }
+    .tools__panel__cards-grid {
+      width: 90%;
+      max-height: 25rem;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: repeat(3, 31%);
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      -webkit-mask-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
+      mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
+      .tools__panel__cards-grid__card {
+        width: 100%;
+        background-color: white;
+        aspect-ratio: 1;
+        border-radius: 0.75rem;
+        @include mix.flex($js: flex-end, $al: flex-start);
+        h3 {
+          @include mix.font(black, 0.813rem, 600, 0, 0 0 0.5em 0.5em);
+        }
+      }
+    }
+  }
+}
