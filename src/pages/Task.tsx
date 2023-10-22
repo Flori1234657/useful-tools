@@ -47,7 +47,7 @@ const Task = () => {
             className="tasks__panel__task-container__card-container"
             aria-label="Tasks Cards Container"
           >
-            {[1, 2, 3, 4].map((el) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((el) => (
               <div
                 className="tasks__panel__task-container__card-container__card"
                 aria-label="Task card"

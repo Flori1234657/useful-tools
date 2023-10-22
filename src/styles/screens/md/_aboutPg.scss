@@ -1,0 +1,37 @@
+@use "../../base/variables" as vr;
+@use "../../base/mixin" as mix;
+
+@mixin styles {
+  .about-us {
+    align-self: flex-start;
+    h1 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    article {
+      width: 84%;
+      max-width: 1595.16px;
+      section {
+        h2 {
+          font-size: 1.438rem;
+          padding: 2rem 0 1.31rem 0;
+        }
+        p,
+        li {
+          font-size: 1rem;
+        }
+        ul {
+          margin-left: 2rem;
+        }
+      }
+      section:first-child {
+        p {
+          max-width: 37.375rem;
+        }
+      }
+      section:last-child {
+        margin-bottom: 4.37rem;
+      }
+    }
+  }
+}

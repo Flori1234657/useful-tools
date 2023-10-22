@@ -4,6 +4,8 @@
 @use "./about" as about;
 @use "./footer" as footer;
 @use "./tools" as tools;
+@use "./tasks" as tasks;
+@use "./aboutPg" as aboutPg;
 
 @mixin styles {
   @include nav.styles;
@@ -12,4 +14,6 @@
   @include about.styles;
   @include footer.styles;
   @include tools.styles;
+  @include tasks.styles;
+  @include aboutPg.styles;
 }

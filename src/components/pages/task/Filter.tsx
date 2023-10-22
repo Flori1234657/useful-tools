@@ -8,7 +8,7 @@ const Filter = () => {
       size="sm"
       indicator={<MdKeyboardArrowDown />}
       sx={{
-        width: { xs: "70%", md: "3.387rem" },
+        width: { xs: "70%", md: "8rem" },
         fontSize: { xs: "0.813rem", md: "0.8125rem" },
         my: { xs: "0.5rem", md: 0 },
         borderRadius: "0.75rem",

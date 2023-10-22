@@ -1,0 +1,132 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as vr;
+
+@mixin styles {
+  .tasks {
+    h1 {
+      @include mix.font(white, 3rem, 500, 3.06rem 0, 0);
+    }
+    .tasks__panel {
+      width: 45.375rem;
+      border-radius: 1.13rem;
+      margin-bottom: 5.5rem;
+      .tasks__panel__top-info-wrapper {
+        @include mix.flex-row-between;
+        margin: 1.3rem 0;
+        h2 {
+          padding: 0;
+          font-size: 0.8125rem;
+        }
+      }
+      .tasks__panel__search-filter-wrapper {
+        width: 34.375rem;
+        @include mix.flex($dr: row, $js: flex-start);
+        .tasks__panel__search-filter-wrapper__search-wrapper {
+          width: 8.8rem;
+          border-radius: 0.63rem;
+          margin-right: 1.231rem;
+          input {
+            font-size: 0.8125rem;
+          }
+          svg {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+      .tasks__panel__task-container {
+        @include mix.flex-col-center();
+        margin: 1.3rem 0 0 0;
+        .tasks__panel__task-container__3-txt-headers {
+          @include mix.flex($dr: row);
+          width: 34.375rem;
+          min-height: auto;
+          margin-bottom: 0.94rem;
+          position: static;
+          h3 {
+            font-size: 1.1875rem;
+          }
+          h3:nth-child(1) {
+            margin-top: 0;
+            margin-left: 1.25rem;
+          }
+          h3:nth-child(2) {
+            margin-top: 0;
+            margin-left: 5rem;
+          }
+          h3:nth-child(3) {
+            position: static;
+            margin-left: 18rem;
+          }
+        }
+        .tasks__panel__task-container__card-container {
+          width: 100%;
+          max-height: 15rem;
+          @include mix.flex-col-center;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          -webkit-mask-image: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 6%,
+            rgba(0, 0, 0, 1) 12%
+          );
+          mask-image: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 6%,
+            rgba(0, 0, 0, 1) 12%
+          );
+          .tasks__panel__task-container__card-container__card:nth-child(1) {
+            margin-left: 0;
+          }
+          .tasks__panel__task-container__card-container__card:last-child {
+            margin-bottom: 2rem;
+          }
+          .tasks__panel__task-container__card-container__card {
+            cursor: pointer;
+            @include mix.flex($dr: row, $js: flex-start);
+            min-width: 34.375rem;
+            min-height: 3rem;
+            position: static;
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+            box-shadow: vr.$nav-box-shadow;
+            h4 {
+              padding: 1rem 0;
+            }
+            .tasks__panel__task-container__card-container__card__time {
+              justify-content: flex-start;
+              margin-top: 0;
+              width: 6rem;
+              margin-left: 1.25rem;
+              svg {
+                font-size: 1.25rem;
+                margin-left: 0.615rem;
+              }
+            }
+
+            h4:nth-child(2) {
+              margin-top: 0;
+              font-size: 1rem;
+              margin-left: 2.03rem;
+              width: 18.5rem;
+            }
+            h4:nth-child(3) {
+              font-size: 0.8125rem;
+              position: static;
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+    p {
+      max-width: 34.375rem;
+      font-size: 0.8125rem;
+      padding: 0;
+    }
+    button:last-child {
+      font-size: 0.8125rem;
+      margin: 1.3rem 0;
+    }
+  }
+}

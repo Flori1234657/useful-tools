@@ -1,5 +1,5 @@
 import MachineImg from "../assets/images/bckgMachine.webp";
-import AdobeCopyright from "../assets/images/adobeCopyright.webp";
+import AdobeCopyright from "../assets/images/adobeCopyrightEn.webp";
 
 const Hero = () => {
   return (
