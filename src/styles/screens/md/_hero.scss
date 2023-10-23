@@ -34,4 +34,29 @@
       margin-bottom: 1.846rem;
     }
   }
+  .--heading-right {
+    background-image: linear-gradient(
+      -328deg,
+      rgba(58, 137, 154, 1) 0%,
+      rgba(53, 74, 93, 1) 80%
+    );
+    .hero-txt-container {
+      margin-left: 0;
+      margin-right: 5.538rem;
+      order: 2;
+      h1 {
+        padding-right: 0;
+      }
+      p {
+        padding: 1.38rem 0 1.38rem 0;
+      }
+    }
+    .hero-phone-img {
+      transform: rotateY(190deg);
+    }
+    .hero-phone-adobe-copyright-img {
+      left: auto;
+      right: 5.538rem;
+    }
+  }
 }

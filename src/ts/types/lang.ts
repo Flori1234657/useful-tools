@@ -1,0 +1,132 @@
+export type Language = {
+  nav: Nav;
+  layout: Layout;
+  pages: Pages;
+  errors: Errors;
+};
+
+export type Nav = {
+  links: string[];
+  button: string;
+  lang: Lang;
+  solidarity: string;
+};
+
+type Lang = {
+  chosen: string;
+  available: string[];
+};
+
+type Layout = {
+  hero: Hero;
+  services: Services;
+  about: About;
+  footer: Footer;
+};
+
+type Hero = {
+  headingTxt: string;
+  subHeadingTxt: string;
+  button: string;
+};
+
+type Services = {
+  headingTxt: string;
+  subHeadingTxt: string;
+  paragraph: string;
+};
+
+type About = {
+  headingTxt: string;
+  subHeadingTxt: string;
+  paragraph: string;
+  button: string;
+};
+
+type Footer = {
+  section1: Section1;
+  section3: Section3;
+  copyright: string;
+};
+
+type Section1 = {
+  title: string;
+  li1: string;
+  li2: string;
+  li3: string;
+  li4: string;
+};
+
+type Section3 = {
+  title: string;
+  li1: string;
+  li2: string;
+  li3: string;
+  li4: string;
+  li5: string;
+};
+
+type Pages = {
+  tools: Tools;
+  tasks: Tasks;
+  aboutUs: AboutUs;
+};
+
+type Tools = {
+  headingTxt: string;
+  searchBar: string;
+  infoTxt: string;
+  toolsNames: string[];
+};
+
+type Tasks = {
+  headingTxt: string;
+  firstPanel: FirstPanel;
+  secondPanel: SecondPanel;
+};
+
+type FirstPanel = {
+  headingTxt: string;
+  calendars: string[];
+  button: string;
+};
+
+type SecondPanel = {
+  topInfo: string[];
+  filter_Status: FilterStatus;
+  cardsCategoryText: CardsCategoryText;
+  hijriTimes: string[];
+  bottomInfoText: string;
+  button: string;
+};
+
+type FilterStatus = {
+  topText: string;
+  option1: string;
+  option2: string;
+  option3: string;
+};
+
+type CardsCategoryText = {
+  txt1: string;
+  txt2: string;
+  txt3: string;
+};
+
+type AboutUs = {
+  headingTxt: string;
+  subHeadings: SubHeading[];
+};
+
+type SubHeading = {
+  topTxt: string;
+  topParagraph?: string;
+  ulList?: string[];
+  endParagraph?: string;
+  paragraph?: string[];
+};
+
+type Errors = {
+  tools: string;
+  lang: string;
+};

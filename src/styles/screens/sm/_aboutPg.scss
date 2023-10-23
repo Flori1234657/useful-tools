@@ -37,3 +37,24 @@
     }
   }
 }
+.--right {
+  background-image: linear-gradient(
+    -321deg,
+    #394f64 0%,
+    #3d8d9b 0.01%,
+    #40a5b0 0.02%,
+    #375165 45.6%
+  );
+  article {
+    section {
+      align-items: flex-end;
+      p,
+      li {
+        text-align: end;
+      }
+      ul {
+        list-style-type: none;
+      }
+    }
+  }
+}

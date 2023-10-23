@@ -1,20 +1,17 @@
 import React from "react";
+import { Language } from "../ts/types/lang";
+import useBrText from "../hooks/useBrText";
 
-const About = () => {
+const About = (lang: Language) => {
+  const aboutStrings = lang.layout.about;
+  const paragraph = useBrText(aboutStrings.paragraph);
+
   return (
     <main className="about">
-      <h1>Who Am I?</h1>
-      <h2>Freelance Front-End web Developer</h2>
-      <p>
-        I'm a passionate front-end web developer dedicated to my craft.
-        Sincerity and quality are my basic principles.I approach each project
-        with the goal of producing a high-performing, SEO-friendly, and
-        accessible website / web App with an good UI/UX design.
-        <br />
-        <br />I adhere to industry best practices to ensure your project's
-        success InshaaAllah.
-      </p>
-      <button>Read More</button>
+      <h1>{aboutStrings.headingTxt}</h1>
+      <h2>{aboutStrings.subHeadingTxt}</h2>
+      <p>{paragraph}</p>
+      <button>{aboutStrings.button}</button>
     </main>
   );
 };

@@ -43,3 +43,17 @@ header {
     margin-bottom: 1rem;
   }
 }
+.--heading-right {
+  .hero-txt-container {
+    align-items: flex-end;
+    p {
+      text-align: end;
+      padding-right: 0;
+      padding-left: 4rem;
+    }
+  }
+  .hero-phone-adobe-copyright-img {
+    left: auto;
+    right: 1rem;
+  }
+}

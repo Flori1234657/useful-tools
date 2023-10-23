@@ -54,7 +54,7 @@
         border-radius: 0.75rem;
         @include mix.flex($js: flex-end, $al: flex-start);
         h3 {
-          @include mix.font(black, 0.813rem, 600, 0, 0 0 0.5em 0.5em);
+          @include mix.font(black, 0.688rem, 500, 0, 0 0 0.5em 0.5em);
         }
       }
     }

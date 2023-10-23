@@ -1,27 +1,29 @@
 {
   "nav": {
     "links": ["Kryefaqja", "Mjete", "Detyrë", "Rreth nesh"],
-    "button": "Mësoni më shumë",
+    "button": "Mësoni më Shumë",
     "lang": {
-      "chosen": "EN",
+      "chosen": "SQ",
       "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
-    }
+    },
+    "solidarity": "Ne qëndorjmë në solidaritet me Palestinën"
   },
   "layout": {
     "hero": {
       "headingTxt": "Lehtësoni punën tuaj!",
       "subHeadingTxt": "Mjete të dobishme për të kryer veprimin që kërkoni, të gjitha në një vend.",
-      "button": "Mësoni më shumë"
+      "button": "Mësoni më Shumë"
     },
     "services": {
       "headingTxt": "Çfarë ofron faqja jonë?",
       "subHeadingTxt": "Mjete të dobishme!",
-      "paragraph": "Ne ofrojmë mjete të ndryshme (mini aplikacione) si: gjeneratori i fjalëkalimeve, konvertimi i njësive të ndryshme, zmadhuesi i imazheve dhe shumë të tjera! Të gjitha këto në një vend, pa nevojën për të kërkuar në internet.<br/><br/>Gjithashtu, të gjitha këto shërbime janë falas. Kështu mund të skurtuar kohën shumë në punën tuaj të përditshme, pa nevojën për të kërkuar një mjet specifik në internet. Thjesht ejani te faqja jonë dhe me shumë mundësi mjeti që kërkoni mund të gjendet në katalogun tonë!<br/><br/>Atëherë, çfarë po prisni?! Shkoni në menunë e navigimit dhe klikoni te Mjete për të vazhduar. Nëse dëshironi të planifikoni ditën tuaj, klikoni te Detyra."
+      "paragraph": "Ne ofrojmë mjete të ndryshme (mini aplikacione) si: gjeneratori i fjalëkalimeve, konvertimi i njësive të ndryshme, zmadhuesi i imazheve dhe shumë të tjera! Të gjitha këto në një vend, pa nevojën për të kërkuar në internet.085208520852Gjithashtu, të gjitha këto shërbime janë falas. Kështu mund të shkurtoni shumë kohë në punën tuaj të përditshme, pa nevojën për të kërkuar një mjet specifik në internet. Thjesht ejani te faqja jonë dhe me shumë mundësi mjeti që kërkoni mund të gjendet në katalogun tonë!085208520852Atëherë, çfarë po prisni?! Shkoni në menunë e navigimit dhe klikoni te Mjete për të vazhduar. Nëse dëshironi të planifikoni ditën tuaj, klikoni te Detyra."
     },
     "about": {
       "headingTxt": "Kush jam unë?",
       "subHeadingTxt": "Zhvillues web i pavarur front-end!",
-      "paragraph": "Jam një zhvillues web i aftësuar në fushën e front-end, i përkushtuar zanatit tim. Sinqeriteti dhe cilësia janë parimet e mia themelore. Punoj fort në çdo projekt me qëllimin për të prodhuar një faqe interneti / aplikacion web me performancë të mirë, duke përfshirë SEO dhe me një UI/UX të mirë.<br/><br/>I përmbahem praktikave më të mira të industrisë për të siguruar suksesin e projektit tuaj, InshaaAllah."
+      "paragraph": "Jam një zhvillues web i aftësuar në fushën e front-end, i përkushtuar zanatit tim. Sinqeriteti dhe cilësia janë parimet e mia themelore. Punoj fort në çdo projekt me qëllimin për të prodhuar një faqe interneti / aplikacion web me performancë të mirë, duke përfshirë SEO dhe me një UI/UX të mirë.085208520852I përmbahem praktikave më të mira të industrisë për të siguruar suksesin e projektit tuaj, InshaaAllah.",
+      "button": "Lexo më Shumë"
     },
     "footer": {
       "section1": {
@@ -38,7 +40,8 @@
         "li3": "Facebook",
         "li4": "GitHub",
         "li5": "Up Work"
-      }
+      },
+      "copyright": "E drjeta e autorit © Florian Dollani"
     }
   },
   "pages": {
@@ -69,7 +72,8 @@
           "txt3": "Gjendja"
         },
         "hijriTimes": ["Sabahu", "Dreka", "Ikindia", "Akshami", "Jacia"],
-        "bottomInfoText": "Klikoni detyrën për ta redaktuar, fshirë ose ndryshuar gjendjen e saj. Paralajmërim! Plotësoni detyrën para se të kaloi koha, përndryshe detyra do të dështojë, InshaaAllah."
+        "bottomInfoText": "Klikoni detyrën për ta redaktuar, fshirë ose ndryshuar gjendjen e saj. Paralajmërim! Plotësoni detyrën para se të kaloi koha, përndryshe detyra do të dështojë, InshaaAllah.",
+        "button": "Shto Detyrë"
       }
     },
     "aboutUs": {
@@ -77,11 +81,28 @@
       "subHeadings": [
         {
           "topTxt": "Kush jemi ne?",
-          "topParagraph": "Jam një zhvillues web i aftësuar në fushën e front-end, i përkushtuar zanatit tim. Sinqeriteti dhe cilësia janë parimet e mia themelore. Punoj fort në çdo projekt me qëllimin për të prodhuar një faqe interneti / aplikacion web me performancë të mirë, duke përfshirë SEO dhe me një UI/UX të mirë.<br/><br/>I përmbahem praktikave më të mira të industrisë për të siguruar suksesin e projektit tuaj, InshaaAllah."
+          "topParagraph": "Jam një zhvillues web i aftësuar në fushën e front-end, i përkushtuar zanatit tim. Sinqeriteti dhe cilësia janë parimet e mia themelore. Punoj fort në çdo projekt me qëllimin për të prodhuar një faqe interneti / aplikacion web me performancë të mirë, duke përfshirë SEO dhe me një UI/UX të mirë.085208520852I përmbahem praktikave më të mira të industrisë për të siguruar suksesin e projektit tuaj, InshaaAllah.085208520852 Kto janë disa nga teknologjitë që jam i aftësuar: 085208520852",
+          "ulList": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Sass",
+            "TypeScript",
+            "React",
+            "Material UI/Joy UI",
+            "Figma për dizenjimin e UI",
+            "Git & GitHub për kontrollin e versionit",
+            "Firebase për backend"
+          ],
+          "endParagraph": "085208520852 Pres me padurim mundësinë për të bashkëpunuar me ju dhe për t'ju sjellë diçka të veçantë InshaaAllah."
         },
         {
           "topTxt": "Shërbimet",
-          "paragraph": "Zhvillimi i faqeve interneti front-end,<br/><br/>Zhvillimi i faqeve interneti full-stack duke përdorur Firebase,<br/><br/>Rregullimi i gabimeve të faqes ose rritja e performancës së saj"
+          "paragraph": [
+            "Zhvillimi i faqeve interneti front-end",
+            "Zhvillimi i faqeve interneti full-stack duke përdorur Firebase",
+            "Rregullimi i gabimeve të faqes ose rritja e performancës së saj"
+          ]
         },
         {
           "topTxt": "Çertifikatat",
@@ -109,5 +130,9 @@
         }
       ]
     }
+  },
+  "errors": {
+    "tools": "Ky mjet nuk po funksionon për momentin!",
+    "lang": "Patëm një problem në ndërrimin e gjuhës!"
   }
 }

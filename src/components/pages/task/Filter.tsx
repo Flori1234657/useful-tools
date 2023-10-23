@@ -1,8 +1,11 @@
 import { Select, Option } from "@mui/joy";
 import { selectClasses } from "@mui/joy/Select";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useMainStore } from "../../../state/mainState";
 
 const Filter = () => {
+  const lang = useMainStore((state) => state.language.pages.tasks);
+
   return (
     <Select
       size="sm"
@@ -21,7 +24,7 @@ const Filter = () => {
           },
         },
       }}
-      placeholder="Filter"
+      placeholder={lang.secondPanel.filter_Status.topText}
       variant="solid"
       slotProps={{
         listbox: {
@@ -33,10 +36,16 @@ const Filter = () => {
         },
       }}
     >
-      <Option value="Pending">Pending</Option>
-      <Option value="Completed">Completed</Option>
-      <Option value="Failed">Failed</Option>
-      <Option value="default">No Filter</Option>
+      <Option value={lang.secondPanel.filter_Status.option1}>
+        {lang.secondPanel.filter_Status.option1}
+      </Option>
+      <Option value={lang.secondPanel.filter_Status.option2}>
+        {lang.secondPanel.filter_Status.option2}
+      </Option>
+      <Option value={lang.secondPanel.filter_Status.option3}>
+        {lang.secondPanel.filter_Status.option3}
+      </Option>
+      <Option value="default">---</Option>
     </Select>
   );
 };

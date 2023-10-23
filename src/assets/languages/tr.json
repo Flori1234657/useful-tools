@@ -3,9 +3,10 @@
     "links": ["Ana Sayfa", "Araçlar", "Görev", "Hakkımızda"],
     "button": "Daha Fazla Bilgi",
     "lang": {
-      "chosen": "EN",
+      "chosen": "TR",
       "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
-    }
+    },
+    "solidarity": "Filistin İle dayanışma içindeyiz"
   },
   "layout": {
     "hero": {
@@ -16,12 +17,12 @@
     "services": {
       "headingTxt": "Web sitemiz neler sunuyor?",
       "subHeadingTxt": "Kullanışlı araçlar!",
-      "paragraph": "Şifre oluşturucu, birim dönüştürme, resim yeniden boyutlandırma gibi farklı araçlar sunuyoruz. Tüm bunlar tek bir yerde, interneti arama ihtiyacınız olmadan sunuluyor.<br/><br/>Ayrıca, tüm bu hizmetler ücretsizdir. Bu şekilde günlük işlerinizden zaman kazanabilir, internet üzerinde belirli bir araç arama ihtiyacınız olmaz. Sadece web sitemize gelin ve muhtemelen o aracı katalogumuzda bulabilirsiniz!<br/><br/>Peki, ne bekliyorsunuz?! Navigasyon menüsüne gidin ve Araçlar'a tıklayarak devam edin. Gününüzü planlamak isterseniz Görev'e tıklayın."
+      "paragraph": "Şifre oluşturucu, birim dönüştürme, resim yeniden boyutlandırma gibi farklı araçlar sunuyoruz. Tüm bunlar tek bir yerde, interneti arama ihtiyacınız olmadan sunuluyor.085208520852Ayrıca, tüm bu hizmetler ücretsizdir. Bu şekilde günlük işlerinizden zaman kazanabilir, internet üzerinde belirli bir araç arama ihtiyacınız olmaz. Sadece web sitemize gelin ve muhtemelen o aracı katalogumuzda bulabilirsiniz!085208520852Peki, ne bekliyorsunuz?! Navigasyon menüsüne gidin ve Araçlar'a tıklayarak devam edin. Gününüzü planlamak isterseniz Görev'e tıklayın."
     },
     "about": {
       "headingTxt": "Ben Kimim?",
       "subHeadingTxt": "Serbest ön yüz web geliştirici!",
-      "paragraph": "Kendimi mesleğime adamış tutkulu bir ön uç web geliştiricisiyim. Samimiyet ve kalite temel ilkelerimdir. Her projeye, iyi bir UI/UX tasarımı ile yüksek performanslı, SEO dostu ve erişilebilir bir web sitesi / web Uygulaması üretme hedefiyle yaklaşıyorum.<br/><br/>Sektörün en iyi uygulamalarına bağlı kalıyorum projenizin başarısını garantilemek için inşaAllah.",
+      "paragraph": "Kendimi mesleğime adamış tutkulu bir ön uç web geliştiricisiyim. Samimiyet ve kalite temel ilkelerimdir. Her projeye, iyi bir UI/UX tasarımı ile yüksek performanslı, SEO dostu ve erişilebilir bir web sitesi / web Uygulaması üretme hedefiyle yaklaşıyorum.085208520852Sektörün en iyi uygulamalarına bağlı kalıyorum projenizin başarısını garantilemek için inşaAllah.",
       "button": "Daha Fazla Oku"
     },
     "footer": {
@@ -39,7 +40,8 @@
         "li3": "Facebook",
         "li4": "GitHub",
         "li5": "Up Work"
-      }
+      },
+      "copyright": "Telif hakkı © Florian Dollani"
     }
   },
   "pages": {
@@ -79,7 +81,7 @@
       "subHeadings": [
         {
           "topTxt": "Biz Kimiz?",
-          "topParagraph": "Kendi işime adanmış bir ön yüz web geliştiriciyim. Samimiyet ve kalite temel prensiplerimdir. Yüksek performanslı, SEO dostu ve erişilebilir bir web sitesi veya web uygulaması üretme hedefiyle her projeye yaklaşıyorum. İşinizin başarısını sağlamak için endüstri en iyi uygulamalarına uyarım, İnşaAllah. <br/><br/> İşte uzman olduğum bazı teknolojiler: <br/><br/>",
+          "topParagraph": "Kendi işime adanmış bir ön yüz web geliştiriciyim. Samimiyet ve kalite temel prensiplerimdir. Yüksek performanslı, SEO dostu ve erişilebilir bir web sitesi veya web uygulaması üretme hedefiyle her projeye yaklaşıyorum. İşinizin başarısını sağlamak için endüstri en iyi uygulamalarına uyarım, İnşaAllah. 085208520852 İşte uzman olduğum bazı teknolojiler: 085208520852",
           "ulList": [
             "HTML",
             "CSS",
@@ -92,11 +94,15 @@
             "Sürüm kontrolü için Git & GitHub",
             "Arka uç için Firebase"
           ],
-          "endParagraph": "<br/><br/> Sizinle işbirliği yapma fırsatını dört gözle bekliyorum ve size özel bir şey getirmek için, İnşaAllah."
+          "endParagraph": "085208520852 Sizinle işbirliği yapma fırsatını dört gözle bekliyorum ve size özel bir şey getirmek için, İnşaAllah."
         },
         {
           "topTxt": "Hizmetler",
-          "paragraph": "Ön yüz web geliştirme, Firebase kullanarak Tam Yığın web geliştirme, Web hatası düzeltme veya iyileştirme"
+          "paragraph": [
+            "Ön yüz web geliştirme",
+            "Firebase kullanarak Tam Yığın web geliştirme",
+            "Web hatası düzeltme veya iyileştirme"
+          ]
         },
         {
           "topTxt": "Sertifikalar",
@@ -124,5 +130,9 @@
         }
       ]
     }
+  },
+  "errors": {
+    "tools": "Bu araç şu anda çalışmıyor!",
+    "lang": "Dili değiştirirken bir hatayla karşılaştık!"
   }
 }

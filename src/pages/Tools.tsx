@@ -1,9 +1,12 @@
 import { IoSearch } from "react-icons/io5";
+import { useMainStore } from "../state/mainState";
 
 const Tools = () => {
+  const lang = useMainStore((state) => state.language.pages.tools);
+
   return (
     <main className="tools">
-      <h1>Necessary Tools, all in one place!</h1>
+      <h1>{lang.headingTxt}</h1>
       <div className="tools__panel" aria-label="Panel for cards of tools">
         <div
           className="tools__panel__top-wrapper"
@@ -13,10 +16,18 @@ const Tools = () => {
             className="tools__panel__top-wrapper__search-bar"
             aria-label="Wrapper for search input and icon"
           >
-            <input type="search" name="Search Input" placeholder="Search EN" />
+            <input
+              type="search"
+              name="Search Input"
+              placeholder={lang.searchBar}
+              style={
+                lang.searchBar === "بحث" ? { order: 2 } : { order: "none" }
+              }
+              dir={lang.searchBar === "بحث" ? "rtl" : ""}
+            />
             <IoSearch />
           </div>
-          <h2>Click a card to use that specific tool.</h2>
+          <h2>{lang.infoTxt}</h2>
         </div>
         <div
           className="tools__panel__cards-grid"
@@ -29,7 +40,7 @@ const Tools = () => {
                 className="tools__panel__cards-grid__card"
                 aria-label="Card Item"
               >
-                <h3>Calculator</h3>
+                <h3>{lang.toolsNames[0]}</h3>
               </div>
             )
           )}
