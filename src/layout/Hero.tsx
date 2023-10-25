@@ -1,15 +1,26 @@
-import MachineImg from "../assets/images/bckgMachine.webp";
 import { Language } from "../ts/types/lang";
 import { useEffect, useState } from "react";
+import returnBreakpoint from "../utils/returnBreakpoint";
 
 const Hero = (lang: Language) => {
   const homeStrings = lang.layout.hero;
   const [copyrightImage, setCopyrightImage] = useState(null);
+  const [bestImage, setBestImage] = useState<string>("");
+
   useEffect(() => {
     import(`../assets/images/adobeCopyright${lang.nav.lang.chosen}.webp`)
       .then((img) => setCopyrightImage(img.default))
       .catch((err) => console.log(err));
   }, [lang]);
+
+  useEffect(() => {
+    const winBreakpoint = returnBreakpoint();
+    import(`../assets/images/bckgMachine${winBreakpoint}.webp`)
+      .then((img) => setBestImage(img.default))
+      .catch(
+        (err) => console.log(err) // Me ui dhe lang files
+      );
+  }, []);
 
   return (
     <header
@@ -25,7 +36,7 @@ const Hero = (lang: Language) => {
         <p>{homeStrings.subHeadingTxt}</p>
         <button>{homeStrings.button}</button>
       </div>
-      <img src={MachineImg} alt="Machine image" className="hero-phone-img" />
+      <img src={bestImage} alt="Machine image" className="hero-phone-img" />
       {copyrightImage !== null && (
         <img
           src={copyrightImage}

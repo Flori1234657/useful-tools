@@ -13,7 +13,7 @@ const Footer = (lang: Language) => {
         footerStrings.section1.title === "ملاحة" ? "--home-footer" : ""
       }
     >
-      <img src={FooterLogo} alt="Website Logo" />
+      <img loading="lazy" src={FooterLogo} alt="Website Logo" />
       <section>
         <h1>{footerStrings.section1.title}</h1>
         <ul>

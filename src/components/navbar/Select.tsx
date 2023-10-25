@@ -33,7 +33,7 @@ const SelectCont = (str: Nav) => {
         },
         button: {
           id: "select-lang",
-          "aria-labelledby": "select-label select-lang",
+          "aria-labelledby": "select-label",
         },
       }}
     >
