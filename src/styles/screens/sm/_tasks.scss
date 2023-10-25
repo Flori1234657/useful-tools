@@ -131,4 +131,8 @@
       vr.$green
     );
   }
+
+  #modal-btn1 {
+    @include mix.button(white, 0.813rem, 700, 1em 2em, 0, 0.75rem, vr.$green);
+  }
 }

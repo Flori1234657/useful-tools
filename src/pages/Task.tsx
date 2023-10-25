@@ -1,11 +1,15 @@
 import { IoSearch } from "react-icons/io5";
 import Filter from "../components/pages/task/Filter";
-import { BsFillSunriseFill as PlaceholderIcn } from "react-icons/bs";
+import Card from "../components/pages/task/Card";
 import { useMainStore } from "../state/mainState";
+import { useState } from "react";
+import AddTaskModal from "../components/pages/task/AddTaskModal";
 
 const Task = () => {
   const lang = useMainStore((state) => state.language.pages.tasks);
   const search = useMainStore((state) => state.language.pages.tools.searchBar);
+
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <main className="tasks">
@@ -54,22 +58,7 @@ const Task = () => {
             aria-label="Tasks Cards Container"
           >
             {[1, 2, 3, 4, 5, 6, 7, 8].map((el) => (
-              <div
-                className="tasks__panel__task-container__card-container__card"
-                aria-label="Task card"
-                key={el}
-              >
-                <div
-                  className="tasks__panel__task-container__card-container__card__time"
-                  aria-label="Time info inside tasks cards"
-                >
-                  <h4>{lang.secondPanel.hijriTimes[0]}</h4>
-                  <PlaceholderIcn />
-                </div>
-
-                <h4>Go to that city to arrive there</h4>
-                <h4>{lang.secondPanel.filter_Status.option2}</h4>
-              </div>
+              <Card key={el} />
             ))}
           </div>
         </div>
@@ -82,8 +71,9 @@ const Task = () => {
         >
           {lang.secondPanel.bottomInfoText}
         </p>
-        <button>{lang.secondPanel.button}</button>
+        <button onClick={() => setOpen(true)}>{lang.secondPanel.button}</button>
       </div>
+      <AddTaskModal open={open} setOpen={setOpen} />
     </main>
   );
 };
