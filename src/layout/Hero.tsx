@@ -1,9 +1,15 @@
 import MachineImg from "../assets/images/bckgMachine.webp";
-import AdobeCopyright from "../assets/images/adobeCopyrightEN.webp";
 import { Language } from "../ts/types/lang";
+import { useEffect, useState } from "react";
 
 const Hero = (lang: Language) => {
   const homeStrings = lang.layout.hero;
+  const [copyrightImage, setCopyrightImage] = useState(null);
+  useEffect(() => {
+    import(`../assets/images/adobeCopyright${lang.nav.lang.chosen}.webp`)
+      .then((img) => setCopyrightImage(img.default))
+      .catch((err) => console.log(err));
+  }, [lang]);
 
   return (
     <header
@@ -20,11 +26,13 @@ const Hero = (lang: Language) => {
         <button>{homeStrings.button}</button>
       </div>
       <img src={MachineImg} alt="Machine image" className="hero-phone-img" />
-      <img
-        src={AdobeCopyright}
-        alt="Adobe Copyright"
-        className="hero-phone-adobe-copyright-img"
-      />
+      {copyrightImage !== null && (
+        <img
+          src={copyrightImage}
+          alt="Adobe Copyright"
+          className="hero-phone-adobe-copyright-img"
+        />
+      )}
     </header>
   );
 };

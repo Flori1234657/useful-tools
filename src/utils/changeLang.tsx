@@ -1,19 +1,17 @@
-import { useMainStore } from "../state/mainState";
 import { LangType } from "../ts/enums/language";
+import { useMainStore } from "../state/mainState";
 
-export const changeLangAsync = async (lang: LangType) => {
-  const useStore = useMainStore();
-
+export const changeLang = async (lang: LangType) => {
   try {
-    useStore.setLoading(true);
+    useMainStore.setState(() => ({ loading: true }));
 
     const imported = await import(
       `../assets/languages/${lang.toLowerCase()}.json`
     );
-    useStore.changeLang(imported);
-  } catch (error) {
-    useStore.setErrors("Error"); // Ndryshoje ne baz te gjuhes
+    useMainStore.setState(() => ({ language: imported }));
+  } catch (err) {
+    useMainStore.setState((state) => ({ errors: state.language.errors.lang }));
   }
 
-  useStore.setLoading(false);
+  useMainStore.setState(() => ({ loading: false }));
 };

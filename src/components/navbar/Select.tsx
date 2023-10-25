@@ -2,10 +2,15 @@ import { Select, Option } from "@mui/joy";
 import { selectClasses } from "@mui/joy/Select";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Nav } from "../../ts/types/lang";
+import { changeLang } from "../../utils/changeLang";
+import { LangType } from "../../ts/enums/language";
 
 const SelectCont = (str: Nav) => {
   return (
     <Select
+      onChange={(e, newVal: LangType | null) => {
+        if (newVal !== null) changeLang(LangType[newVal]);
+      }}
       size="sm"
       indicator={<MdKeyboardArrowDown />}
       sx={{

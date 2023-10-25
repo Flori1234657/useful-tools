@@ -1,12 +1,19 @@
 import { create } from "zustand";
 import { MainState } from "../ts/interface/mainState";
-import English from "../assets/languages/tr.json";
+import English from "../assets/languages/en.json";
+import { persist, devtools } from "zustand/middleware";
 
-export const useMainStore = create<MainState>((set) => ({
-  language: English,
-  errors: "",
-  loading: false,
-  changeLang: (lang) => set((state) => ({ ...state, language: lang })),
-  setErrors: (err) => set((state) => ({ ...state, errors: err })),
-  setLoading: (load) => set((state) => ({ ...state, loading: load })),
-}));
+export const useMainStore = create<MainState>()(
+  devtools(
+    persist(
+      (set) => ({
+        language: English,
+        errors: "",
+        loading: false,
+        setErrors: (err) => set((state) => ({ errors: err })),
+        setLoading: (load) => set((state) => ({ loading: load })),
+      }),
+      { name: "main-store" }
+    )
+  )
+);
