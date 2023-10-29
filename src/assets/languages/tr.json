@@ -4,7 +4,8 @@
     "button": "Daha Fazla Bilgi",
     "lang": {
       "chosen": "TR",
-      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
+      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"],
+      "localeString": "tr-TR"
     },
     "solidarity": "Filistin İle dayanışma içindeyiz"
   },
@@ -73,6 +74,7 @@
         },
         "hijriTimes": ["Fecir", "Zuhr", "Aser", "Akşam", "İşa"],
         "bottomInfoText": "Düzenlemek, silmek veya durumunu değiştirmek için bir göreve tıklayın. Uyarı! Görevi süre dolmadan tamamlayın, aksi takdirde görev başarısız olur, inşaAllah.",
+        "noTasksText": "Şu anda hiçbir görev yok!",
         "button": "Görev Ekle"
       }
     },

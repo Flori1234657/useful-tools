@@ -1,17 +1,44 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/joy/Modal";
 import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
 import { Button, Option, Select, Stack, Textarea } from "@mui/joy";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { selectClasses } from "@mui/joy/Select";
+import { useMainStore } from "../../../state/mainState";
+import { TaskCard } from "../../../ts/types/taskCard";
+import { SelectedStatusOption, HijriTimes } from "../../../ts/enums/tasks";
 
 interface Props {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  data: TaskCard;
 }
 
-const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
+const EditTaskModal: React.FC<Props> = ({ open, setOpen, data }) => {
+  const mainStore = useMainStore();
+  const secPanelTasks = useMainStore(
+    (state) => state.language.pages.tasks.secondPanel
+  );
+
+  const [time, setTime] = useState<string>(HijriTimes[data.hijriTimes]);
+  const [task, setTask] = useState<string>(data.task);
+  const [state, setState] = useState<string>(data.status);
+
+  const handleSubmit = () => {
+    mainStore.setLoading(true);
+    mainStore.setTasks({
+      id: data.id,
+      //@ts-ignore
+      hijriTimes: HijriTimes[time],
+      task: task,
+      //@ts-ignore
+      status: SelectedStatusOption[state],
+    });
+
+    mainStore.setLoading(false);
+  };
+
   return (
     <Modal
       aria-labelledby="Edit task modal"
@@ -32,7 +59,12 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
           backgroundImage: `linear-gradient(180deg, #43abb8 0%, #394f64 78.12%)`,
         }}
       >
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
           <Typography
             component="h2"
             id="modal-title"
@@ -56,6 +88,10 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 required
                 indicator={<MdKeyboardArrowDown />}
                 placeholder="Time"
+                defaultValue={time}
+                onChange={(e, newVal) =>
+                  typeof newVal === "string" ? setTime(newVal) : ""
+                }
                 sx={{
                   width: { xs: "50%", md: "35%" },
                   fontSize: { xs: "0.813rem", md: "0.8125rem" },
@@ -69,11 +105,11 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 }}
                 variant="solid"
               >
-                <Option value={"Fajr"}>{"Fajr"}</Option>
-                <Option value={"Zuhur"}>{"Zuhur"}</Option>
-                <Option value={"Asr"}>{"Asr"}</Option>
-                <Option value={"Maghrib"}>{"Maghrib"}</Option>
-                <Option value={"Isha"}>{"Isha"}</Option>
+                <Option value={"T1"}>{"Fajr"}</Option>
+                <Option value={"T2"}>{"Zuhur"}</Option>
+                <Option value={"T3"}>{"Asr"}</Option>
+                <Option value={"T4"}>{"Maghrib"}</Option>
+                <Option value={"T5"}>{"Isha"}</Option>
               </Select>
             </Stack>
             <Stack>
@@ -86,6 +122,8 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 variant="solid"
                 minRows={4}
                 maxRows={4}
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
                 sx={{
                   fontSize: { xs: "0.813rem", md: "0.8125rem" },
                   borderRadius: "0.8rem",
@@ -103,6 +141,9 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 required
                 indicator={<MdKeyboardArrowDown />}
                 placeholder="State"
+                onChange={(e, newVal) =>
+                  typeof newVal === "string" ? setState(newVal) : ""
+                }
                 sx={{
                   width: { xs: "50%", md: "35%" },
                   fontSize: { xs: "0.813rem", md: "0.8125rem" },
@@ -116,9 +157,9 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 }}
                 variant="solid"
               >
-                <Option value={"Pending"}>{"Pending"}</Option>
-                <Option value={"Completed"}>{"Completed"}</Option>
-                <Option value={"Failed"}>{"Failed"}</Option>
+                <Option value={"O1"}>{"Pending"}</Option>
+                <Option value={"O2"}>{"Completed"}</Option>
+                <Option value={"O3"}>{"Failed"}</Option>
               </Select>
             </Stack>
             <Stack
@@ -131,11 +172,11 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 color="danger"
                 sx={{
                   borderRadius: "0.8rem",
-                  backgroundColor: "#b84743",
+                  backgroundColor: "#43abb8",
                   p: "1em 2em",
                   fontSize: "0.688rem",
                   ":hover": {
-                    backgroundColor: "#b84743af",
+                    backgroundColor: "#43aab8a4",
                   },
                 }}
                 onClick={() => setOpen(false)}
@@ -155,6 +196,28 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                 }}
               >
                 Save and Exit
+              </Button>
+            </Stack>
+            <Stack mt="1rem" justifyContent="center" width="100%">
+              <Button
+                color="warning"
+                sx={{
+                  borderRadius: "0.8rem",
+                  backgroundColor: "#b84743",
+                  p: "1em 2em",
+                  fontSize: "0.688rem",
+                  ":hover": {
+                    backgroundColor: "#b84743af",
+                  },
+                }}
+                onClick={() => {
+                  mainStore.setLoading(true);
+                  mainStore.removeTask(data.id);
+                  mainStore.setLoading(false);
+                  setOpen(false);
+                }}
+              >
+                Delete
               </Button>
             </Stack>
           </Stack>

@@ -1,10 +1,13 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/joy/Modal";
 import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
 import { Button, Option, Select, Stack, Textarea } from "@mui/joy";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { selectClasses } from "@mui/joy/Select";
+import { useMainStore } from "../../../state/mainState";
+import { TaskCard } from "../../../ts/types/taskCard";
+import { SelectedStatusOption, HijriTimes } from "../../../ts/enums/tasks";
 
 interface Props {
   open: boolean;
@@ -12,6 +15,32 @@ interface Props {
 }
 
 const AddTaskModal: React.FC<Props> = ({ open, setOpen }) => {
+  const store = useMainStore();
+
+  const [time, setTime] = useState<string>("");
+  const [task, setTask] = useState<string>("");
+
+  const handleSubmit = () => {
+    store.setLoading(true);
+
+    const id: number | null =
+      store.tasks.length > 0 ? store.tasks[store.tasks.length - 1].id : null;
+
+    const tsk: TaskCard = {
+      id: id !== null ? id + 1 : 1,
+      //@ts-ignore
+      hijriTimes: HijriTimes[time],
+      task: task,
+      status: SelectedStatusOption.O1,
+    };
+    store.setTasks(tsk);
+
+    setTime("");
+    setTask("");
+    store.setLoading(false);
+    setOpen(false);
+  };
+
   return (
     <>
       <Modal
@@ -33,7 +62,12 @@ const AddTaskModal: React.FC<Props> = ({ open, setOpen }) => {
             backgroundImage: `linear-gradient(180deg, #43abb8 0%, #394f64 78.12%)`,
           }}
         >
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+          >
             <Typography
               component="h2"
               id="modal-title"
@@ -54,6 +88,7 @@ const AddTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                   Time
                 </Typography>
                 <Select
+                  required
                   indicator={<MdKeyboardArrowDown />}
                   placeholder="Time"
                   sx={{
@@ -67,13 +102,16 @@ const AddTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                       },
                     },
                   }}
+                  onChange={(e, newVal) =>
+                    typeof newVal === "string" ? setTime(newVal) : ""
+                  }
                   variant="solid"
                 >
-                  <Option value={"Fajr"}>{"Fajr"}</Option>
-                  <Option value={"Zuhur"}>{"Zuhur"}</Option>
-                  <Option value={"Asr"}>{"Asr"}</Option>
-                  <Option value={"Maghrib"}>{"Maghrib"}</Option>
-                  <Option value={"Isha"}>{"Isha"}</Option>
+                  <Option value={"T1"}>{"Fajr"}</Option>
+                  <Option value={"T2"}>{"Zuhur"}</Option>
+                  <Option value={"T3"}>{"Asr"}</Option>
+                  <Option value={"T4"}>{"Maghrib"}</Option>
+                  <Option value={"T5"}>{"Isha"}</Option>
                 </Select>
               </Stack>
               <Stack>
@@ -81,10 +119,13 @@ const AddTaskModal: React.FC<Props> = ({ open, setOpen }) => {
                   Task
                 </Typography>
                 <Textarea
+                  required
                   placeholder="Write task here..."
                   variant="solid"
                   minRows={4}
                   maxRows={4}
+                  value={task}
+                  onChange={(e) => setTask(e.target.value)}
                   sx={{
                     fontSize: { xs: "0.813rem", md: "0.8125rem" },
                     borderRadius: "0.8rem",

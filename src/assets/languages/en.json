@@ -4,7 +4,8 @@
     "button": "Learn More",
     "lang": {
       "chosen": "EN",
-      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
+      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"],
+      "localeString": "en-US"
     },
     "solidarity": "We stand in solidarity with Palestine"
   },
@@ -73,6 +74,7 @@
         },
         "hijriTimes": ["Fajr", "Zuhur", "Asr", "Maghrib", "Isha"],
         "bottomInfoText": "Click on task to edit, delete, or to change it state. Warning! Complete the task before time pass, otherwise task will fail InshaaAllah.",
+        "noTasksText": "There are no tasks for the moment!",
         "button": "Add a Task"
       }
     },

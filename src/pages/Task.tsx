@@ -4,10 +4,19 @@ import Card from "../components/pages/task/Card";
 import { useMainStore } from "../state/mainState";
 import { useState } from "react";
 import AddTaskModal from "../components/pages/task/AddTaskModal";
+import uq from "@umalqura/core";
 
 const Task = () => {
   const lang = useMainStore((state) => state.language.pages.tasks);
   const search = useMainStore((state) => state.language.pages.tools.searchBar);
+  const locale = useMainStore((state) => state.language.nav.lang);
+  const mainStore = useMainStore();
+
+  // Hijri calendar
+  uq.locale(locale.chosen.toLowerCase()); // Gjuha a muajve
+  const hijriDate = uq(new Date()); // data Hixhrit
+  const hirjiMonths = uq.months();
+  // Hijri calendar
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -19,7 +28,12 @@ const Task = () => {
           className="tasks__panel__top-info-wrapper"
           aria-label="Top info of panel"
         >
-          <h2>{lang.secondPanel.topInfo[0]}: 3 Rebi‘ul Akhir 1445</h2>
+          <h2 dir={locale.chosen !== "ar" ? "ltr" : "rtl"}>
+            {lang.secondPanel.topInfo[0]}:{" "}
+            {`${hijriDate.hd.toLocaleString(locale.localeString)} ${
+              hirjiMonths[hijriDate.hm - 2]
+            } ${hijriDate.hy.toLocaleString(locale.localeString)}`}
+          </h2>
           <h2>4 {lang.secondPanel.topInfo[1]}</h2>
         </div>
         <div
@@ -57,8 +71,8 @@ const Task = () => {
             className="tasks__panel__task-container__card-container"
             aria-label="Tasks Cards Container"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((el) => (
-              <Card key={el} />
+            {mainStore.tasks.map((el) => (
+              <Card key={el.id} {...el} />
             ))}
           </div>
         </div>
@@ -69,7 +83,9 @@ const Task = () => {
               : { textAlign: "left" }
           }
         >
-          {lang.secondPanel.bottomInfoText}
+          {mainStore.tasks.length > 0
+            ? lang.secondPanel.bottomInfoText
+            : lang.secondPanel.noTasksText}
         </p>
         <button onClick={() => setOpen(true)}>{lang.secondPanel.button}</button>
       </div>

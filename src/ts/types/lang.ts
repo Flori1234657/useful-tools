@@ -15,6 +15,7 @@ export type Nav = {
 type Lang = {
   chosen: string;
   available: string[];
+  localeString: string;
 };
 
 type Layout = {
@@ -97,6 +98,7 @@ type SecondPanel = {
   cardsCategoryText: CardsCategoryText;
   hijriTimes: string[];
   bottomInfoText: string;
+  noTasksText: string;
   button: string;
 };
 

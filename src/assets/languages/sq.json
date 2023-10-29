@@ -4,7 +4,8 @@
     "button": "Mësoni më Shumë",
     "lang": {
       "chosen": "SQ",
-      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"]
+      "available": ["AR", "EN", "HI", "RU", "SQ", "TR"],
+      "localeString": "sq-AL"
     },
     "solidarity": "Ne qëndorjmë në solidaritet me Palestinën"
   },
@@ -73,6 +74,7 @@
         },
         "hijriTimes": ["Sabahu", "Dreka", "Ikindia", "Akshami", "Jacia"],
         "bottomInfoText": "Klikoni detyrën për ta redaktuar, fshirë ose ndryshuar gjendjen e saj. Paralajmërim! Plotësoni detyrën para se të kaloi koha, përndryshe detyra do të dështojë, InshaaAllah.",
+        "noTasksText": "Nuk ke detyra për momentin!",
         "button": "Shto Detyrë"
       }
     },
