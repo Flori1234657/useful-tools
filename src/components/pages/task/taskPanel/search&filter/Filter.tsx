@@ -1,7 +1,7 @@
 import { Select, Option } from "@mui/joy";
 import { selectClasses } from "@mui/joy/Select";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { useMainStore } from "../../../state/mainState";
+import { useMainStore } from "../../../../../state/mainState";
 
 const Filter = () => {
   const lang = useMainStore((state) => state.language.pages.tasks);

@@ -5,9 +5,9 @@ import {
 } from "react-icons/bs";
 import { RiSunFoggyFill as IkindiIcn } from "react-icons/ri";
 import { FaMoon as JaciIcn } from "react-icons/fa6";
-import { useMainStore } from "../../../state/mainState";
-import { TaskCard } from "../../../ts/types/taskCard";
-import EditTaskModal from "./EditTaskModal";
+import { useMainStore } from "../../../../../state/mainState";
+import { TaskCard } from "../../../../../ts/types/taskCard";
+import EditTaskModal from "./card/EditTaskModal";
 import React, { useState } from "react";
 
 const iconsObj = {

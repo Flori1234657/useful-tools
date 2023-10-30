@@ -5,9 +5,12 @@ import Sheet from "@mui/joy/Sheet";
 import { Button, Option, Select, Stack, Textarea } from "@mui/joy";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { selectClasses } from "@mui/joy/Select";
-import { useMainStore } from "../../../state/mainState";
-import { TaskCard } from "../../../ts/types/taskCard";
-import { SelectedStatusOption, HijriTimes } from "../../../ts/enums/tasks";
+import { useMainStore } from "../../../../../../state/mainState";
+import { TaskCard } from "../../../../../../ts/types/taskCard";
+import {
+  SelectedStatusOption,
+  HijriTimes,
+} from "../../../../../../ts/enums/tasks";
 
 interface Props {
   open: boolean;

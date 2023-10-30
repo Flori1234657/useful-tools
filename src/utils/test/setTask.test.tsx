@@ -15,8 +15,8 @@ const pushOnTestArr = (times: HijriTimes) => {
 };
 
 pushOnTestArr(HijriTimes.T1);
+testArr[0].hijriTimes = HijriTimes.T5;
 pushOnTestArr(HijriTimes.T2);
-testArr[399999].hijriTimes = HijriTimes.T4;
 pushOnTestArr(HijriTimes.T3);
 pushOnTestArr(HijriTimes.T4);
 pushOnTestArr(HijriTimes.T5);
@@ -24,6 +24,7 @@ pushOnTestArr(HijriTimes.T5);
 test("Will insertion sort perform well on 1M tasks with 1 unsorted item?", () => {
   let startTime: number;
   let endTime: number;
+  let finalTime: number = 0;
 
   const mockFunc = (): TaskCard[] => {
     let arry = [...testArr];
@@ -42,13 +43,11 @@ test("Will insertion sort perform well on 1M tasks with 1 unsorted item?", () =>
     }
 
     endTime = performance.now();
+    finalTime = startTime - endTime;
     return arry;
   };
 
   mockFunc();
-
-  // @ts-ignore
-  const finalTime = startTime - endTime;
 
   expect(finalTime).toBeLessThan(30); //milliseconds
 });
