@@ -8,6 +8,7 @@ import { selectClasses } from "@mui/joy/Select";
 import { useMainStore } from "../../../state/mainState";
 import { TaskCard } from "../../../ts/types/taskCard";
 import { SelectedStatusOption, HijriTimes } from "../../../ts/enums/tasks";
+import { v4 as uuidv4 } from "uuid";
 
 interface Props {
   open: boolean;
@@ -23,11 +24,10 @@ const AddTaskModal: React.FC<Props> = ({ open, setOpen }) => {
   const handleSubmit = () => {
     store.setLoading(true);
 
-    const id: number | null =
-      store.tasks.length > 0 ? store.tasks[store.tasks.length - 1].id : null;
+    const id: string = uuidv4();
 
     const tsk: TaskCard = {
-      id: id !== null ? id + 1 : 1,
+      id: id,
       //@ts-ignore
       hijriTimes: HijriTimes[time],
       task: task,

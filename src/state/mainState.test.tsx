@@ -4,7 +4,7 @@ import { LangType } from "../ts/enums/language";
 import { changeLang } from "../utils/changeLang";
 import App from "../App";
 
-test("A ndryshon gjuhën?", async () => {
+test("Does the language change?", async () => {
   const effect = vi
     .fn()
     .mockImplementation(async () => await changeLang(LangType.AR));

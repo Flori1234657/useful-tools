@@ -37,6 +37,7 @@ const EditTaskModal: React.FC<Props> = ({ open, setOpen, data }) => {
     });
 
     mainStore.setLoading(false);
+    setOpen(false);
   };
 
   return (

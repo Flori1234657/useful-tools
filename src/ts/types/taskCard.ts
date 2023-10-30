@@ -1,7 +1,7 @@
 import { SelectedStatusOption, HijriTimes } from "../enums/tasks";
 
 export type TaskCard = {
-  id: number;
+  id: string;
   hijriTimes: HijriTimes;
   task: string;
   status: SelectedStatusOption;

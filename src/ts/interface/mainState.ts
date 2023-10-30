@@ -7,7 +7,7 @@ export interface MainState {
   errors: string;
   loading: boolean;
   setTasks: (task: TaskCard) => void;
-  removeTask: (id: number) => void;
+  removeTask: (id: string) => void;
   setErrors: (err: string) => void;
   setLoading: (load: boolean) => void;
 }
