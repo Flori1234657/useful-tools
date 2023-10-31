@@ -1,21 +1,16 @@
 import { Language } from "../ts/types/lang";
 import useBrText from "../hooks/useBrText";
-import { useEffect, useState } from "react";
 import returnBreakpoint from "../utils/returnBreakpoint";
+import useBestImage from "../hooks/useBestImage";
 
 const Services = (lang: Language) => {
   const servicesStrings = lang.layout.services;
   const paragraph = useBrText(servicesStrings.paragraph);
-  const [bestImage, setBestImage] = useState<string>("");
 
-  useEffect(() => {
-    const winBreakpoint = returnBreakpoint();
-    import(`../assets/images/aboutImg${winBreakpoint}.webp`)
-      .then((img) => setBestImage(img.default))
-      .catch(
-        (err) => console.log(err) // Me ui dhe lang files
-      );
-  }, []);
+  const winBreakpoint = returnBreakpoint();
+  const bestImage = useBestImage({
+    path: `../assets/images/aboutImg${winBreakpoint}.webp`,
+  });
 
   return (
     <main className="services">

@@ -1,26 +1,18 @@
 import { Language } from "../ts/types/lang";
-import { useEffect, useState } from "react";
 import returnBreakpoint from "../utils/returnBreakpoint";
+import useBestImage from "../hooks/useBestImage";
 
 const Hero = (lang: Language) => {
+  const winBreakpoint = returnBreakpoint();
   const homeStrings = lang.layout.hero;
-  const [copyrightImage, setCopyrightImage] = useState(null);
-  const [bestImage, setBestImage] = useState<string>("");
 
-  useEffect(() => {
-    import(`../assets/images/adobeCopyright${lang.nav.lang.chosen}.webp`)
-      .then((img) => setCopyrightImage(img.default))
-      .catch((err) => console.log(err));
-  }, [lang]);
-
-  useEffect(() => {
-    const winBreakpoint = returnBreakpoint();
-    import(`../assets/images/bckgMachine${winBreakpoint}.webp`)
-      .then((img) => setBestImage(img.default))
-      .catch(
-        (err) => console.log(err) // Me ui dhe lang files
-      );
-  }, []);
+  const copyrightImage = useBestImage({
+    dependency: lang,
+    path: `../assets/images/adobeCopyright${lang.nav.lang.chosen}.webp`,
+  });
+  const bestImage = useBestImage({
+    path: `../assets/images/bckgMachine${winBreakpoint}.webp`,
+  });
 
   return (
     <header
@@ -37,13 +29,12 @@ const Hero = (lang: Language) => {
         <button>{homeStrings.button}</button>
       </div>
       <img src={bestImage} alt="Machine image" className="hero-phone-img" />
-      {copyrightImage !== null && (
-        <img
-          src={copyrightImage}
-          alt="Adobe Copyright"
-          className="hero-phone-adobe-copyright-img"
-        />
-      )}
+
+      <img
+        src={copyrightImage}
+        alt="Adobe Copyright"
+        className="hero-phone-adobe-copyright-img"
+      />
     </header>
   );
 };
