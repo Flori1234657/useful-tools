@@ -72,6 +72,28 @@
           "txt2": "Detyra",
           "txt3": "Gjendja"
         },
+        "taskModal": {
+          "sheet": {
+            "addTaskSheetHt": "Shto një detyrë!",
+            "editTaskSheetHt": "Ndrysho ktë detyrë!",
+            "stateSelect": {
+              "headingText": "Gjëndja"
+            },
+            "taskTextArea": {
+              "headingText": "Detyra",
+              "placeholder": "Shkruaj detyrën këtu..."
+            },
+            "timeSelect": {
+              "headingText": "Koha"
+            }
+          },
+          "cancelBtn": "Anullo",
+          "deleteBtn": "Fshih",
+          "submitBtn": {
+            "addTask": "Shto Detyrë",
+            "editTask": "Ruaj dhe Dil"
+          }
+        },
         "hijriTimes": ["Sabahu", "Dreka", "Ikindia", "Akshami", "Jacia"],
         "bottomInfoText": "Klikoni detyrën për ta redaktuar, fshirë ose ndryshuar gjendjen e saj. Paralajmërim! Plotësoni detyrën para se të kaloi koha, përndryshe detyra do të dështojë, InshaaAllah.",
         "noTasksText": "Nuk ke detyra për momentin!",

@@ -72,6 +72,28 @@
           "txt2": "المهمة",
           "txt3": "الحالة"
         },
+        "taskModal": {
+          "sheet": {
+            "addTaskSheetHt": "!إضافة مهمة جديدة",
+            "editTaskSheetHt": "!تحرير هذه المهمة",
+            "stateSelect": {
+              "headingText": "ولاية"
+            },
+            "taskTextArea": {
+              "headingText": "مهمة",
+              "placeholder": "أكتب المهمة هنا"
+            },
+            "timeSelect": {
+              "headingText": "وقت"
+            }
+          },
+          "cancelBtn": "يلغي",
+          "deleteBtn": "يمسح",
+          "submitBtn": {
+            "addTask": "إضافة مهمة",
+            "editTask": "حفظ وخروج"
+          }
+        },
         "hijriTimes": ["الفجر", "الظهر", "العصر", "المغرب", "العشاء"],
         "bottomInfoText": "انقر على المهمة لتحريرها، حذفها، أو تغيير حالتها. تنبيه! أكمل المهمة قبل أن يمر الوقت، وإلا ستفشل المهمة بإذن الله.",
         "noTasksText": "!لا توجد مهام في الوقت الراهن",

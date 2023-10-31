@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import { LangType } from "../ts/enums/language";
-import { changeLang } from "../utils/changeLang";
-import App from "../App";
+import { LangType } from "../../ts/enums/language";
+import { changeLang } from "../../utils/changeLang";
+import App from "../../App";
 
 test("Does the language change?", async () => {
   const effect = vi

@@ -96,6 +96,7 @@ type SecondPanel = {
   topInfo: string[];
   filter_Status: FilterStatus;
   cardsCategoryText: CardsCategoryText;
+  taskModal: TaskModal;
   hijriTimes: string[];
   bottomInfoText: string;
   noTasksText: string;
@@ -131,4 +132,27 @@ type SubHeading = {
 type Errors = {
   tools: string;
   lang: string;
+};
+
+type TaskModal = {
+  sheet: {
+    addTaskSheetHt: string;
+    editTaskSheetHt: string;
+    stateSelect: {
+      headingText: string;
+    };
+    taskTextArea: {
+      headingText: string;
+      placeholder: string;
+    };
+    timeSelect: {
+      headingText: string;
+    };
+  };
+  cancelBtn: string;
+  deleteBtn: string;
+  submitBtn: {
+    addTask: string;
+    editTask: string;
+  };
 };

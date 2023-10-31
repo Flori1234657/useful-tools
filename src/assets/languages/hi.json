@@ -72,6 +72,28 @@
           "txt2": "कार्य",
           "txt3": "स्थिति"
         },
+        "taskModal": {
+          "sheet": {
+            "addTaskSheetHt": "एक नया कार्य जोड़ें!",
+            "editTaskSheetHt": "इस कार्य को संपादित करें!",
+            "stateSelect": {
+              "headingText": "राज्य"
+            },
+            "taskTextArea": {
+              "headingText": "काम",
+              "placeholder": "कार्य यहां लिखें..."
+            },
+            "timeSelect": {
+              "headingText": "समय"
+            }
+          },
+          "cancelBtn": "रद्द करना",
+          "deleteBtn": "मिटाना",
+          "submitBtn": {
+            "addTask": "कार्य जोड़ें",
+            "editTask": "सुरषित और बहार"
+          }
+        },
         "hijriTimes": ["फज्र", "जुहुर", "असर", "मग़रिब", "इशा"],
         "bottomInfoText": "कार्य को संपादित, हटाया, या उसकी स्थिति बदलने के लिए क्लिक करें। चेतावनी! समय बीतने से पहले कार्य पूरा करें, अन्यथा कार्य विफल हो जाएगा, इंशा अल्लाह।",
         "noTasksText": "फिलहाल कोई कार्य नहीं हैं!",

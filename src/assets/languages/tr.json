@@ -72,6 +72,28 @@
           "txt2": "Görev",
           "txt3": "Durum"
         },
+        "taskModal": {
+          "sheet": {
+            "addTaskSheetHt": "Yeni bir görev ekle!",
+            "editTaskSheetHt": "Bu görevi düzenle!",
+            "stateSelect": {
+              "headingText": "Durum"
+            },
+            "taskTextArea": {
+              "headingText": "Görev",
+              "placeholder": "Görevi buraya yazın..."
+            },
+            "timeSelect": {
+              "headingText": "Zaman"
+            }
+          },
+          "cancelBtn": "İptal",
+          "deleteBtn": "Sil",
+          "submitBtn": {
+            "addTask": "Görev Ekle",
+            "editTask": "Kaydet ve Çık"
+          }
+        },
         "hijriTimes": ["Fecir", "Zuhr", "Aser", "Akşam", "İşa"],
         "bottomInfoText": "Düzenlemek, silmek veya durumunu değiştirmek için bir göreve tıklayın. Uyarı! Görevi süre dolmadan tamamlayın, aksi takdirde görev başarısız olur, inşaAllah.",
         "noTasksText": "Şu anda hiçbir görev yok!",

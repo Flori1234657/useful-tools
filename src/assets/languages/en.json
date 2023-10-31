@@ -72,6 +72,28 @@
           "txt2": "Task",
           "txt3": "State"
         },
+        "taskModal": {
+          "sheet": {
+            "addTaskSheetHt": "Add a new task!",
+            "editTaskSheetHt": "Edit this task!",
+            "stateSelect": {
+              "headingText": "State"
+            },
+            "taskTextArea": {
+              "headingText": "Task",
+              "placeholder": "Write task here..."
+            },
+            "timeSelect": {
+              "headingText": "Time"
+            }
+          },
+          "cancelBtn": "Cancel",
+          "deleteBtn": "Delete",
+          "submitBtn": {
+            "addTask": "Add Task",
+            "editTask": "Save and Exit"
+          }
+        },
         "hijriTimes": ["Fajr", "Zuhur", "Asr", "Maghrib", "Isha"],
         "bottomInfoText": "Click on task to edit, delete, or to change it state. Warning! Complete the task before time pass, otherwise task will fail InshaaAllah.",
         "noTasksText": "There are no tasks for the moment!",

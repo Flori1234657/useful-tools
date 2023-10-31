@@ -8,6 +8,7 @@ const Filter = () => {
 
   return (
     <Select
+      dir={lang.headingTxt === "خطط ليومك!" ? "rtl" : "ltr"}
       size="sm"
       indicator={<MdKeyboardArrowDown />}
       sx={{
