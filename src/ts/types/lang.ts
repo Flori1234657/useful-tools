@@ -88,8 +88,16 @@ type Tasks = {
 
 type FirstPanel = {
   headingTxt: string;
-  calendars: string[];
-  button: string;
+  selectsGroup: {
+    country: string;
+    city: string;
+  };
+  countriesNames: string[];
+  informationText: string;
+  buttons: {
+    btnContinue: string;
+    btnSkip: string;
+  };
 };
 
 type SecondPanel = {

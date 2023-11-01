@@ -55,9 +55,30 @@
     "tasks": {
       "headingTxt": "Planifikoni ditën tuaj!",
       "firstPanel": {
-        "headingTxt": "Përshëndetje! Jeni i ri këtu, ju lutem zgjidhni kalendarin fillimisht.",
-        "calendars": ["Gjregorian", "Hixhri"],
-        "button": "Vazhdoni"
+        "headingTxt": "Konfiguroni panelin e detyrave",
+        "selectsGroup": {
+          "country": "Shteit",
+          "city": "Qyteti"
+        },
+        "countriesNames": [
+          "Shqipëria",
+          "Egjipti",
+          "India",
+          "Iraku",
+          "Arabia Saudite",
+          "Pakistani",
+          "Palestina",
+          "Rusia",
+          "Siria",
+          "Turqia",
+          "Britania",
+          "Amerika"
+        ],
+        "informationText": "Ne e duam këtë informacion për të bërë ndryshime tek detyrat kur afati që ti i jep kalon bazuar në zonën tënde!. Nëse nuk e vendosni ktë informacion, juve ju duhet që të fshihni ose ndryshoni gjëndjen e detyrave manualisht, edhe nëse afati i detyrës kalon.",
+        "buttons": {
+          "btnContinue": "Vazhdo",
+          "btnSkip": "Kapërce"
+        }
       },
       "secondPanel": {
         "topInfo": ["Data", "Detyra"],

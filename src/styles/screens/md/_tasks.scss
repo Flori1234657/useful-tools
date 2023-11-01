@@ -119,15 +119,25 @@
           }
         }
       }
+      button:last-child {
+        font-size: 0.8125rem;
+        margin: 1.3rem 0;
+      }
+    }
+    .tasks__config-panel {
+      width: 45.375rem;
+      border-radius: 1.13rem;
+      margin-bottom: 5.5rem;
+      h2 {
+        font-size: 2.15385rem;
+        font-weight: 500;
+        padding: 2.462rem 0;
+      }
     }
     p {
       max-width: 34.375rem;
       font-size: 0.8125rem;
       padding: 0;
-    }
-    button:last-child {
-      font-size: 0.8125rem;
-      margin: 1.3rem 0;
     }
   }
 }

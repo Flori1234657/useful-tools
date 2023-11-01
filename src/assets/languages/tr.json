@@ -55,9 +55,30 @@
     "tasks": {
       "headingTxt": "Gününüzü Planlayın!",
       "firstPanel": {
-        "headingTxt": "Merhaba! Burada yenisiniz, lütfen önce takvimi seçin.",
-        "calendars": ["Miladi", "Hicri"],
-        "button": "Devam"
+        "headingTxt": "Görev panelini kur",
+        "selectsGroup": {
+          "country": "Ülke",
+          "city": "Şehir"
+        },
+        "countriesNames": [
+          "Arnavutluk",
+          "Mısır",
+          "Hindistan",
+          "Irak",
+          "Suudi Arabistan",
+          "Pakistan",
+          "Filistin",
+          "Rusya",
+          "Suriye",
+          "Türkiye",
+          "Birleşik Krallık",
+          "Amerika Birleşik Devletleri"
+        ],
+        "informationText": "Bölge zamanlarınıza göre geçiş izni verdiğiniz görevlerde değişiklik yapmak için bu bilgiye ihtiyacımız var! Bu bilgiyi sağlamazsanız, görevleri tamamlama zamanı gelse bile manuel olarak silmeniz veya görevlerin durumunu değiştirmeniz gerekecektir. görev geçişi.",
+        "buttons": {
+          "btnContinue": "Devam etmek",
+          "btnSkip": "Atlamak"
+        }
       },
       "secondPanel": {
         "topInfo": ["Tarih", "Görevler"],

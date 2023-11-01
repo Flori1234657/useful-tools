@@ -116,20 +116,36 @@
         }
       }
     }
+    button:last-child {
+      @include mix.button(
+        white,
+        0.813rem,
+        700,
+        1em 2em,
+        1rem 0,
+        0.75rem,
+        vr.$green
+      );
+    }
+  }
+  .tasks__config-panel {
+    width: 90.65%;
+    border-radius: 1.5rem;
+    background-image: vr.$tools-panel-background;
+    box-shadow: vr.$tools-panel-box-shadow;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    @include mix.flex-col-center;
+    h2 {
+      @include mix.font(white, 1.188rem, 600, 1.5rem 0, 0);
+    }
+    form {
+      width: 90%;
+      @include mix.flex-col-center;
+    }
   }
   p {
     @include mix.font(white, 0.813rem, 400, 0 1rem, 0);
-  }
-  button:last-child {
-    @include mix.button(
-      white,
-      0.813rem,
-      700,
-      1em 2em,
-      1rem 0,
-      0.75rem,
-      vr.$green
-    );
   }
 
   #modal-btn1 {

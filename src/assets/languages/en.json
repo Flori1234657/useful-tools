@@ -55,9 +55,30 @@
     "tasks": {
       "headingTxt": "Plan your day!",
       "firstPanel": {
-        "headingTxt": "Hello! You are new here, please chose the calendar first.",
-        "calendars": ["Gregorian", "Hijri"],
-        "button": "Continue"
+        "headingTxt": "Setup the tasks panel",
+        "selectsGroup": {
+          "country": "Country",
+          "city": "City"
+        },
+        "countriesNames": [
+          "Albania",
+          "Egypt",
+          "India",
+          "Iraq",
+          "Saudi Arabia",
+          "Pakistan",
+          "Palestine",
+          "Russia",
+          "Syria",
+          "Turkey",
+          "United Kingdom",
+          "United States"
+        ],
+        "informationText": "We need this information to make changes to the tasks when deadline you give them pass based on your area times!. If you don't provide this information, you will need to manually delete or change tasks state, even if time to complete the task pass.",
+        "buttons": {
+          "btnContinue": "Continue",
+          "btnSkip": "Skip"
+        }
       },
       "secondPanel": {
         "topInfo": ["Date", "Tasks"],

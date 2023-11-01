@@ -12,6 +12,9 @@ export const useMainStore = create<MainState>()(
         tasks: [],
         errors: "",
         loading: false,
+        taskSetup: {
+          newUser: true,
+        },
         setTasks: (task) =>
           set((state) => setTask(state, task), false, "Set or edit task"), // Kjo InshaaAllah do perdoret edhe per edit
         removeTask: (id) =>
