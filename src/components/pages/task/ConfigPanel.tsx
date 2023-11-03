@@ -5,6 +5,7 @@ import { useMainStore } from "../../../state/mainState";
 import { useState } from "react";
 import { AvailableCountries as Avc } from "../../../ts/enums/countries";
 import { configTaskPanel } from "../../../utils/tasks/setupTaskPanel";
+import Error from "../../error/Error";
 
 const ConfigPanel = () => {
   const lang = useMainStore((state) => state.language.pages.tasks.firstPanel);
@@ -43,6 +44,7 @@ const ConfigPanel = () => {
         </Typography>
         <ButtonsGr cit={selectedCity} con={selectedCountry} />
       </form>
+      <Error />
     </div>
   );
 };

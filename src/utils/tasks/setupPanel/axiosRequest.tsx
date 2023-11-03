@@ -39,7 +39,10 @@ export const getPrayerTimes = async ({ country, city }: GetProps) => {
     };
   } catch (error) {
     console.log(error);
-    useMainStore.setState(() => ({ loading: false }));
+    useMainStore.setState(() => ({
+      loading: false,
+      errors: "Error",
+    }));
     return null;
   }
 };

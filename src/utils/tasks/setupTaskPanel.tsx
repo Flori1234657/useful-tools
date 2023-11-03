@@ -9,10 +9,7 @@ export const configTaskPanel = async (
 ) => {
   const getRequest = await getPrayerTimes({ country, city });
 
-  if (getRequest === null) {
-    alert("Ndodhi nje problem provoni me von");
-    return;
-  }
+  if (getRequest === null) return;
 
   useTaskStore.setState(() => {
     const startPathU = getRequest.uq;

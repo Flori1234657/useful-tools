@@ -98,6 +98,16 @@ type FirstPanel = {
     btnContinue: string;
     btnSkip: string;
   };
+  errors: {
+    headingErrTxt: string;
+    axios: {
+      "404Status": string;
+      "500Status": string;
+      others: string;
+    };
+    tryLater: string;
+    closeBtn: string;
+  };
 };
 
 type SecondPanel = {
