@@ -2,15 +2,32 @@ import SelectsGroup from "./setupPanel/SelectsGroup";
 import ButtonsGr from "./setupPanel/ButtonsGr";
 import { Typography } from "@mui/joy";
 import { useMainStore } from "../../../state/mainState";
+import { useState } from "react";
+import { AvailableCountries as Avc } from "../../../ts/enums/countries";
+import { configTaskPanel } from "../../../utils/tasks/setupTaskPanel";
 
 const ConfigPanel = () => {
   const lang = useMainStore((state) => state.language.pages.tasks.firstPanel);
 
+  const [selectedCountry, setSelectedCountry] = useState<Avc | undefined>(
+    undefined
+  );
+  const [selectedCity, setSelectedCity] = useState<string>("");
+
   return (
     <div className="tasks__config-panel" aria-label="Config Task Panel">
       <h2>{lang.headingTxt}</h2>
-      <form>
-        <SelectsGroup />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          configTaskPanel(selectedCountry!, selectedCity);
+        }}
+      >
+        <SelectsGroup
+          selectedCountry={selectedCountry}
+          setSelectedCity={setSelectedCity}
+          setSelectedCountry={setSelectedCountry}
+        />
         <Typography
           level="h4"
           fontWeight="400"
@@ -24,7 +41,7 @@ const ConfigPanel = () => {
         >
           {lang.informationText}
         </Typography>
-        <ButtonsGr />
+        <ButtonsGr cit={selectedCity} con={selectedCountry} />
       </form>
     </div>
   );

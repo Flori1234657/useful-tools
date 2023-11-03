@@ -1,4 +1,5 @@
 import { useMainStore } from "../state/mainState";
+import { useTaskStore } from "../state/tasksState";
 import { useState, lazy, Suspense } from "react";
 import AddTaskModal from "../components/pages/task/AddTaskModal";
 
@@ -7,12 +8,12 @@ const ConfigPanel = lazy(() => import("../components/pages/task/ConfigPanel"));
 
 const Task = () => {
   const lang = useMainStore((state) => state.language.pages.tasks);
-  const mainStore = useMainStore();
+  const tasksStore = useTaskStore();
 
   const [open, setOpen] = useState<boolean>(false);
 
   const [togglePanel, setTogglePanel] = useState<boolean>(
-    mainStore.taskSetup.newUser
+    tasksStore.taskSetup.newUser
   );
 
   return (

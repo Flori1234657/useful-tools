@@ -1,12 +1,13 @@
 import { useMainStore } from "../../../../state/mainState";
+import { useTaskStore } from "../../../../state/tasksState";
 
 const BottomInfo = () => {
   const lang = useMainStore((state) => state.language.pages.tasks);
-  const mainStore = useMainStore();
+  const tasksStore = useTaskStore();
 
   return (
     <p dir={lang.headingTxt === "خطط ليومك!" ? "rtl" : "ltr"}>
-      {mainStore.tasks.length > 0
+      {tasksStore.tasks.length > 0
         ? lang.secondPanel.bottomInfoText
         : lang.secondPanel.noTasksText}
     </p>

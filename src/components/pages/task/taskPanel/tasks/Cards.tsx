@@ -1,12 +1,12 @@
-import { useMainStore } from "../../../../../state/mainState";
+import { useTaskStore } from "../../../../../state/tasksState";
 import Card from "./Card";
 
 const Cards = () => {
-  const mainStore = useMainStore();
+  const tasksStore = useTaskStore();
 
   return (
     <>
-      {mainStore.tasks.map((el) => (
+      {tasksStore.tasks.map((el) => (
         <Card key={el.id} {...el} />
       ))}
     </>

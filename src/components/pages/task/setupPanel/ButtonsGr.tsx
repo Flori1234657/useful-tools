@@ -1,8 +1,15 @@
 import { Button, Stack } from "@mui/joy";
 import { useMainStore } from "../../../../state/mainState";
+import { AvailableCountries as Avc } from "../../../../ts/enums/countries";
 
-const ButtonsGr = () => {
+interface Props {
+  con: Avc | undefined;
+  cit: string;
+}
+
+const ButtonsGr = (props: Props) => {
   const lang = useMainStore((state) => state.language.pages.tasks.firstPanel);
+  const mainStore = useMainStore();
 
   return (
     <Stack
@@ -13,6 +20,9 @@ const ButtonsGr = () => {
       width={{ xs: "100%", md: "auto" }}
     >
       <Button
+        loading={mainStore.loading}
+        disabled={props.con === undefined || props.cit === ""}
+        type="submit"
         sx={{
           fontSize: { xs: "0.813rem", md: "0.84615rem" },
           borderRadius: "0.75rem",

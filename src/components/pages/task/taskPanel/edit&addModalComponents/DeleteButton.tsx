@@ -2,6 +2,7 @@ import { Button, Stack } from "@mui/joy";
 import React from "react";
 import { useMainStore } from "../../../../../state/mainState";
 import { TaskCard } from "../../../../../ts/types/taskCard";
+import { useTaskStore } from "../../../../../state/tasksState";
 
 interface Props {
   data: TaskCard;
@@ -10,6 +11,7 @@ interface Props {
 
 const DeleteButton: React.FC<Props> = ({ data, setOpen }) => {
   const mainStore = useMainStore();
+  const tasksStore = useTaskStore();
   const lang = useMainStore(
     (state) => state.language.pages.tasks.secondPanel.taskModal
   );
@@ -29,7 +31,7 @@ const DeleteButton: React.FC<Props> = ({ data, setOpen }) => {
         }}
         onClick={() => {
           mainStore.setLoading(true);
-          mainStore.removeTask(data.id);
+          tasksStore.removeTask(data.id);
           mainStore.setLoading(false);
           setOpen(false);
         }}

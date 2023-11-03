@@ -3,6 +3,7 @@ import { AvailableCountries as Avc } from "../../../../../../ts/enums/countries"
 import { useState, useEffect } from "react";
 import { useMainStore } from "../../../../../../state/mainState";
 import { CountryCity } from "../../../../../../ts/types/cities";
+import Cities from "../../../../../../data/cities/en.json";
 
 const Options = (props: { selectedCountry: Avc }) => {
   const selCn = props.selectedCountry;
@@ -19,8 +20,8 @@ const Options = (props: { selectedCountry: Avc }) => {
 
   return (
     cities !== undefined &&
-    cities[selCn].map((el) => (
-      <Option key={el} value={el}>
+    cities[selCn].map((el, i) => (
+      <Option key={el} value={Cities[selCn][i]}>
         {el.replace(/\W\d+/g, " ")}
       </Option>
     ))

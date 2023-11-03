@@ -1,5 +1,5 @@
-import { TaskCard } from "../ts/types/taskCard";
-import { MainState } from "../ts/interface/mainState";
+import { TaskCard } from "../../ts/types/taskCard";
+import { TasksState } from "../../ts/interface/tasksState";
 
 type ReturnProps = {
   tasks: TaskCard[];
@@ -26,7 +26,7 @@ const sort = (arr: TaskCard[]): TaskCard[] => {
 
 // Final function also here sort fc will be called InshaaAllah
 
-const setTask = (prevState: MainState, task: TaskCard): ReturnProps => {
+const setTask = (prevState: TasksState, task: TaskCard): ReturnProps => {
   let areEqual: boolean = false;
 
   if (prevState.tasks.length > 0) {

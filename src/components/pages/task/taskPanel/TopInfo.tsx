@@ -1,9 +1,11 @@
 import { useMainStore } from "../../../../state/mainState";
 import useHijriCalendar from "../../../../hooks/useHijriCalendar";
+import { useTaskStore } from "../../../../state/tasksState";
 
 const TopInfo = () => {
   const locale = useMainStore((state) => state.language.nav.lang);
   const mainStore = useMainStore();
+  const tasksStore = useTaskStore();
   const lang = useMainStore(
     (state) => state.language.pages.tasks.secondPanel.topInfo
   );
@@ -18,7 +20,7 @@ const TopInfo = () => {
         {lang[0]}: {`${hjDate} ${hjMonths[hjMonth - 2]} ${hjYear}`}
       </h2>
       <h2>
-        {mainStore.tasks.length.toLocaleString(
+        {tasksStore.tasks.length.toLocaleString(
           mainStore.language.nav.lang.localeString
         )}{" "}
         {lang[1]}

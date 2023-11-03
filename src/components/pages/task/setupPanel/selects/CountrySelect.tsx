@@ -6,6 +6,7 @@ import { useMainStore } from "../../../../../state/mainState";
 
 const CountrySelect = (props: {
   setSelectedCountry: React.Dispatch<React.SetStateAction<Avc | undefined>>;
+  setSelectedCity: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const setCountry = props.setSelectedCountry;
 
@@ -19,8 +20,14 @@ const CountrySelect = (props: {
       sx={selectStyles}
       indicator={<MdKeyboardArrowDown />}
       variant="solid"
-      //@ts-ignore
-      onChange={(e, val) => val !== null && setCountry(val)}
+      onChange={(e, val) =>
+        val !== null &&
+        //@ts-ignore
+        setCountry((prev) => {
+          if (prev !== val) props.setSelectedCity("");
+          return val;
+        })
+      }
       slotProps={{
         listbox: {
           placement: "bottom-start",

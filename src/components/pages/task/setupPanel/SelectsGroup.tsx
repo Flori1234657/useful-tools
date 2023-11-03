@@ -1,15 +1,17 @@
 import { Stack, Typography } from "@mui/joy";
 import CountrySelect from "./selects/CountrySelect";
 import CitySelect from "./selects/CitySelect";
-import { useState } from "react";
 import { AvailableCountries as Avc } from "../../../../ts/enums/countries";
 import { useMainStore } from "../../../../state/mainState";
 
-const SelectsGroup = () => {
+interface Props {
+  selectedCountry: Avc | undefined;
+  setSelectedCountry: React.Dispatch<React.SetStateAction<Avc | undefined>>;
+  setSelectedCity: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const SelectsGroup = (props: Props) => {
   const lang = useMainStore((state) => state.language.pages.tasks.firstPanel);
-  const [selectedCountry, setSelectedCountry] = useState<Avc | undefined>(
-    undefined
-  );
 
   return (
     <Stack
@@ -33,7 +35,10 @@ const SelectsGroup = () => {
         >
           {lang.selectsGroup.country}
         </Typography>
-        <CountrySelect setSelectedCountry={setSelectedCountry} />
+        <CountrySelect
+          setSelectedCountry={props.setSelectedCountry}
+          setSelectedCity={props.setSelectedCity}
+        />
       </Stack>
       <Stack sx={{ width: { xs: "60%", md: "9.23rem" } }}>
         <Typography
@@ -51,7 +56,10 @@ const SelectsGroup = () => {
         >
           {lang.selectsGroup.city}
         </Typography>
-        <CitySelect selectedCountry={selectedCountry} />
+        <CitySelect
+          selectedCountry={props.selectedCountry}
+          setSelectedCity={props.setSelectedCity}
+        />
       </Stack>
     </Stack>
   );
