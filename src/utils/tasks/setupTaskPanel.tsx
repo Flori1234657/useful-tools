@@ -15,10 +15,14 @@ export const configTaskPanel = async (
     const startPathU = getRequest.uq;
     const startPathM = getRequest.mwl;
 
+    const date = new Date();
+
     const data: TaskConfig = {
       newUser: false,
       country: country,
       city: city,
+      fetchDate: `${date.getDate()}${date.getMonth()}${date.getFullYear()}`,
+      skipped: false,
       times: {
         Fajr: startPathU.Fajr,
         Sunrise: startPathU.Sunrise,

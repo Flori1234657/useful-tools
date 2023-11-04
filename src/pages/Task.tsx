@@ -12,18 +12,18 @@ const Task = () => {
 
   const [open, setOpen] = useState<boolean>(false);
 
-  const [togglePanel, setTogglePanel] = useState<boolean>(
-    tasksStore.taskSetup.newUser
-  );
-
   return (
-    <Suspense fallback={<h3>Loading ...</h3>}>
-      <main className="tasks">
-        <h1>{lang.headingTxt}</h1>
-        {togglePanel ? <ConfigPanel /> : <TasksPanel setOpen={setOpen} />}
-        <AddTaskModal open={open} setOpen={setOpen} />
-      </main>
-    </Suspense>
+    <main className="tasks">
+      <h1>{lang.headingTxt}</h1>
+      <Suspense fallback={""}>
+        {tasksStore.taskSetup.newUser ? (
+          <ConfigPanel />
+        ) : (
+          <TasksPanel setOpen={setOpen} />
+        )}
+      </Suspense>
+      <AddTaskModal open={open} setOpen={setOpen} />
+    </main>
   );
 };
 

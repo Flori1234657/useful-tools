@@ -5,6 +5,8 @@ export type TaskConfig = {
   country?: AvailableCountries;
   city?: string;
   times?: HijriDayTimes;
+  fetchDate?: string;
+  skipped?: boolean;
 };
 
 export type HijriDayTimes = {

@@ -82,8 +82,6 @@
         "errors": {
           "headingErrTxt": "Problem!",
           "axios": {
-            "404Status": "Nuk mundëm ti marrim të dhënat për qytetin e përzgjedhur!",
-            "500Status": "Patëm probleme në lidhjen me serverin!",
             "others": "Patëm një problem në përpjekje për të ruajtur konfigurimet!"
           },
           "tryLater": "Ju lutem provoni më vonë.",

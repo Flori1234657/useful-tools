@@ -82,8 +82,6 @@
         "errors": {
           "headingErrTxt": "Hata!",
           "axios": {
-            "404Status": "Seçilen şehir için verileri alamadık!",
-            "500Status": "Sunucuya bağlanırken sorunlar yaşadık!",
             "others": "Yapılandırmaları kaydetmeye çalışırken bir sorunla karşılaştık!"
           },
           "tryLater": "Lütfen daha sonra tekrar deneyin.",

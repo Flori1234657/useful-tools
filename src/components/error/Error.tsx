@@ -2,7 +2,7 @@ import { Button, Modal, Stack, Typography } from "@mui/joy";
 import { useState, useEffect } from "react";
 import { useMainStore } from "../../state/mainState";
 
-const Error = () => {
+const Error = ({ errStr }: { errStr: string }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const mainStore = useMainStore();
@@ -11,7 +11,7 @@ const Error = () => {
   );
 
   useEffect(() => {
-    if (mainStore.errors !== "") setOpen(true);
+    if (mainStore.errors) setOpen(true);
   }, [mainStore.errors]);
 
   return (
@@ -40,7 +40,7 @@ const Error = () => {
           mx={{ xs: "1em", md: "1.769rem", lg: "1.438rem" }}
           my="1em"
         >
-          {errors.axios.others}
+          {errStr}
           <br />
           {errors.tryLater}
         </Typography>
@@ -55,7 +55,10 @@ const Error = () => {
             py: { md: "1em" },
           }}
           color="danger"
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            useMainStore.setState(() => ({ errors: false }));
+          }}
         >
           {errors.closeBtn}
         </Button>

@@ -8,7 +8,7 @@ export const useMainStore = create<MainState>()(
     persist(
       (set) => ({
         language: English,
-        errors: "Ndodhi nje problem ne lidhje me serverin",
+        errors: false,
         loading: false,
         setErrors: (err) => set(() => ({ errors: err }), false, "Set errors"),
         setLoading: (load) =>

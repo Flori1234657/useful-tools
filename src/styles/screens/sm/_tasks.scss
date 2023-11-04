@@ -116,7 +116,7 @@
         }
       }
     }
-    button:last-child {
+    .tasks__panel__open-modal-button {
       @include mix.button(
         white,
         0.813rem,

@@ -1,6 +1,7 @@
 import { Button, Stack } from "@mui/joy";
 import { useMainStore } from "../../../../state/mainState";
 import { AvailableCountries as Avc } from "../../../../ts/enums/countries";
+import { useTaskStore } from "../../../../state/tasksState";
 
 interface Props {
   con: Avc | undefined;
@@ -10,6 +11,7 @@ interface Props {
 const ButtonsGr = (props: Props) => {
   const lang = useMainStore((state) => state.language.pages.tasks.firstPanel);
   const mainStore = useMainStore();
+  const taskStore = useTaskStore();
 
   return (
     <Stack
@@ -41,6 +43,11 @@ const ButtonsGr = (props: Props) => {
         {lang.buttons.btnContinue}
       </Button>
       <Button
+        onClick={() =>
+          useTaskStore.setState(() => ({
+            taskSetup: { newUser: false, skipped: true },
+          }))
+        }
         sx={{
           fontSize: { xs: "0.813rem", md: "0.84615rem" },
           borderRadius: "0.75rem",

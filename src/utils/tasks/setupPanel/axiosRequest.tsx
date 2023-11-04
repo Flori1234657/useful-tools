@@ -38,10 +38,9 @@ export const getPrayerTimes = async ({ country, city }: GetProps) => {
       mwl: muslimWorldLeague.data.data.timings,
     };
   } catch (error) {
-    console.log(error);
     useMainStore.setState(() => ({
       loading: false,
-      errors: "Error",
+      errors: true,
     }));
     return null;
   }

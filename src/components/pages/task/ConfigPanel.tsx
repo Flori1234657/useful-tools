@@ -2,13 +2,18 @@ import SelectsGroup from "./setupPanel/SelectsGroup";
 import ButtonsGr from "./setupPanel/ButtonsGr";
 import { Typography } from "@mui/joy";
 import { useMainStore } from "../../../state/mainState";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { AvailableCountries as Avc } from "../../../ts/enums/countries";
 import { configTaskPanel } from "../../../utils/tasks/setupTaskPanel";
-import Error from "../../error/Error";
+
+const Error = lazy(() => import("../../error/Error"));
 
 const ConfigPanel = () => {
   const lang = useMainStore((state) => state.language.pages.tasks.firstPanel);
+  const mainStore = useMainStore();
+  const error = useMainStore(
+    (state) => state.language.pages.tasks.firstPanel.errors.axios.others
+  );
 
   const [selectedCountry, setSelectedCountry] = useState<Avc | undefined>(
     undefined
@@ -44,7 +49,9 @@ const ConfigPanel = () => {
         </Typography>
         <ButtonsGr cit={selectedCity} con={selectedCountry} />
       </form>
-      <Error />
+      <Suspense fallback="">
+        {mainStore.errors ? <Error errStr={error} /> : ""}
+      </Suspense>
     </div>
   );
 };
