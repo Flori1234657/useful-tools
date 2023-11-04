@@ -2,6 +2,8 @@ import React from "react";
 import { Option, Select, Stack, Typography, selectClasses } from "@mui/joy";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useMainStore } from "../../../../../state/mainState";
+import useAvailableTimes from "../../../../../hooks/useAvailableTimes";
+import { useTaskStore } from "../../../../../state/tasksState";
 
 interface Props {
   time: string;
@@ -10,6 +12,8 @@ interface Props {
 
 const TimeInput: React.FC<Props> = ({ time, setTime }) => {
   const lang = useMainStore((state) => state.language.pages.tasks.secondPanel);
+  const skipped = useTaskStore((state) => state.taskSetup.skipped);
+  const returnObj = useAvailableTimes();
 
   return (
     <Stack
@@ -43,11 +47,25 @@ const TimeInput: React.FC<Props> = ({ time, setTime }) => {
         }}
         variant="solid"
       >
-        <Option value={"T1"}>{lang.hijriTimes[0]}</Option>
-        <Option value={"T2"}>{lang.hijriTimes[1]}</Option>
-        <Option value={"T3"}>{lang.hijriTimes[2]}</Option>
-        <Option value={"T4"}>{lang.hijriTimes[3]}</Option>
-        <Option value={"T5"}>{lang.hijriTimes[4]}</Option>
+        {skipped ? (
+          <>
+            <Option value={"T1"}>{lang.hijriTimes[0]}</Option>
+            <Option value={"T2"}>{lang.hijriTimes[1]}</Option>
+            <Option value={"T3"}>{lang.hijriTimes[2]}</Option>
+            <Option value={"T4"}>{lang.hijriTimes[3]}</Option>
+            <Option value={"T5"}>{lang.hijriTimes[4]}</Option>
+          </>
+        ) : (
+          returnObj.map((el, i) =>
+            el ? (
+              <Option key={`T${i + 1}`} value={`T${i + 1}`}>
+                {lang.hijriTimes[i]}
+              </Option>
+            ) : (
+              ""
+            )
+          )
+        )}
       </Select>
     </Stack>
   );

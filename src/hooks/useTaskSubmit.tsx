@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HijriTimes, SelectedStatusOption } from "../ts/enums/tasks";
 import { TaskCard } from "../ts/types/taskCard";
 import { useMainStore } from "../state/mainState";
+import { useTaskStore } from "../state/tasksState";
 
 interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,6 +13,7 @@ interface Props {
 
 const useTaskSubmit = (props: Props) => {
   const store = useMainStore();
+  const taskStore = useTaskStore();
   const { setOpen, data, id, add } = props;
 
   const [time, setTime] = useState<string>(HijriTimes[data?.hijriTimes || 0]);
@@ -30,7 +32,7 @@ const useTaskSubmit = (props: Props) => {
     };
 
     if (add) {
-      store.setTasks({
+      taskStore.setTasks({
         ...obj,
         id: id,
         status: SelectedStatusOption.O1,
@@ -39,7 +41,7 @@ const useTaskSubmit = (props: Props) => {
       setTime("");
       setTask("");
     } else {
-      store.setTasks({
+      taskStore.setTasks({
         ...obj,
         //@ts-ignore
         status: SelectedStatusOption[state],
