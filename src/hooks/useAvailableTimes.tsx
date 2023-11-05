@@ -6,13 +6,14 @@ const compareTimes = (time: string): boolean => {
   const times = useTaskStore((state) => state.taskSetup.times);
 
   const date = new Date();
+  const minutes = date.getMinutes();
   const extractedTime = time.match(/\d/g);
 
   const convertedTime = Number(extractedTime?.join(""));
-  const nowTime = `${date.getHours()}${date.getMinutes()}`;
+  const nowTime = `${date.getHours()}${minutes < 10 ? "0" + minutes : minutes}`;
 
   // Changing the day on Maghrib InshaaAllah
-  const maghribTime = times?.Maghrib.match(/\d/g);
+  let maghribTime = times?.Maghrib.match(/\d/g);
 
   {
     /**

@@ -9,6 +9,7 @@ import { useMainStore } from "../../../../../state/mainState";
 import { TaskCard } from "../../../../../ts/types/taskCard";
 import EditTaskModal from "./card/EditTaskModal";
 import React, { useState } from "react";
+import { useTaskStore } from "../../../../../state/tasksState";
 
 const iconsObj = {
   "0": SabahIcn,
@@ -19,6 +20,8 @@ const iconsObj = {
 };
 
 const Card: React.FC<TaskCard> = (data) => {
+  const tasksStore = useTaskStore();
+
   const lang = useMainStore((state) => state.language.pages.tasks);
   const [openModal, setOpenModal] = useState(false);
 
@@ -29,8 +32,13 @@ const Card: React.FC<TaskCard> = (data) => {
       {" "}
       <div
         className="tasks__panel__task-container__card-container__card"
+        style={data.status !== "option3" ? { opacity: 1 } : { opacity: 0.5 }}
         aria-label="Task card"
-        onClick={() => setOpenModal(true)}
+        onClick={() =>
+          data.status !== "option3"
+            ? setOpenModal(true)
+            : tasksStore.removeTask(data.id)
+        }
       >
         <div
           className="tasks__panel__task-container__card-container__card__time"

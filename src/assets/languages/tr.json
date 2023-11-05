@@ -74,7 +74,7 @@
           "Birleşik Krallık",
           "Amerika Birleşik Devletleri"
         ],
-        "informationText": "Bölge zamanlarınıza göre geçiş izni verdiğiniz görevlerde değişiklik yapmak için bu bilgiye ihtiyacımız var! Bu bilgiyi sağlamazsanız, görevleri tamamlama zamanı gelse bile manuel olarak silmeniz veya görevlerin durumunu değiştirmeniz gerekecektir. görev geçişi.",
+        "informationText": "Alan zamanlarınıza göre geçiş izni verdiğiniz görevlerde değişiklik yapmak için bu bilgiye ihtiyacımız var! Bu bilgiyi sağlamazsanız, görevin tamamlanması için zaman geçse bile görevlerin durumunu manuel olarak değiştirmeniz gerekecektir.",
         "buttons": {
           "btnContinue": "Devam etmek",
           "btnSkip": "Atlamak"
