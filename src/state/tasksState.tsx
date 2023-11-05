@@ -11,6 +11,10 @@ export const useTaskStore = create<TasksState>()(
         taskSetup: {
           newUser: true,
         },
+        taskActions: {
+          filterTasks: undefined,
+          searchTasks: undefined,
+        },
         setTasks: (task) =>
           set((state) => setTask(state, task), false, "Set or edit task"), // Kjo InshaaAllah do perdoret edhe per edit
         removeTask: (id) =>

@@ -30,6 +30,7 @@ export const configTaskPanel = async (
         Asr: startPathU.Asr,
         Maghrib: startPathM.Maghrib,
         Isha: startPathU.Isha,
+        Midnight: startPathM.Midnight,
       },
     };
 

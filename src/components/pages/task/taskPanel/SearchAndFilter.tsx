@@ -1,31 +1,17 @@
-import { useMainStore } from "../../../../state/mainState";
 import { useTaskStore } from "../../../../state/tasksState";
-import { IoSearch } from "react-icons/io5";
 import { IoMdSettings } from "react-icons/io";
 import Filter from "./search&filter/Filter";
+import Search from "./search&filter/Search";
 import { IconButton } from "@mui/joy";
+import { useState } from "react";
 
 const SearchAndFilter = () => {
-  const search = useMainStore((state) => state.language.pages.tools.searchBar);
-
   return (
     <div
       className="tasks__panel__search-filter-wrapper"
       aria-label="Wrapper for search and filter"
     >
-      <div
-        className="tasks__panel__search-filter-wrapper__search-wrapper"
-        aria-label="Search input and icon wrapper"
-      >
-        <input
-          type="search"
-          name="Search Input"
-          placeholder={search}
-          style={search === "بحث" ? { order: 2 } : { order: "none" }}
-          dir={search === "بحث" ? "rtl" : ""}
-        />
-        <IoSearch />
-      </div>
+      <Search />
       <Filter />
       <IconButton
         variant="solid"

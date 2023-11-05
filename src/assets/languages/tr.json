@@ -74,7 +74,7 @@
           "Birleşik Krallık",
           "Amerika Birleşik Devletleri"
         ],
-        "informationText": "Alan zamanlarınıza göre geçiş izni verdiğiniz görevlerde değişiklik yapmak için bu bilgiye ihtiyacımız var! Bu bilgiyi sağlamazsanız, görevin tamamlanması için zaman geçse bile görevlerin durumunu manuel olarak değiştirmeniz gerekecektir.",
+        "informationText": "Alan zamanlarınıza göre geçiş izni verdiğiniz görevlerde değişiklik yapmak için bu bilgiye ihtiyacımız var! Bu bilgiyi sağlamazsanız, görevin tamamlanması için zaman geçse bile görevlerin durumunu manuel olarak değiştirmeniz gerekecektir.İslami takvimi kullanıyoruz.",
         "buttons": {
           "btnContinue": "Devam etmek",
           "btnSkip": "Atlamak"

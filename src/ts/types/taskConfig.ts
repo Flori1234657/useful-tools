@@ -16,4 +16,5 @@ export type HijriDayTimes = {
   Asr: string;
   Maghrib: string;
   Isha: string;
+  Midnight: string;
 };
