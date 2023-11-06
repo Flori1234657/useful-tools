@@ -10,12 +10,13 @@ const Filter = () => {
 
   const [filterInput, setFilterInput] = useState<string>("default");
 
+  // TODO: Don't set store when components first loaded
   useEffect(() => {
-    if (filterInput !== "default")
-      useTaskStore.setState({
-        taskActions: { filterTasks: filterInput },
-      });
-    else
+    useTaskStore.setState({
+      taskActions: { filterTasks: filterInput },
+    });
+
+    if (filterInput === "default")
       useTaskStore.setState({
         taskActions: { filterTasks: "", searchTasks: "" },
       });

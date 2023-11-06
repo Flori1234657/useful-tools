@@ -3,7 +3,6 @@ import { IoMdSettings } from "react-icons/io";
 import Filter from "./search&filter/Filter";
 import Search from "./search&filter/Search";
 import { IconButton } from "@mui/joy";
-import { useState } from "react";
 
 const SearchAndFilter = () => {
   return (

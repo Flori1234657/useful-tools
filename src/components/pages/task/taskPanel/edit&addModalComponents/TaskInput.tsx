@@ -31,6 +31,11 @@ const TaskInput: React.FC<Props> = ({ task, setTask }) => {
           fontSize: { xs: "0.813rem", md: "0.8125rem" },
           borderRadius: "0.8rem",
         }}
+        slotProps={{
+          textarea: {
+            maxLength: 52,
+          },
+        }}
       />
     </Stack>
   );

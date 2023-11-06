@@ -56,7 +56,7 @@ const TimeInput: React.FC<Props> = ({ time, setTime }) => {
             <Option value={"T5"}>{lang.hijriTimes[4]}</Option>
           </>
         ) : (
-          returnObj.map((el, i) =>
+          returnObj?.map((el, i) =>
             el ? (
               <Option key={`T${i + 1}`} value={`T${i + 1}`}>
                 {lang.hijriTimes[i]}

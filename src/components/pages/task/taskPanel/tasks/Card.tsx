@@ -27,15 +27,21 @@ const Card: React.FC<TaskCard> = (data) => {
 
   const VisibleIcon = iconsObj[data.hijriTimes];
 
+  const returnStyles = () => {
+    if (data.status === "option3") return { opacity: 0.5 };
+    if (data.status === "option2") return { backgroundColor: "#50cbdb" };
+    return {};
+  };
+
   return (
     <>
       {" "}
       <div
         className="tasks__panel__task-container__card-container__card"
-        style={data.status !== "option3" ? { opacity: 1 } : { opacity: 0.5 }}
+        style={returnStyles()}
         aria-label="Task card"
         onClick={() =>
-          data.status !== "option3"
+          data.status === "option1"
             ? setOpenModal(true)
             : tasksStore.removeTask(data.id)
         }

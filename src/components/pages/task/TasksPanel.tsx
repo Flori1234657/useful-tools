@@ -13,6 +13,10 @@ const TasksPanel: React.FC<Props> = ({ setOpen }) => {
   const lang = useMainStore((state) => state.language.pages.tasks);
   const taskStore = useTaskStore((state) => state.taskSetup);
 
+  /**
+   TODO: Add an error comp plus when time fetched fails on load set skipped true
+   */
+
   useEffect(() => {
     if (taskStore.skipped) return;
 

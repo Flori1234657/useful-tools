@@ -84,7 +84,7 @@
           .tasks__panel__task-container__card-container__card {
             cursor: pointer;
             @include mix.flex($dr: row, $js: flex-start);
-            min-width: 34.375rem;
+            width: 34.375rem;
             min-height: 3rem;
             position: static;
             margin-right: 0;

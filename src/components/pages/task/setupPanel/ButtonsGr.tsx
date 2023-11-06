@@ -43,6 +43,7 @@ const ButtonsGr = (props: Props) => {
         {lang.buttons.btnContinue}
       </Button>
       <Button
+        disabled={mainStore.loading}
         onClick={() =>
           useTaskStore.setState(() => ({
             taskSetup: { newUser: false, skipped: true },

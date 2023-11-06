@@ -8,6 +8,8 @@ const Search = () => {
 
   const [searchInput, setSearchInput] = useState<string>("");
 
+  // TODO: Don't set store when components first loaded
+
   useEffect(() => {
     const debounceTimeout = setTimeout(() => {
       useTaskStore.setState({ taskActions: { searchTasks: searchInput } });
