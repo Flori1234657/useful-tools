@@ -42,7 +42,8 @@ const compareTimes = (time: string, isMgIsh?: boolean): boolean => {
     return Number(nowTime) < userTime;
   }
 
-  // Then when nowTime goes 00:00 we compare prayer times nowTime.
+  // Then when nowTime goes 00:00 we compare prayer times nowTime InshaaAllah.
+  if (isMgIsh) return false;
   return Number(nowTime) < userTime;
 };
 
