@@ -1,4 +1,4 @@
-import useAvailableTimes from "../../../../../../hooks/useAvailableTimes";
+import useAvailableTimes from "../../../../../../hooks/taskPanel/useAvailableTimes";
 import { useTaskStore } from "../../../../../../state/tasksState";
 import { SelectedStatusOption as St } from "../../../../../../ts/enums/tasks";
 import Card from "../Card";

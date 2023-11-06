@@ -2,7 +2,7 @@ import React from "react";
 import { Option, Select, Stack, Typography, selectClasses } from "@mui/joy";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useMainStore } from "../../../../../state/mainState";
-import useAvailableTimes from "../../../../../hooks/useAvailableTimes";
+import useAvailableTimes from "../../../../../hooks/taskPanel/useAvailableTimes";
 import { useTaskStore } from "../../../../../state/tasksState";
 
 interface Props {
