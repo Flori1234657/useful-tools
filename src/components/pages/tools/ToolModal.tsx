@@ -1,10 +1,16 @@
-import useTool from "../../../hooks/mini-apps/useTool";
+import { lazy, Suspense } from "react";
 import Loader from "../../loading/Loader";
 
 const ToolModal = (props: { modalCredentials: string }) => {
-  const tool = useTool(props.modalCredentials);
+  const Component = lazy(
+    () => import(`../../mini-aps/${props.modalCredentials}.tsx`)
+  );
 
-  return tool ? tool : <Loader />;
+  return (
+    <Suspense fallback={<Loader />}>
+      <Component />
+    </Suspense>
+  );
 };
 
 export default ToolModal;
