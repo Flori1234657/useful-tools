@@ -50,7 +50,32 @@
       "headingTxt": "Necessary tools, all in one place!",
       "searchBar": "Search",
       "infoTxt": "Click to use that specific tool.",
-      "toolsNames": ["Calculator"]
+      "toolsNames": [
+        "Password Generator",
+        "Area meter by map",
+        "Color contrast checker",
+        "Image background remover",
+        "Grammar checker",
+        "Video type convertor",
+        "Video size convertor",
+        "Image type convertor",
+        "Image resizer",
+        "String list sorter",
+        "Text to list",
+        "Text letter changer",
+        "Color palette generator",
+        "Gradient color maker",
+        "Color picker",
+        "Video audio remover",
+        "Measurements units conversion",
+        "Web units conversion",
+        "Js json convertor",
+        "Calculator",
+        "Aspect ratio calculator",
+        "Dummy text generator",
+        "Notebook"
+      ],
+      "openError": "There was a problem opening this tool!"
     },
     "tasks": {
       "headingTxt": "Plan your day!",

@@ -50,7 +50,32 @@
       "headingTxt": "Gerekli Araçlar, Hepsi Bir Arada!",
       "searchBar": "Ara",
       "infoTxt": "Belirli bir aracı kullanmak için tıklayın.",
-      "toolsNames": ["Hesap Makinesi"]
+      "toolsNames": [
+        "Şifre Oluşturucu",
+        "Haritaya göre alan ölçer",
+        "Renk kontrastı denetleyicisi",
+        "Görüntü arka planı kaldırıcı",
+        "Dilbilgisi denetleyicisi",
+        "Video türü dönüştürücü",
+        "Video boyutu dönüştürücü",
+        "Resim türü dönüştürücü",
+        "Resim yeniden boyutlandırıcı",
+        "Dize listesi sıralayıcısı",
+        "Listelenecek metin",
+        "Metin harfi değiştirici",
+        "Renk paleti oluşturucu",
+        "Degrade renk oluşturucu",
+        "Renk seçici",
+        "Video ses çıkarıcı",
+        "Ölçüm birimleri dönüşümü",
+        "Web birimleri dönüşümü",
+        "Js json dönüştürücü",
+        "Hesap makinesi",
+        "En boy oranı hesaplayıcı",
+        "Sahte metin oluşturucu",
+        "Not defteri"
+      ],
+      "openError": "Bu araç açılırken bir sorun oluştu!"
     },
     "tasks": {
       "headingTxt": "Gününüzü Planlayın!",

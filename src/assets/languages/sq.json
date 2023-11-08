@@ -50,7 +50,32 @@
       "headingTxt": "Mjete të nevojshme, të gjitha në një vend!",
       "searchBar": "Kërkoni",
       "infoTxt": "Klikoni për të përdorur atë mjet specifik.",
-      "toolsNames": ["Llogaritësi"]
+      "toolsNames": [
+        "Gjenerues fjalëkalimi",
+        "Mat zonën nga harta",
+        "Kontrollo kontrastin e ngjyrave",
+        "Hiq sfondin e imazhit",
+        "Kontrolli i gramatikës",
+        "Konvertuesi i llojit të videos",
+        "Konvertuesi i madhësisë së videos",
+        "Konvertuesi i llojit të imazhit",
+        "Ndryshuesi i madhësisë së imazhit",
+        "Rendit listën e tekstit",
+        "Teksti në listë",
+        "Ndryshuesi i shkronjave të tekstit",
+        "Gjeneratori i kombinimeve së ngjyrave",
+        "Formo ngjyra 'gradient'",
+        "Zgjedhësi i ngjyrave",
+        "Heqës i audios nga video",
+        "Konvertimi i njësive matëse",
+        "Konvertimi i njësive të ueb faqes",
+        "Konvertuesi Js json",
+        "Llogaritësi",
+        "Llogaritësi i raportit të pamjes",
+        "Gjenerator i tekstit të rremë",
+        "Fletore"
+      ],
+      "openError": "Kemi një problem në përpjekjen për të hapur mjetin!"
     },
     "tasks": {
       "headingTxt": "Planifikoni ditën tuaj!",

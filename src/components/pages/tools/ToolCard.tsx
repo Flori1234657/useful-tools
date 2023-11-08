@@ -1,6 +1,14 @@
 import { useMainStore } from "../../../state/mainState";
+import MapToolsCards from "./MapToolsCards";
+import { useState } from "react";
+import ToolModal from "./ToolModal";
+import Error from "../../error/Error";
 
 const ToolCard = () => {
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [modalCredentials, setModalCredentials] = useState<string>("");
+
+  const mainStore = useMainStore();
   const lang = useMainStore((state) => state.language.pages.tools);
 
   return (
@@ -8,17 +16,16 @@ const ToolCard = () => {
       className="tools__panel__cards-grid"
       aria-label="Grid for cards of tools"
     >
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11, 12, 13, 14, 15, 16, 17, 18].map(
-        (el) => (
-          <div
-            key={el}
-            className="tools__panel__cards-grid__card"
-            aria-label="Card Item"
-          >
-            <h3>{lang.toolsNames[0]}</h3>
-          </div>
-        )
+      <MapToolsCards
+        setOpenModal={setOpenModal}
+        setModalCredentials={setModalCredentials}
+      />
+      {openModal && !mainStore.errors ? (
+        <ToolModal modalCredentials={modalCredentials} />
+      ) : (
+        ""
       )}
+      <Error errStr={lang.openError} />
     </div>
   );
 };

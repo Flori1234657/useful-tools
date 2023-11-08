@@ -78,6 +78,7 @@ type Tools = {
   searchBar: string;
   infoTxt: string;
   toolsNames: string[];
+  openError: string;
 };
 
 type Tasks = {

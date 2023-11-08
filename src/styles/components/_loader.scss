@@ -1,0 +1,25 @@
+#loader {
+  width: 3rem;
+  height: 3rem;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  animation: skLinRotate 1s ease-in-out infinite alternate;
+  &:focus {
+    outline: none;
+  }
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  inset: 0.313rem;
+  border-radius: 50%;
+  border: 0.313rem solid transparent;
+  border-top-color: #43abb8;
+}
+@keyframes skLinRotate {
+  95%,
+  100% {
+    transform: rotate(840deg);
+  }
+}
