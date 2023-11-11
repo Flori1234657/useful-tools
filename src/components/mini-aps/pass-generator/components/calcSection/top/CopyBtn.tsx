@@ -4,6 +4,7 @@ import { IconContext } from "react-icons";
 import { copyTextToClipboard } from "../../../../../../utils/mini-apps/copyToClipboard";
 import useIconChange from "../../../../../../hooks/mini-apps/useIconChange";
 import { useMainStore } from "../../../../../../state/mainState";
+import { useMiniAppsStore } from "../../../../../../state/miniAppsState";
 
 type Props = {
   inputRef: React.MutableRefObject<HTMLInputElement | null>;
@@ -11,6 +12,8 @@ type Props = {
 
 const CopyBtn = (props: Props) => {
   const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const dir = useMainStore((state) => state.language.nav.lang.chosen);
+  const grPass = useMiniAppsStore((st) => st.psg.generatedPassword);
 
   const { toggleFirstIcon, setToggleFirstIcon } = useIconChange(800);
 
@@ -19,12 +22,18 @@ const CopyBtn = (props: Props) => {
       value={{ className: "tools__panel__cards-grid__copy-btn-animation" }}
     >
       <Button
+        disabled={grPass === "" ? true : false}
         color="neutral"
         sx={{
           borderRadius: "0.75rem",
           fontSize: { xs: "0.813rem", md: "0.84615rem" },
         }}
-        endDecorator={toggleFirstIcon ? <IoCopy /> : <Checked />}
+        endDecorator={
+          dir !== "AR" ? toggleFirstIcon ? <IoCopy /> : <Checked /> : ""
+        }
+        startDecorator={
+          dir === "AR" ? toggleFirstIcon ? <IoCopy /> : <Checked /> : ""
+        }
         onClick={() => {
           if (props.inputRef === null) return;
           copyTextToClipboard(props.inputRef.current!.value).then(() => {

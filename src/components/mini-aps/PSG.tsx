@@ -18,7 +18,12 @@ const PSG = () => {
       aria-labelledby="modal-title"
       aria-describedby="modal-desc"
       open={openModal}
-      onClose={() => useMiniAppsStore.setState(() => ({ openModal: false }))}
+      onClose={() =>
+        useMiniAppsStore.setState((st) => ({
+          openModal: false,
+          psg: { ...st.psg, generatedPassword: "" },
+        }))
+      }
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -28,7 +33,8 @@ const PSG = () => {
       <Sheet
         variant="outlined"
         sx={{
-          width: { xs: "90.65%", md: "30.76923rem" },
+          width: { xs: "90.65%", md: "auto" },
+          minWidth: { md: "30.76923rem" },
           maxWidth: { xs: "700px" },
           borderRadius: { xs: "1.5rem", md: "1.23rem" },
           p: { xs: "1.5rem", md: "2rem" },

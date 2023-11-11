@@ -75,27 +75,25 @@
         "Gjenerator i tekstit të rremë",
         "Fletore"
       ],
-      "toolsText": [
-        {
-          "heading": "Gjenero fjalëkalim",
-          "input": {
-            "placeholder": "Fjalëkalimi",
-            "levels": {
-              "normal": "NIVELI",
-              "danger": "DOBËT",
-              "warning": "NORMAL",
-              "success": "SIGURT"
-            },
-            "copyBtn": "Kopjo"
+      "toolsText": {
+        "heading": "Gjenero fjalëkalim",
+        "input": {
+          "placeholder": "Fjalëkalimi",
+          "levels": {
+            "normal": "NIVELI",
+            "danger": "DOBËT",
+            "warning": "NORMAL",
+            "success": "SIGURT"
           },
-          "passLength": "Madhësia:",
-          "include": {
-            "mainText": "Përfshih:",
-            "options": ["ABC", "abc", "123"]
-          },
-          "generateBtn": "Gjenero"
-        }
-      ],
+          "copyBtn": "Kopjo"
+        },
+        "passLength": "Madhësia:",
+        "include": {
+          "mainText": "Përfshih:",
+          "options": ["ABC", "abc", "123"]
+        },
+        "generateBtn": "Gjenero"
+      },
       "openError": "Kemi një problem në përpjekjen për të hapur mjetin!"
     },
     "tasks": {

@@ -5,6 +5,7 @@ import { useMainStore } from "../../../../../state/mainState";
 
 const Down = () => {
   const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   const mnaps = useMiniAppsStore((state) => state.psg.checkBoxes);
 
@@ -23,7 +24,16 @@ const Down = () => {
       rowGap={"0.5rem"}
       justifyContent={{ md: "space-between" }}
     >
-      <Typography fontSize="1rem" fontWeight="600">
+      <Typography
+        fontSize="1rem"
+        fontWeight="600"
+        sx={dir === "AR" ? { order: 2 } : {}}
+        slotProps={{
+          root: {
+            dir: dir === "AR" ? "rtl" : "ltr",
+          },
+        }}
+      >
         {lang.include.mainText}
       </Typography>
       <Stack
@@ -37,7 +47,7 @@ const Down = () => {
           label={lang.include.options[0]}
           checked={mnaps.BigAbc}
         />
-        {lang.include.options.length === 2 ? (
+        {lang.include.options[1] === "" ? (
           ""
         ) : (
           <Checkbox

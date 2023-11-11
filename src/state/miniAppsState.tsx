@@ -7,8 +7,8 @@ export const useMiniAppsStore = create<MiniAppsStore>()(
   devtools((set) => ({
     psg: {
       checkBoxes: {
-        BigAbc: false,
-        SmallAbc: true,
+        BigAbc: true,
+        SmallAbc: false,
         Numbers: false,
         Symbols: false,
         setChecked: (val, checkBox) =>

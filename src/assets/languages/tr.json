@@ -75,28 +75,25 @@
         "Sahte metin oluşturucu",
         "Not defteri"
       ],
-      "toolsText": [
-        {
-          "heading": "Parola Oluştur",
-          "input": {
-            "placeholder": "Buraya parola",
-            "levels": {
-              "normal": "SEVİYE",
-              "danger": "ZAYIF",
-              "warning": "NORMAL",
-              "success": "GÜÇLÜ"
-            },
-            "copyBtn": "Kopyala"
+      "toolsText": {
+        "heading": "Parola Oluştur",
+        "input": {
+          "placeholder": "Buraya parola",
+          "levels": {
+            "normal": "SEVİYE",
+            "danger": "ZAYIF",
+            "warning": "NORMAL",
+            "success": "GÜÇLÜ"
           },
-          "passLength": "Parola uzunluğu:",
-          "include": {
-            "mainText": "İçermek:",
-            "options": ["ABC", "abc", "123"]
-          },
-          "generateBtn": "Oluştur"
-        }
-      ],
-
+          "copyBtn": "Kopyala"
+        },
+        "passLength": "Parola uzunluğu:",
+        "include": {
+          "mainText": "İçermek:",
+          "options": ["ABC", "abc", "123"]
+        },
+        "generateBtn": "Oluştur"
+      },
       "openError": "Bu araç açılırken bir sorun oluştu!"
     },
     "tasks": {

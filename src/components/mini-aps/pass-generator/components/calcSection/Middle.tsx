@@ -3,9 +3,11 @@ import { useMiniAppsStore } from "../../../../../state/miniAppsState";
 import { useState, useEffect } from "react";
 import useDebounce from "../../../../../hooks/useDebounce";
 import { useMainStore } from "../../../../../state/mainState";
+import getLocalNumber from "../../../../../utils/mini-apps/convertNumbersToLcSt";
 
 const Middle = () => {
   const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lcSt = useMainStore((st) => st.language.nav.lang.localeString);
 
   const mnaps = useMiniAppsStore();
   const [passlength, setPasslength] = useState<number | null>(null);
@@ -26,7 +28,9 @@ const Middle = () => {
     >
       <Typography fontSize="1rem" fontWeight="600">
         {lang.passLength}
-        <span style={{ fontWeight: "500" }}>{passlength ?? 8}</span>
+        <span style={{ fontWeight: "500" }}>
+          {getLocalNumber(passlength ?? 8, lcSt)}
+        </span>
       </Typography>
       <Slider
         sx={{

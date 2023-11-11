@@ -5,6 +5,7 @@ import { useMainStore } from "../../../../state/mainState";
 
 const SectionTitle = () => {
   const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   return (
     <Stack
@@ -15,10 +16,7 @@ const SectionTitle = () => {
     >
       <Typography
         level="h1"
-        sx={lang.heading === "إنشاء كلمة مرور" ? { order: 2 } : {}}
-        slotProps={
-          lang.heading === "إنشاء كلمة مرور" ? { root: { dir: "rtl" } } : {}
-        }
+        sx={dir === "AR" ? { order: 2 } : {}}
         fontSize={{ xs: "1.438rem", md: "1.46154rem" }}
       >
         {lang.heading}
@@ -29,10 +27,16 @@ const SectionTitle = () => {
         sx={{
           fontSize: { xs: "1.438rem", md: "1.46154rem" },
           borderRadius: "0.75rem",
-          ml: { md: "3.46rem" },
+          ml: dir !== "AR" ? { md: "3.46rem" } : "",
+          mr: dir === "AR" ? { md: "3.46rem" } : "",
           mt: { xs: "0.5rem", md: 0 },
         }}
-        onClick={() => useMiniAppsStore.setState(() => ({ openModal: false }))}
+        onClick={() =>
+          useMiniAppsStore.setState((st) => ({
+            openModal: false,
+            psg: { ...st.psg, generatedPassword: "" },
+          }))
+        }
       >
         <IoExit />
       </IconButton>

@@ -5,6 +5,7 @@ import { useMainStore } from "../../../../state/mainState";
 
 const GenerateButton = () => {
   const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   const mnaps = useMiniAppsStore();
   const disableBtn: boolean = useMiniAppsStore((state) => {
@@ -15,6 +16,8 @@ const GenerateButton = () => {
       value ? "" : unChecked++;
     }
 
+    if ((unChecked === 3 && dir == "AR") || dir == "HI" || dir == "RU")
+      return true;
     if (unChecked === 4) return true;
     return false;
   });
@@ -32,7 +35,11 @@ const GenerateButton = () => {
       color="primary"
       onClick={() =>
         mnaps.psg.setGenPass(
-          generateRandPass(mnaps.psg.checkBoxes, mnaps.psg.passLength)
+          generateRandPass(
+            mnaps.psg.checkBoxes,
+            mnaps.psg.passLength,
+            dir == "AR" || dir == "HI" || dir == "RU" ? dir : undefined
+          )
         )
       }
     >

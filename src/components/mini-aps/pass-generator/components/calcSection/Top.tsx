@@ -6,6 +6,7 @@ import { useMainStore } from "../../../../../state/mainState";
 import { PasswLevels } from "../../../../../ts/types/lang";
 const Top = () => {
   const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   const generatedPassword = useMiniAppsStore(
     (state) => state.psg.generatedPassword
@@ -17,7 +18,7 @@ const Top = () => {
   useEffect(() => {
     const getLevel = () => {
       if (!generatedPassword) return "normal";
-      if (generatedPassword?.length < 19) return "danger";
+      if (generatedPassword?.length < 13) return "danger";
       if (generatedPassword?.length < 23) return "warning";
       if (generatedPassword?.length < 31) return "success";
 
@@ -43,21 +44,40 @@ const Top = () => {
         slotProps={{
           input: {
             ref: inputRef,
+            dir: dir === "AR" ? "rtl" : "",
           },
         }}
         endDecorator={
-          //@ts-ignore
-          <Chip sx={{ borderRadius: "0.75rem" }} color={passLevel}>
-            {
-              //@ts-ignore
-              (lang.input.levels as PasswLevels)[passLevel]
-            }
-          </Chip>
+          dir !== "AR" ? (
+            //@ts-ignore
+            <Chip sx={{ borderRadius: "0.75rem" }} color={passLevel}>
+              {
+                //@ts-ignore
+                (lang.input.levels as PasswLevels)[passLevel]
+              }
+            </Chip>
+          ) : (
+            ""
+          )
+        }
+        startDecorator={
+          dir === "AR" ? (
+            //@ts-ignore
+            <Chip sx={{ borderRadius: "0.75rem" }} color={passLevel}>
+              {
+                //@ts-ignore
+                (lang.input.levels as PasswLevels)[passLevel]
+              }
+            </Chip>
+          ) : (
+            ""
+          )
         }
         sx={{
           borderRadius: "0.75rem",
           fontSize: { xs: "1rem", md: "0.84615rem" },
           width: { md: "65%" },
+          order: dir === "AR" ? 2 : "",
         }}
       />
       <CopyBtn inputRef={inputRef} />
