@@ -1,0 +1,12 @@
+.tools__panel__cards-grid__copy-btn-animation {
+  animation: copy 0.4s;
+}
+
+@keyframes copy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

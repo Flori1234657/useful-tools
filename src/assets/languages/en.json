@@ -75,6 +75,27 @@
         "Dummy text generator",
         "Notebook"
       ],
+      "toolsText": [
+        {
+          "heading": "Generate Password",
+          "input": {
+            "placeholder": "Password here",
+            "levels": {
+              "normal": "LEVEL",
+              "danger": "WEAK",
+              "warning": "NORMAL",
+              "success": "STRONG"
+            },
+            "copyBtn": "Copy"
+          },
+          "passLength": "Password length:",
+          "include": {
+            "mainText": "Include:",
+            "options": ["ABC", "abc", "123"]
+          },
+          "generateBtn": "Generate"
+        }
+      ],
       "openError": "There was a problem opening this tool!"
     },
     "tasks": {

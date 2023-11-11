@@ -75,6 +75,28 @@
         "مولد النص الوهمي",
         "دفتر"
       ],
+      "toolsText": [
+        {
+          "heading": "إنشاء كلمة مرور",
+          "input": {
+            "placeholder": "كلمة المرور هنا",
+            "levels": {
+              "normal": "المستوى",
+              "danger": "ضعيف",
+              "warning": "عادي",
+              "success": "قوي"
+            },
+            "copyBtn": "نسخ"
+          },
+          "passLength": "طول كلمة المرور:",
+          "include": {
+            "mainText": "تضمين:",
+            "options": ["أأأ", "١٢٣"]
+          },
+          "generateBtn": "إنشاء"
+        }
+      ],
+
       "openError": "!حدثت مشكلة أثناء فتح هذه الأداة"
     },
     "tasks": {

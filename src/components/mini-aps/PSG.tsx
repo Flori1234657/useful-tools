@@ -1,44 +1,46 @@
 import * as React from "react";
-import Button from "@mui/joy/Button";
 import Modal from "@mui/joy/Modal";
-import ModalClose from "@mui/joy/ModalClose";
-import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
+import { useMainStore } from "../../state/mainState";
+import SectionTitle from "./pass-generator/components/SectionTitle";
+import SectionCalc from "./pass-generator/components/SectionCalc";
+import GenerateButton from "./pass-generator/components/GenerateButton";
+import { useMiniAppsStore } from "../../state/miniAppsState";
+
 const PSG = () => {
-  const [open, setOpen] = React.useState<boolean>(true);
+  const mainStore = useMainStore();
+  const openModal = useMiniAppsStore((state) => state.openModal);
+
+  React.useEffect(() => mainStore.setLoading(false), []);
 
   return (
     <Modal
       aria-labelledby="modal-title"
       aria-describedby="modal-desc"
-      open={open}
-      onClose={() => setOpen(false)}
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      open={openModal}
+      onClose={() => useMiniAppsStore.setState(() => ({ openModal: false }))}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       <Sheet
         variant="outlined"
         sx={{
-          maxWidth: 500,
-          borderRadius: "md",
-          p: 3,
+          width: { xs: "90.65%", md: "30.76923rem" },
+          maxWidth: { xs: "700px" },
+          borderRadius: { xs: "1.5rem", md: "1.23rem" },
+          p: { xs: "1.5rem", md: "2rem" },
           boxShadow: "lg",
+          display: { md: "flex" },
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
-        <ModalClose variant="plain" sx={{ m: 1 }} />
-        <Typography
-          component="h2"
-          id="modal-title"
-          level="h4"
-          textColor="inherit"
-          fontWeight="lg"
-          mb={1}
-        >
-          This is the modal title
-        </Typography>
-        <Typography id="modal-desc" textColor="text.tertiary">
-          Make sure to use <code>aria-labelledby</code> on the modal dialog with
-          an optional <code>aria-describedby</code> attribute.
-        </Typography>
+        <SectionTitle />
+        <SectionCalc />
+        <GenerateButton />
       </Sheet>
     </Modal>
   );
