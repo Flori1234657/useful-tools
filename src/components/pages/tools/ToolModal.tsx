@@ -10,7 +10,7 @@ const ToolModal = (props: { modalCredentials: string }) => {
   useEffect(() => mainStore.setLoading(true), []);
 
   const Component = lazy(
-    () => import(`../../mini-aps/${props.modalCredentials}.tsx`)
+    () => import(`../../mini-aps/prefixes/${props.modalCredentials}.tsx`)
   );
 
   return (

@@ -26,7 +26,7 @@ const Middle = () => {
       justifyContent={{ md: "space-between" }}
       pb={{ md: "1.231rem" }}
     >
-      <Typography fontSize="1rem" fontWeight="600">
+      <Typography fontSize="1rem" fontWeight="600" sx={{ color: "#375165" }}>
         {lang.passLength}
         <span style={{ fontWeight: "500" }}>
           {getLocalNumber(passlength ?? 8, lcSt)}
