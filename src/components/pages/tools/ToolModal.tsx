@@ -1,10 +1,25 @@
-import useTool from "../../../hooks/mini-apps/useTool";
+import { lazy, Suspense, useEffect } from "react";
 import Loader from "../../loading/Loader";
+import { useMainStore } from "../../../state/mainState";
+import { CssVarsProvider } from "@mui/joy";
+import { theme } from "./MUI/theme";
 
 const ToolModal = (props: { modalCredentials: string }) => {
-  const tool = useTool(props.modalCredentials);
+  const mainStore = useMainStore();
 
-  return tool ? tool : <Loader />;
+  useEffect(() => mainStore.setLoading(true), []);
+
+  const Component = lazy(
+    () => import(`../../mini-aps/${props.modalCredentials}.tsx`)
+  );
+
+  return (
+    <Suspense fallback={<Loader />}>
+      <CssVarsProvider theme={theme}>
+        <Component />
+      </CssVarsProvider>
+    </Suspense>
+  );
 };
 
 export default ToolModal;

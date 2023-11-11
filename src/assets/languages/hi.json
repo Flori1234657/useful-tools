@@ -75,6 +75,25 @@
         "डमी टेक्स्ट जेनरेटर",
         "स्मरण पुस्तक"
       ],
+      "toolsText": {
+        "heading": "पासवर्ड बनाएं",
+        "input": {
+          "placeholder": "यहाँ पासवर्ड",
+          "levels": {
+            "normal": "स्तर",
+            "danger": "कमजोर",
+            "warning": "सामान्य",
+            "success": "मजबूत"
+          },
+          "copyBtn": "कॉपी करें"
+        },
+        "passLength": "पासवर्ड की लंबाई:",
+        "include": {
+          "mainText": "शामिल करें:",
+          "options": ["र्डएं", "", "१२३"]
+        },
+        "generateBtn": "बनाएं"
+      },
       "openError": "इस टूल को खोलने में एक समस्या थी!"
     },
     "tasks": {

@@ -3,9 +3,10 @@ import MapToolsCards from "./MapToolsCards";
 import { useState } from "react";
 import ToolModal from "./ToolModal";
 import Error from "../../error/Error";
+import { useMiniAppsStore } from "../../../state/miniAppsState";
 
 const ToolCard = () => {
-  const [openModal, setOpenModal] = useState<boolean>(false);
+  const openModal = useMiniAppsStore((state) => state.openModal);
   const [modalCredentials, setModalCredentials] = useState<string>("");
 
   const mainStore = useMainStore();
@@ -16,10 +17,7 @@ const ToolCard = () => {
       className="tools__panel__cards-grid"
       aria-label="Grid for cards of tools"
     >
-      <MapToolsCards
-        setOpenModal={setOpenModal}
-        setModalCredentials={setModalCredentials}
-      />
+      <MapToolsCards setModalCredentials={setModalCredentials} />
       {openModal && !mainStore.errors ? (
         <ToolModal modalCredentials={modalCredentials} />
       ) : (

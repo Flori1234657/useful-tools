@@ -78,6 +78,7 @@ type Tools = {
   searchBar: string;
   infoTxt: string;
   toolsNames: string[];
+  toolsText: ToolsText;
   openError: string;
 };
 
@@ -174,4 +175,26 @@ type TaskModal = {
     addTask: string;
     editTask: string;
   };
+};
+
+type ToolsText = {
+  heading: string;
+  input: {
+    placeholder: string;
+    levels: PasswLevels;
+    copyBtn: string;
+  };
+  passLength: string;
+  include: {
+    mainText: string;
+    options: string[];
+  };
+  generateBtn: string;
+};
+
+export type PasswLevels = {
+  normal: string;
+  danger: string;
+  warning: string;
+  success: string;
 };

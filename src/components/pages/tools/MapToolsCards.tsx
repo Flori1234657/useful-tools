@@ -1,10 +1,10 @@
 import React from "react";
 import toolsObjectArr from "../../../data/tools";
 import { useMainStore } from "../../../state/mainState";
+import { useMiniAppsStore } from "../../../state/miniAppsState";
 
 const MapToolsCards = (props: {
   setModalCredentials: React.Dispatch<React.SetStateAction<string>>;
-  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const lang = useMainStore((state) => state.language.pages.tools);
 
@@ -15,7 +15,7 @@ const MapToolsCards = (props: {
       aria-label="Card Item"
       onClick={() => {
         props.setModalCredentials(el.credentials);
-        props.setOpenModal(true);
+        useMiniAppsStore.setState(() => ({ openModal: true }));
       }}
     >
       <h3>{lang.toolsNames[i]}</h3>

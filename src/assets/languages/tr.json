@@ -75,6 +75,25 @@
         "Sahte metin oluşturucu",
         "Not defteri"
       ],
+      "toolsText": {
+        "heading": "Parola Oluştur",
+        "input": {
+          "placeholder": "Buraya parola",
+          "levels": {
+            "normal": "SEVİYE",
+            "danger": "ZAYIF",
+            "warning": "NORMAL",
+            "success": "GÜÇLÜ"
+          },
+          "copyBtn": "Kopyala"
+        },
+        "passLength": "Parola uzunluğu:",
+        "include": {
+          "mainText": "İçermek:",
+          "options": ["ABC", "abc", "123"]
+        },
+        "generateBtn": "Oluştur"
+      },
       "openError": "Bu araç açılırken bir sorun oluştu!"
     },
     "tasks": {
