@@ -38,6 +38,9 @@ export const useMiniAppsStore = create<MiniAppsStore>()(
           "Set generated password"
         ),
     },
+    imr: {
+      imgDownloadPath: null,
+    },
     openModal: false,
   }))
 );

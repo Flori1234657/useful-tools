@@ -6,7 +6,7 @@ import { useMainStore } from "../../../../../state/mainState";
 import getLocalNumber from "../../../../../utils/mini-apps/convertNumbersToLcSt";
 
 const Middle = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
   const lcSt = useMainStore((st) => st.language.nav.lang.localeString);
 
   const mnaps = useMiniAppsStore();
@@ -26,7 +26,7 @@ const Middle = () => {
       justifyContent={{ md: "space-between" }}
       pb={{ md: "1.231rem" }}
     >
-      <Typography fontSize="1rem" fontWeight="600">
+      <Typography fontSize="1rem" fontWeight="600" sx={{ color: "#375165" }}>
         {lang.passLength}
         <span style={{ fontWeight: "500" }}>
           {getLocalNumber(passlength ?? 8, lcSt)}

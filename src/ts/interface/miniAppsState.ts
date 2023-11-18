@@ -8,5 +8,9 @@ export interface MiniAppsStore {
     setGenPass: (pass: string) => void;
     generatedPassword?: string;
   };
+  imr: {
+    imgDownloadPath: string | null;
+    cleanup?: (() => void) | null;
+  };
   openModal: boolean;
 }

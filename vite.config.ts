@@ -15,6 +15,10 @@ export default defineConfig({
     // since parsing CSS is slow
     css: true,
   },
+  define: {
+    "import.meta.env.VITE_API_KEY_REMOVE_BG":
+      process.env.VITE_API_KEY_REMOVE_BG,
+  },
   server: {
     open: true,
   },

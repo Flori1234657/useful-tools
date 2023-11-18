@@ -75,24 +75,36 @@
         "مولد النص الوهمي",
         "دفتر"
       ],
+
       "toolsText": {
-        "heading": "إنشاء كلمة مرور",
-        "input": {
-          "placeholder": "كلمة المرور هنا",
-          "levels": {
-            "normal": "المستوى",
-            "danger": "ضعيف",
-            "warning": "عادي",
-            "success": "قوي"
+        "PSG": {
+          "heading": "إنشاء كلمة مرور",
+          "input": {
+            "placeholder": "كلمة المرور هنا",
+            "levels": {
+              "normal": "المستوى",
+              "danger": "ضعيف",
+              "warning": "عادي",
+              "success": "قوي"
+            },
+            "copyBtn": "نسخ"
           },
-          "copyBtn": "نسخ"
+          "passLength": "طول كلمة المرور:",
+          "include": {
+            "mainText": "تضمين:",
+            "options": ["أأأ", "", "١٢٣"]
+          },
+          "generateBtn": "إنشاء"
         },
-        "passLength": "طول كلمة المرور:",
-        "include": {
-          "mainText": "تضمين:",
-          "options": ["أأأ", "", "١٢٣"]
-        },
-        "generateBtn": "إنشاء"
+        "IMR": {
+          "heading": "إزالة خلفية الصورة",
+          "uploadBtn": "تحميل الصورة",
+          "threeBtns": {
+            "downl": "تحميل",
+            "retry": "إعادة المحاولة",
+            "upload": "تحميل"
+          }
+        }
       },
       "openError": "!حدثت مشكلة أثناء فتح هذه الأداة"
     },

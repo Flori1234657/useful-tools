@@ -5,7 +5,7 @@ import CopyBtn from "./top/CopyBtn";
 import { useMainStore } from "../../../../../state/mainState";
 import { PasswLevels } from "../../../../../ts/types/lang";
 const Top = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
   const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   const generatedPassword = useMiniAppsStore(

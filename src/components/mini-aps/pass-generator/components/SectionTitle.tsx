@@ -1,47 +1,18 @@
-import { IconButton, Stack, Typography } from "@mui/joy";
-import { IoExit } from "react-icons/io5";
-import { useMiniAppsStore } from "../../../../state/miniAppsState";
+import { Stack } from "@mui/joy";
+import TitleAndExitBtn from "../../components/TitleAndExitBtn";
 import { useMainStore } from "../../../../state/mainState";
+import { useMiniAppsStore } from "../../../../state/miniAppsState";
 
 const SectionTitle = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
-  const dir = useMainStore((state) => state.language.nav.lang.chosen);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
 
-  return (
-    <Stack
-      direction={{ md: "row" }}
-      alignItems="center"
-      justifyContent="center"
-      sx={{ mb: "1rem", m: 0 }}
-    >
-      <Typography
-        level="h1"
-        sx={dir === "AR" ? { order: 2 } : {}}
-        fontSize={{ xs: "1.438rem", md: "1.46154rem" }}
-      >
-        {lang.heading}
-      </Typography>
-      <IconButton
-        aria-label="Exit from this tool"
-        color="danger"
-        sx={{
-          fontSize: { xs: "1.438rem", md: "1.46154rem" },
-          borderRadius: "0.75rem",
-          ml: dir !== "AR" ? { md: "3.46rem" } : "",
-          mr: dir === "AR" ? { md: "3.46rem" } : "",
-          mt: { xs: "0.5rem", md: 0 },
-        }}
-        onClick={() =>
-          useMiniAppsStore.setState((st) => ({
-            openModal: false,
-            psg: { ...st.psg, generatedPassword: "" },
-          }))
-        }
-      >
-        <IoExit />
-      </IconButton>
-    </Stack>
-  );
+  const exitAction = () => {
+    useMiniAppsStore.setState((st) => ({
+      psg: { ...st.psg, generatedPassword: "" },
+    }));
+  };
+
+  return <TitleAndExitBtn otherActions={exitAction} title={lang.heading} />;
 };
 
 export default SectionTitle;

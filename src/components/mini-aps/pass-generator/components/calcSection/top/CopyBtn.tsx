@@ -11,7 +11,7 @@ type Props = {
 };
 
 const CopyBtn = (props: Props) => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
   const dir = useMainStore((state) => state.language.nav.lang.chosen);
   const grPass = useMiniAppsStore((st) => st.psg.generatedPassword);
 

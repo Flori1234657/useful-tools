@@ -76,23 +76,34 @@
         "Блокнот"
       ],
       "toolsText": {
-        "heading": "Создать пароль",
-        "input": {
-          "placeholder": "Пароль здесь",
-          "levels": {
-            "normal": "УРОВЕНЬ",
-            "danger": "СЛАБЫЙ",
-            "warning": "НОРМАЛЬНЫЙ",
-            "success": "СИЛЬНЫЙ"
+        "PSG": {
+          "heading": "Создать пароль",
+          "input": {
+            "placeholder": "Пароль здесь",
+            "levels": {
+              "normal": "УРОВЕНЬ",
+              "danger": "СЛАБЫЙ",
+              "warning": "НОРМАЛЬНЫЙ",
+              "success": "СИЛЬНЫЙ"
+            },
+            "copyBtn": "Копировать"
           },
-          "copyBtn": "Копировать"
+          "passLength": "Длина пароля:",
+          "include": {
+            "mainText": "Включить:",
+            "options": ["нер", "", "123"]
+          },
+          "generateBtn": "Создать"
         },
-        "passLength": "Длина пароля:",
-        "include": {
-          "mainText": "Включить:",
-          "options": ["нер", "", "123"]
-        },
-        "generateBtn": "Создать"
+        "IMR": {
+          "heading": "Удаление фона изображения",
+          "uploadBtn": "Загрузить изображение",
+          "threeBtns": {
+            "downl": "Скачать",
+            "retry": "Повторить",
+            "upload": "Загрузить"
+          }
+        }
       },
       "openError": "При открытии этого инструмента возникла проблема!"
     },
