@@ -3,7 +3,7 @@ import { sheetSxObj } from "../SX-objs/sheetSx";
 import UploadSection from "../img-bckg-remover/components/uploadSec/UploadSection";
 import { useMiniAppsStore } from "../../../state/miniAppsState";
 import { useMainStore } from "../../../state/mainState";
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy, useEffect } from "react";
 
 const RemoveSection = lazy(
   () => import("../img-bckg-remover/components/removeSec/RemoveSection")
@@ -15,7 +15,7 @@ const IMR = () => {
 
   useEffect(() => mainStore.setLoading(false), []);
 
-  const [toggleFSection, setToggleFSection] = useState<boolean>(true);
+  const rmvdImgSt = useMiniAppsStore((state) => state.imr);
 
   return (
     <Modal
@@ -34,7 +34,7 @@ const IMR = () => {
       }}
     >
       <Sheet variant="outlined" sx={sheetSxObj}>
-        {toggleFSection ? (
+        {!rmvdImgSt.imgDownloadPath ? (
           <UploadSection />
         ) : (
           <Suspense fallback="">

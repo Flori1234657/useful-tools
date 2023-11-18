@@ -1,7 +1,11 @@
 import { Stack } from "@mui/joy";
 import UploadBtn from "./UploadBtn";
 
-const Upload = (props: { btnTitle: string; bckgImg: string }) => {
+const Upload = (props: {
+  btnTitle: string;
+  bckgImg: string;
+  funct: (e: React.ChangeEvent<HTMLInputElement>) => Promise<void>;
+}) => {
   return (
     <Stack
       mt={{ xs: "1rem", md: "1.5rem" }}
@@ -18,7 +22,7 @@ const Upload = (props: { btnTitle: string; bckgImg: string }) => {
         width: { md: "20.15385rem" },
       }}
     >
-      <UploadBtn title={props.btnTitle} />
+      <UploadBtn title={props.btnTitle} func={props.funct} />
     </Stack>
   );
 };

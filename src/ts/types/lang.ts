@@ -178,18 +178,30 @@ type TaskModal = {
 };
 
 type ToolsText = {
-  heading: string;
-  input: {
-    placeholder: string;
-    levels: PasswLevels;
-    copyBtn: string;
+  PSG: {
+    heading: string;
+    input: {
+      placeholder: string;
+      levels: PasswLevels;
+      copyBtn: string;
+    };
+    passLength: string;
+    include: {
+      mainText: string;
+      options: string[];
+    };
+    generateBtn: string;
   };
-  passLength: string;
-  include: {
-    mainText: string;
-    options: string[];
+  IMR: {
+    heading: string;
+    uploadBtn: string;
+    threeBtns: {
+      downl: string;
+      retry: string;
+      upload: string;
+    };
+    error: string;
   };
-  generateBtn: string;
 };
 
 export type PasswLevels = {

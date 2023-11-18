@@ -6,7 +6,7 @@ import { useMainStore } from "../../../../../state/mainState";
 import getLocalNumber from "../../../../../utils/mini-apps/convertNumbersToLcSt";
 
 const Middle = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
   const lcSt = useMainStore((st) => st.language.nav.lang.localeString);
 
   const mnaps = useMiniAppsStore();

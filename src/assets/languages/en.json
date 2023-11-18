@@ -76,23 +76,34 @@
         "Notebook"
       ],
       "toolsText": {
-        "heading": "Generate Password",
-        "input": {
-          "placeholder": "Password here",
-          "levels": {
-            "normal": "LEVEL",
-            "danger": "WEAK",
-            "warning": "NORMAL",
-            "success": "STRONG"
+        "PSG": {
+          "heading": "Generate Password",
+          "input": {
+            "placeholder": "Password here",
+            "levels": {
+              "normal": "LEVEL",
+              "danger": "WEAK",
+              "warning": "NORMAL",
+              "success": "STRONG"
+            },
+            "copyBtn": "Copy"
           },
-          "copyBtn": "Copy"
+          "passLength": "Password length:",
+          "include": {
+            "mainText": "Include:",
+            "options": ["ABC", "abc", "123"]
+          },
+          "generateBtn": "Generate"
         },
-        "passLength": "Password length:",
-        "include": {
-          "mainText": "Include:",
-          "options": ["ABC", "abc", "123"]
-        },
-        "generateBtn": "Generate"
+        "IMR": {
+          "heading": "Remove image background",
+          "uploadBtn": "Upload Image",
+          "threeBtns": {
+            "downl": "Download",
+            "retry": "Retry",
+            "upload": "Upload"
+          }
+        }
       },
       "openError": "There was a problem opening this tool!"
     },

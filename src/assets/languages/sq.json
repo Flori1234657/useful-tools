@@ -76,23 +76,34 @@
         "Fletore"
       ],
       "toolsText": {
-        "heading": "Gjenero fjalëkalim",
-        "input": {
-          "placeholder": "Fjalëkalimi",
-          "levels": {
-            "normal": "NIVELI",
-            "danger": "DOBËT",
-            "warning": "NORMAL",
-            "success": "SIGURT"
+        "PSG": {
+          "heading": "Gjenero fjalëkalim",
+          "input": {
+            "placeholder": "Fjalëkalimi",
+            "levels": {
+              "normal": "NIVELI",
+              "danger": "DOBËT",
+              "warning": "NORMAL",
+              "success": "SIGURT"
+            },
+            "copyBtn": "Kopjo"
           },
-          "copyBtn": "Kopjo"
+          "passLength": "Madhësia:",
+          "include": {
+            "mainText": "Përfshih:",
+            "options": ["ABC", "abc", "123"]
+          },
+          "generateBtn": "Gjenero"
         },
-        "passLength": "Madhësia:",
-        "include": {
-          "mainText": "Përfshih:",
-          "options": ["ABC", "abc", "123"]
-        },
-        "generateBtn": "Gjenero"
+        "IMR": {
+          "heading": "Heqja e sfondit të imazhit",
+          "uploadBtn": "Ngarko imazh",
+          "threeBtns": {
+            "downl": "Shkarko",
+            "retry": "Riprovo",
+            "upload": "Ngarko"
+          }
+        }
       },
       "openError": "Kemi një problem në përpjekjen për të hapur mjetin!"
     },

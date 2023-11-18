@@ -76,23 +76,34 @@
         "Not defteri"
       ],
       "toolsText": {
-        "heading": "Parola Oluştur",
-        "input": {
-          "placeholder": "Buraya parola",
-          "levels": {
-            "normal": "SEVİYE",
-            "danger": "ZAYIF",
-            "warning": "NORMAL",
-            "success": "GÜÇLÜ"
+        "PSG": {
+          "heading": "Parola Oluştur",
+          "input": {
+            "placeholder": "Buraya parola",
+            "levels": {
+              "normal": "SEVİYE",
+              "danger": "ZAYIF",
+              "warning": "NORMAL",
+              "success": "GÜÇLÜ"
+            },
+            "copyBtn": "Kopyala"
           },
-          "copyBtn": "Kopyala"
+          "passLength": "Parola uzunluğu:",
+          "include": {
+            "mainText": "İçermek:",
+            "options": ["ABC", "abc", "123"]
+          },
+          "generateBtn": "Oluştur"
         },
-        "passLength": "Parola uzunluğu:",
-        "include": {
-          "mainText": "İçermek:",
-          "options": ["ABC", "abc", "123"]
-        },
-        "generateBtn": "Oluştur"
+        "IMR": {
+          "heading": "Resim arka planını kaldır",
+          "uploadBtn": "Resim Yükle",
+          "threeBtns": {
+            "downl": "İndir",
+            "retry": "Yeniden Dene",
+            "upload": "Yükle"
+          }
+        }
       },
       "openError": "Bu araç açılırken bir sorun oluştu!"
     },

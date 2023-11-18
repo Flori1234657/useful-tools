@@ -5,7 +5,7 @@ import { useMainStore } from "../../../../../state/mainState";
 import { psgCheckboxSx } from "../../../SX-objs/pasgCheckbox";
 
 const Down = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
   const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   const mnaps = useMiniAppsStore((state) => state.psg.checkBoxes);

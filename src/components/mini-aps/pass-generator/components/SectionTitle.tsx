@@ -4,7 +4,7 @@ import { useMainStore } from "../../../../state/mainState";
 import { useMiniAppsStore } from "../../../../state/miniAppsState";
 
 const SectionTitle = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
 
   const exitAction = () => {
     useMiniAppsStore.setState((st) => ({

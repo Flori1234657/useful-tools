@@ -76,23 +76,34 @@
         "स्मरण पुस्तक"
       ],
       "toolsText": {
-        "heading": "पासवर्ड बनाएं",
-        "input": {
-          "placeholder": "यहाँ पासवर्ड",
-          "levels": {
-            "normal": "स्तर",
-            "danger": "कमजोर",
-            "warning": "सामान्य",
-            "success": "मजबूत"
+        "PSG": {
+          "heading": "पासवर्ड बनाएं",
+          "input": {
+            "placeholder": "यहाँ पासवर्ड",
+            "levels": {
+              "normal": "स्तर",
+              "danger": "कमजोर",
+              "warning": "सामान्य",
+              "success": "मजबूत"
+            },
+            "copyBtn": "कॉपी करें"
           },
-          "copyBtn": "कॉपी करें"
+          "passLength": "पासवर्ड की लंबाई:",
+          "include": {
+            "mainText": "शामिल करें:",
+            "options": ["र्डएं", "", "१२३"]
+          },
+          "generateBtn": "बनाएं"
         },
-        "passLength": "पासवर्ड की लंबाई:",
-        "include": {
-          "mainText": "शामिल करें:",
-          "options": ["र्डएं", "", "१२३"]
-        },
-        "generateBtn": "बनाएं"
+        "IMR": {
+          "heading": "छवि के पृष्ठभूमि हटाएं",
+          "uploadBtn": "छवि अपलोड करें",
+          "threeBtns": {
+            "downl": "डाउनलोड",
+            "retry": "पुनः प्रयास करें",
+            "upload": "अपलोड करें"
+          }
+        }
       },
       "openError": "इस टूल को खोलने में एक समस्या थी!"
     },

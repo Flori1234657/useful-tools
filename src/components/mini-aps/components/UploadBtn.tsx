@@ -1,6 +1,7 @@
 import { BiSolidCloudUpload as UploadIcn } from "react-icons/bi";
 import Button from "@mui/joy/Button";
 import { styled } from "@mui/joy";
+import { useMainStore } from "../../../state/mainState";
 
 const VisuallyHiddenInput = styled("input")`
   clip: rect(0 0 0 0);
@@ -14,9 +15,15 @@ const VisuallyHiddenInput = styled("input")`
   width: 1px;
 `;
 
-const UploadBtn = (props: { title: string }) => {
+const UploadBtn = (props: {
+  title: string;
+  func: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) => {
+  const loading = useMainStore((state) => state.loading);
+
   return (
     <Button
+      loading={loading}
       component="label"
       role={undefined}
       tabIndex={-1}
@@ -30,7 +37,7 @@ const UploadBtn = (props: { title: string }) => {
       }}
     >
       {props.title}
-      <VisuallyHiddenInput type="file" />
+      <VisuallyHiddenInput type="file" onChange={props.func} />
     </Button>
   );
 };

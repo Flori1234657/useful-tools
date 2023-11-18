@@ -4,7 +4,7 @@ import { generateRandPass } from "../utils/returnPass";
 import { useMainStore } from "../../../../state/mainState";
 
 const GenerateButton = () => {
-  const lang = useMainStore((st) => st.language.pages.tools.toolsText);
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.PSG);
   const dir = useMainStore((state) => state.language.nav.lang.chosen);
 
   const mnaps = useMiniAppsStore();

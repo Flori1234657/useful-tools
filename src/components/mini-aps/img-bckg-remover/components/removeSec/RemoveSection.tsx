@@ -1,9 +1,30 @@
 import { Stack, AspectRatio } from "@mui/joy";
 import TitleAndExitBtn from "../../../components/TitleAndExitBtn";
 import ThreeBtnsSection from "./ThreeBtnsSection";
-import Placeholder from "../../../../../assets/images/mini-apps/placeholderImg.jpg";
+import { useMiniAppsStore } from "../../../../../state/miniAppsState";
+import { useEffect } from "react";
 
 const RemoveSection = () => {
+  const rmvdImgSt = useMiniAppsStore((state) => state.imr);
+  const errorImg = "https://shorturl.at/lwzP9";
+
+  /**
+      Cleanup function to remove 
+      the image created locally 
+      for saving resources InshaaAllah
+   */
+
+  useEffect(() => {
+    return () => {
+      if (rmvdImgSt.cleanup) {
+        rmvdImgSt.cleanup();
+        useMiniAppsStore.setState(() => ({
+          imr: { imgDownloadPath: null, cleanup: null },
+        }));
+      }
+    };
+  });
+
   return (
     <>
       <TitleAndExitBtn title="Remove image background" />
@@ -21,7 +42,12 @@ const RemoveSection = () => {
             boxShadow: "lg",
           }}
         >
-          <img src={Placeholder} alt="Resized image" />
+          <img
+            src={
+              rmvdImgSt.imgDownloadPath ? rmvdImgSt.imgDownloadPath : errorImg
+            }
+            alt="Resized image"
+          />
         </AspectRatio>
         <ThreeBtnsSection />
       </Stack>
