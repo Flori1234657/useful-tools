@@ -103,6 +103,17 @@
             "retry": "Yeniden Dene",
             "upload": "Yükle"
           }
+        },
+        "CCC": {
+          "heading": "Renk kontrastı denetleyicisi",
+          "label1": "Metin rengi",
+          "label2": "Arka Plan",
+          "level": {
+            "GOOD": "Güzel çok iyi!",
+            "BAD": "İyi değil!",
+            "MIDDLE": "İyi.",
+            "PLACEHOLDER": "Lütfen renkleri seçin!"
+          }
         }
       },
       "openError": "Bu araç açılırken bir sorun oluştu!"

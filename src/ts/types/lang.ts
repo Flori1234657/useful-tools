@@ -202,6 +202,17 @@ type ToolsText = {
     };
     error: string;
   };
+  CCC: {
+    heading: string;
+    label1: string;
+    label2: string;
+    level: {
+      GOOD: string;
+      BAD: string;
+      MIDDLE: string;
+      PLACEHOLDER: string;
+    };
+  };
 };
 
 export type PasswLevels = {

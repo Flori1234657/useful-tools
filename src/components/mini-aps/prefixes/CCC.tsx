@@ -8,6 +8,7 @@ import TitleAndExitBtn from "../components/TitleAndExitBtn";
 
 const CCC = () => {
   const mainStore = useMainStore();
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.CCC);
   const openModal = useMiniAppsStore((state) => state.openModal);
 
   useEffect(() => mainStore.setLoading(false), []);
@@ -29,7 +30,7 @@ const CCC = () => {
       }}
     >
       <Sheet variant="outlined" sx={sheetSxObj}>
-        <TitleAndExitBtn title="Color contrast checker" />
+        <TitleAndExitBtn title={lang.heading} />
         <CalculatingSection />
       </Sheet>
     </Modal>

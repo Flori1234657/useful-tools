@@ -103,6 +103,17 @@
             "retry": "Riprovo",
             "upload": "Ngarko"
           }
+        },
+        "CCC": {
+          "heading": "Kontrollo kontrastin e ngjyrave",
+          "label1": "Ngjyra e tekstit",
+          "label2": "Sfondi",
+          "level": {
+            "GOOD": "Shumë mirë!",
+            "BAD": "Jo mirë!",
+            "MIDDLE": "Mirë.",
+            "PLACEHOLDER": "Ju lutem zgjidhni ngjyrat!"
+          }
         }
       },
       "openError": "Kemi një problem në përpjekjen për të hapur mjetin!"

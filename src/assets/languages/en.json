@@ -103,6 +103,17 @@
             "retry": "Retry",
             "upload": "Upload"
           }
+        },
+        "CCC": {
+          "heading": "Color contrast checker",
+          "label1": "Text color",
+          "label2": "Background",
+          "level": {
+            "GOOD": "Very nice!",
+            "BAD": "Not good!",
+            "MIDDLE": "Good.",
+            "PLACEHOLDER": "Please select colors!"
+          }
         }
       },
       "openError": "There was a problem opening this tool!"
