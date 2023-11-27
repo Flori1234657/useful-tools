@@ -12,5 +12,10 @@ export interface MiniAppsStore {
     imgDownloadPath: string | null;
     cleanup?: (() => void) | null;
   };
+  arc: {
+    selected: "W" | "H" | "A";
+    input1: "W" | "H" | "A";
+    input2: "W" | "H" | "A";
+  };
   openModal: boolean;
 }

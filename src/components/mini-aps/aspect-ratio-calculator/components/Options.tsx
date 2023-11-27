@@ -1,4 +1,5 @@
-import { Checkbox, Stack, Typography } from "@mui/joy";
+import { RadioGroup, Stack, Typography } from "@mui/joy";
+import RadioBtn from "./components/RadioBtn";
 
 const Options = () => {
   return (
@@ -11,11 +12,20 @@ const Options = () => {
       <Typography fontWeight="600" fontSize="1rem" mr="1rem">
         Calculate:
       </Typography>
-      <Stack justifyContent="space-between" direction="row" gap="1rem">
-        <Checkbox size="sm" label="Ratio" />
-        <Checkbox size="sm" label="Width" />
-        <Checkbox size="sm" label="Heigh" />
-      </Stack>
+
+      <RadioGroup
+        sx={{
+          justifyContent: "space-between",
+          flexDirection: "row",
+          gap: "1rem",
+        }}
+        defaultValue="Ratio"
+        name="radio-buttons-group"
+      >
+        <RadioBtn firstWord="W" label="Width" />
+        <RadioBtn firstWord="H" label="Height" />
+        <RadioBtn firstWord="A" label="Ratio" />
+      </RadioGroup>
     </Stack>
   );
 };

@@ -41,6 +41,11 @@ export const useMiniAppsStore = create<MiniAppsStore>()(
     imr: {
       imgDownloadPath: null,
     },
+    arc: {
+      selected: "A",
+      input1: "W",
+      input2: "H",
+    },
     openModal: false,
   }))
 );

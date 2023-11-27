@@ -2,6 +2,7 @@ import { FormControl, FormLabel, Input as Inpt } from "@mui/joy";
 
 type Props = {
   label: string;
+  ref: React.MutableRefObject<HTMLInputElement | null>;
 };
 
 const Input = (props: Props) => {
@@ -15,6 +16,11 @@ const Input = (props: Props) => {
         variant="solid"
         size="sm"
         placeholder="1500px"
+        slotProps={{
+          input: {
+            ref: props.ref,
+          },
+        }}
       />
     </FormControl>
   );
