@@ -114,6 +114,14 @@
             "MIDDLE": "Mirë.",
             "PLACEHOLDER": "Ju lutem zgjidhni ngjyrat!"
           }
+        },
+        "ARC": {
+          "heading": "Llogarit raportin e pamjes",
+          "calculate": "Llogarit",
+          "W": "Gjerësia",
+          "H": "Gjatësia",
+          "A": "Raporti",
+          "result": "Rezultati"
         }
       },
       "openError": "Kemi një problem në përpjekjen për të hapur mjetin!"

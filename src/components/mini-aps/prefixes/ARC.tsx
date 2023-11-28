@@ -9,6 +9,7 @@ import Options from "../aspect-ratio-calculator/components/Options";
 
 const ARC = () => {
   const mainStore = useMainStore();
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.ARC);
   const openModal = useMiniAppsStore((state) => state.openModal);
 
   useEffect(() => mainStore.setLoading(false), []);
@@ -30,7 +31,7 @@ const ARC = () => {
       }}
     >
       <Sheet variant="outlined" sx={sheetSxObj}>
-        <TitleAndExitBtn title="Calculate aspect ratio" />
+        <TitleAndExitBtn title={lang.heading} />
         <Options />
         <DownSection />
       </Sheet>

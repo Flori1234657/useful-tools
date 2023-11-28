@@ -114,6 +114,14 @@
             "MIDDLE": "İyi.",
             "PLACEHOLDER": "Lütfen renkleri seçin!"
           }
+        },
+        "ARC": {
+          "heading": "En-boy oranı hesaplayıcı",
+          "calculate": "Hesapla",
+          "W": "Genişlik",
+          "H": "Yükseklik",
+          "A": "Oran",
+          "result": "Sonuç"
         }
       },
       "openError": "Bu araç açılırken bir sorun oluştu!"

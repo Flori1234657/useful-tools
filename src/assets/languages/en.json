@@ -114,6 +114,14 @@
             "MIDDLE": "Good.",
             "PLACEHOLDER": "Please select colors!"
           }
+        },
+        "ARC": {
+          "heading": "Aspect ratio calculator",
+          "calculate": "Calculate",
+          "W": "Width",
+          "H": "Height",
+          "A": "Ratio",
+          "result": "Result"
         }
       },
       "openError": "There was a problem opening this tool!"

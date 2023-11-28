@@ -1,7 +1,10 @@
 import { RadioGroup, Stack, Typography } from "@mui/joy";
 import RadioBtn from "./components/RadioBtn";
+import { useMainStore } from "../../../../state/mainState";
 
 const Options = () => {
+  const lang = useMainStore((st) => st.language.pages.tools.toolsText.ARC);
+
   return (
     <Stack
       direction="row"
@@ -10,7 +13,7 @@ const Options = () => {
       flexWrap="wrap"
     >
       <Typography fontWeight="600" fontSize="1rem" mr="1rem">
-        Calculate:
+        {lang.calculate}
       </Typography>
 
       <RadioGroup
@@ -22,9 +25,9 @@ const Options = () => {
         defaultValue="Ratio"
         name="radio-buttons-group"
       >
-        <RadioBtn firstWord="W" label="Width" />
-        <RadioBtn firstWord="H" label="Height" />
-        <RadioBtn firstWord="A" label="Ratio" />
+        <RadioBtn firstWord="W" label={lang.W} />
+        <RadioBtn firstWord="H" label={lang.H} />
+        <RadioBtn firstWord="A" label={lang.A} />
       </RadioGroup>
     </Stack>
   );

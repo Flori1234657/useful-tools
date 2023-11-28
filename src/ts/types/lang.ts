@@ -1,3 +1,5 @@
+import { ToolsText } from "./mini-apps/mnaps-lang";
+
 export type Language = {
   nav: Nav;
   layout: Layout;
@@ -174,44 +176,6 @@ type TaskModal = {
   submitBtn: {
     addTask: string;
     editTask: string;
-  };
-};
-
-type ToolsText = {
-  PSG: {
-    heading: string;
-    input: {
-      placeholder: string;
-      levels: PasswLevels;
-      copyBtn: string;
-    };
-    passLength: string;
-    include: {
-      mainText: string;
-      options: string[];
-    };
-    generateBtn: string;
-  };
-  IMR: {
-    heading: string;
-    uploadBtn: string;
-    threeBtns: {
-      downl: string;
-      retry: string;
-      upload: string;
-    };
-    error: string;
-  };
-  CCC: {
-    heading: string;
-    label1: string;
-    label2: string;
-    level: {
-      GOOD: string;
-      BAD: string;
-      MIDDLE: string;
-      PLACEHOLDER: string;
-    };
   };
 };
 
